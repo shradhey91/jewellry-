@@ -6,6 +6,8 @@ import Image from 'next/image';
 
 export const runtime = 'nodejs';
 
+export const dynamic = "force-dynamic";
+
 export default async function ShopPage() {
     const [content, allCategories, allProducts, metals, purities] = await Promise.all([
         getShopPageContent(),

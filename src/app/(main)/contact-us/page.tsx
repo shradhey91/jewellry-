@@ -9,6 +9,8 @@ import { getContactPageContent } from '@/app/admin/pages/contact-us/actions';
 
 export const runtime = 'nodejs';
 
+export const dynamic = "force-dynamic";
+
 export default async function ContactUsPage() {
   const content = await getContactPageContent();
   

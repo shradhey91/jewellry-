@@ -10,6 +10,8 @@ import MinimalistHomepageTheme from "./themes/minimalist-homepage-theme";
 
 export const runtime = 'nodejs';
 
+export const dynamic = "force-dynamic";
+
 export default async function HomePage() {
   // Fetch all data concurrently
   const [

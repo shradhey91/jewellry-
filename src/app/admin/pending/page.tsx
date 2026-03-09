@@ -33,7 +33,7 @@ export default async function PendingPage() {
                         <TableRow key={user.id}>
                             <TableCell className="font-medium">{user.name}</TableCell>
                             <TableCell>{user.email}</TableCell>
-                            <TableCell>{new Date(user.created_at).toLocaleDateString()}</TableCell>
+                            <TableCell>{new Date(user.created_at).toLocaleDateString("en-GB")}</TableCell>
                             <TableCell className="text-right">
                                 <PendingUserActions userId={user.id} />
                             </TableCell>

@@ -8,6 +8,8 @@ import { getDiamondGuideContent } from '@/lib/get-diamond-guide-content';
 
 export const runtime = 'nodejs';
 
+export const dynamic = "force-dynamic";
+
 export default async function DiamondGuidePage() {
   const content = await getDiamondGuideContent();
 
