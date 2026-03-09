@@ -1,0 +1,68 @@
+
+[
+    {
+        "id": "admin",
+        "name": "Administrator",
+        "description": "Has full access to all areas of the admin panel.",
+        "permissions": [
+            "dashboard:view",
+            "reports:view",
+            "orders:view",
+            "orders:edit",
+            "customers:view",
+            "customers:edit",
+            "discounts:manage",
+            "products:view",
+            "products:create",
+            "products:edit",
+            "products:delete",
+            "categories:view",
+            "categories:create",
+            "categories:edit",
+            "categories:delete",
+            "blog:view",
+            "blog:create",
+            "blog:edit",
+            "blog:delete",
+            "media:manage",
+            "pages:manage",
+            "appearance:manage",
+            "menus:manage",
+            "pricing:manage",
+            "tax:manage",
+            "shipping:manage",
+            "settings:manage",
+            "users:manage"
+        ]
+    },
+    {
+        "id": "moderator",
+        "name": "Moderator",
+        "description": "Can manage products and blog content.",
+        "permissions": [
+            "products:create",
+            "products:edit",
+            "blogs:create",
+            "blogs:edit"
+        ]
+    },
+    {
+        "id": "designer",
+        "name": "Designer",
+        "description": "Can manage visual elements like menus and product images.",
+        "permissions": [
+            "products:edit"
+        ]
+    },
+    {
+        "id": "marketer",
+        "name": "Marketer",
+        "description": "Can manage blog content and SEO for products.",
+        "permissions": [
+            "blogs:create",
+            "blogs:edit",
+            "blogs:delete",
+            "products:edit"
+        ]
+    }
+]

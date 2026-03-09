@@ -1,0 +1,420 @@
+
+{
+  "hero": {
+    "enabled": true,
+    "slides": [
+      {
+        "id": "slide-1",
+        "type": "image",
+        "title": "Modern Interpretations in Diamonds",
+        "subtitle": "Crafted for today, inspired by heritage.",
+        "cta": {
+          "label": "Explore Collection",
+          "href": "/collections/diamonds"
+        },
+        "imageUrl": "https://images.unsplash.com/photo-1602107536707-a4a8111d3151?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsaWZlc3R5bGUlMjBmYXNoaW9ufGVufDB8fHx8MTc2ODU0MzM2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+        "videoUrl": null
+      },
+      {
+        "id": "slide-2",
+        "type": "video",
+        "title": "Experience the Movement",
+        "subtitle": "Our jewelry in motion, bringing each piece to life.",
+        "cta": {
+          "label": "Shop Now",
+          "href": "/shop"
+        },
+        "imageUrl": "https://images.unsplash.com/photo-1588444968576-f7b99076a7e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlbGVnYW50JTIwamV3ZWxyeSUyMHN0b3JlfGVufDB8fHx8MTc2ODI2NTYwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+        "videoUrl": "https://cdn.pixabay.com/video/2018/11/10/19253-300109077_large.mp4"
+      }
+    ]
+  },
+  "diamond_interpretations": {
+    "enabled": true,
+    "title": "Modern Interpretations in Diamond",
+    "cards": [
+      {
+        "id": "earrings",
+        "title": "Earrings",
+        "image": "https://images.unsplash.com/photo-1761479258392-011cb2090063?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkaWFtb25kJTIwc3R1ZCUyMGVhcnJpbmdzfGVufDB8fHx8MTc2NzEyNDM4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+        "href": "/jewellery/earrings"
+      },
+      {
+        "id": "necklaces",
+        "title": "Necklaces",
+        "image": "https://images.unsplash.com/photo-1611012844392-f4f96c7fd052?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzaWx2ZXIlMjBuZWNrbGFjZXxlbnwwfHx8fDE3NjY4NDkwNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "href": "/jewellery/necklaces"
+      },
+      {
+        "id": "rings",
+        "title": "Rings",
+        "image": "https://images.unsplash.com/photo-1611955167811-4711904bb9f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnb2xkJTIwcmluZ3xlbnwwfHx8fDE3NjY4NDkwNzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "href": "/jewellery/rings"
+      }
+    ]
+  },
+  "signature_collections": {
+    "enabled": true,
+    "title": "Signature Collections",
+    "collections": {
+      "primary": {
+        "id": "primary-collection",
+        "title": "Floral Bloom",
+        "image": "https://images.unsplash.com/photo-1631050165155-421c47e306f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8amV3ZWxyeSUyMGRldGFpbHxlbnwwfHx8fDE3Njg1NTgyMTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "href": "/collections/floral",
+        "type": "image",
+        "videoUrl": null
+      },
+      "secondary": [
+        {
+          "id": "earrings",
+          "title": "Stunning Earrings",
+          "image": "https://images.unsplash.com/photo-1762344352608-7b85a0834904?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxnb2xkJTIwaG9vcCUyMGVhcnJpbmdzfGVufDB8fHx8MTc2NzEyNDM4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/collections/earrings"
+        },
+        {
+          "id": "wedding",
+          "title": "Wedding Gifts",
+          "image": "https://images.unsplash.com/photo-1525350109470-a8c4ff3d3aae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXRjaGluZyUyMGNvdXBsZSUyMHJpbmdzfGVufDB8fHx8MTc2NzEyNDM4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/collections/wedding"
+        }
+      ]
+    }
+  },
+  "category_grid_with_trending": {
+    "enabled": true,
+    "categories": {
+      "title": "Find Your Perfect Match",
+      "items": [
+        {
+          "id": "gold",
+          "title": "Gold",
+          "image": "https://images.unsplash.com/photo-1724896732926-cad47e0080a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxnb2xkJTIwcmluZyUyMGxpZmVzdHlsZXxlbnwwfHx8fDE3NjY4NDkwNzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/jewellery/gold"
+        },
+        {
+          "id": "diamond",
+          "title": "Diamond",
+          "image": "https://images.unsplash.com/photo-1731657017065-6bf400d479fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGlhbW9uZCUyMHN0YWNrJTIwcmluZ3xlbnwwfHx8fDE3NjcxMjQzODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/jewellery/diamond"
+        },
+        {
+          "id": "earrings",
+          "title": "Earrings",
+          "image": "https://images.unsplash.com/photo-1643822523123-241d959fa1d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cGVhcmwlMjBkYW5nbGVyJTIwZWFycmluZ3N8ZW58MHx8fHwxNzY3MTI0Mzg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/jewellery/earrings"
+        },
+        {
+          "id": "pendants",
+          "title": "Pendants",
+          "image": "https://images.unsplash.com/photo-1664178266066-e37e0d25e6a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxnZW1zdG9uZSUyMHBlbmRhbnR8ZW58MHx8fHwxNzY3MTI0Mzg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/jewellery/pendants"
+        },
+        {
+          "id": "bracelets",
+          "title": "Bracelets",
+          "image": "https://images.unsplash.com/photo-1758995116383-f51775896add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2xkJTIwYmFuZ2xlcyUyMHN0YWNrfGVufDB8fHx8MTc2NzEyNDM4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/jewellery/bracelets"
+        },
+        {
+          "id": "dailywear",
+          "title": "Dailywear",
+          "image": "https://images.unsplash.com/photo-1708221269898-27fc12754dfc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzaW1wbGUlMjBnb2xkJTIwcmluZ3xlbnwwfHx8fDE3NjcxMjQzODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/jewellery/dailywear"
+        }
+      ]
+    },
+    "trending": {
+      "title": "Trending Now",
+      "items": [
+        {
+          "id": "trend-1",
+          "title": "Elegant Diamond Ring",
+          "image": "https://images.unsplash.com/photo-1595538934869-503c9448981b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsYXJnZSUyMGNvY2t0YWlsJTIwcmluZ3xlbnwwfHx8fDE3NjcxMjQzODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/product/diamond-ring"
+        },
+        {
+          "id": "trend-2",
+          "title": "Classic Gold Necklace",
+          "image": "https://images.unsplash.com/photo-1671663906664-9586041c3aa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZW5kYW50JTIwY2hhaW4lMjBuZWNrbGFjZXxlbnwwfHx8fDE3NjcxMjQzODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/product/gold-necklace"
+        },
+        {
+          "id": "trend-3",
+          "title": "Modern Stud Earrings",
+          "image": "https://images.unsplash.com/photo-1584948221378-93841f589fb7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzaWx2ZXIlMjBzdHVkJTIwZWFycmluZ3N8ZW58MHx8fHwxNzY3MTI0Mzg0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/product/stud-earrings"
+        }
+      ]
+    }
+  },
+  "world_of_brand": {
+    "enabled": true,
+    "title": "The World of Our Jewellery",
+    "items": [
+      {
+        "id": "wedding",
+        "title": "Wedding",
+        "image": "https://images.unsplash.com/photo-1525350109470-a8c4ff3d3aae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxtYXRjaGluZyUyMGNvdXBsZSUyMHJpbmdzfGVufDB8fHx8MTc2NzEyNDM4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+        "href": "/collections/wedding"
+      },
+      {
+        "id": "diamond",
+        "title": "Diamond",
+        "image": "https://images.unsplash.com/photo-1731657017065-6bf400d479fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8ZGlhbW9uZCUyMHN0YWNrJTIwcmluZ3xlbnwwfHx8fDE3NjcxMjQzODR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "href": "/collections/diamond"
+      }
+    ]
+  },
+  "assurance_and_exchange": {
+    "enabled": true,
+    "assurance": {
+      "title": "Our Assurance",
+      "items": [
+        {
+          "id": "certified",
+          "title": "Certified Jewellery",
+          "description": "Authenticity guaranteed with certified purity and quality.",
+          "icon": "Award"
+        },
+        {
+          "id": "lifetime",
+          "title": "Lifetime Maintenance",
+          "description": "Free lifetime cleaning and inspection.",
+          "icon": "Wrench"
+        },
+        {
+          "id": "returns",
+          "title": "Easy Returns",
+          "description": "Hassle-free returns and exchanges.",
+          "icon": "Replace"
+        }
+      ]
+    },
+    "exchange": {
+      "title": "Exchange Your Old Gold",
+      "subtitle": "Upgrade your jewellery with our transparent exchange program.",
+      "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnaWZ0JTIwYm94fGVufDB8fHx8MTc2ODU5NDkwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "cta": {
+        "label": "Know More",
+        "href": "/exchange"
+      }
+    }
+  },
+  "gifts_and_experiences": {
+    "enabled": true,
+    "gift": {
+      "title": "The Perfect Gift",
+      "subtitle": "Celebrate moments with jewellery that lasts forever.",
+      "image": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnaWZ0JTIwYm94fGVufDB8fHx8MTc2ODU5NDkwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "cta": {
+        "label": "Explore Gifts",
+        "href": "/gifts"
+      }
+    },
+    "experiences": {
+      "title": "Jewellery Experiences",
+      "items": [
+        {
+          "id": "digital-gold",
+          "title": "Digital Gold",
+          "subtitle": "Invest in gold securely online.",
+          "image": "https://images.unsplash.com/photo-1758995116383-f51775896add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxnb2xkJTIwYmFuZ2xlcyUyMHN0YWNrfGVufDB8fHx8MTc2NzEyNDM4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/digital-gold"
+        },
+        {
+          "id": "appointment",
+          "title": "Book an Appointment",
+          "subtitle": "Personalized in-store experience.",
+          "image": "https://images.unsplash.com/photo-1562682524-3136f32e0a74?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyaW5nJTIwb24lMjBoYW5kfGVufDB8fHx8MTc2NzU0ODI1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/book-appointment"
+        },
+        {
+          "id": "jewellery-care",
+          "title": "Jewellery Care",
+          "subtitle": "Keep your jewellery shining forever.",
+          "image": "https://images.unsplash.com/photo-1745542284155-52a2d488547b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzaWx2ZXIlMjBjaGFybSUyMGJyYWNlbGV0fGVufDB8fHx8MTc2NzEyNDM4NHww&ixlib=rb-4.1.0&q=80&w=1080",
+          "href": "/jewellery-care"
+        }
+      ]
+    }
+  },
+  "newestProducts": {
+    "enabled": true,
+    "title": "Newest Arrivals",
+    "categoryId": null
+  },
+  "bestSellers": {
+    "enabled": true,
+    "title": "Our Best Sellers",
+    "categoryId": null
+  },
+  "testimonials": {
+    "enabled": true,
+    "title": "Words of our Customers",
+    "items": [
+      {
+        "id": "1",
+        "name": "Priya S.",
+        "location": "Mumbai",
+        "text": "The ring I bought is absolutely stunning! The craftsmanship is top-notch, and it feels so special.",
+        "rating": 5,
+        "imageUrl": "https://images.unsplash.com/photo-1646206532396-a1d6b79a7731?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoYXBweSUyMHdvbWFuJTIwZmFjZXxlbnwwfHx8fDE3NjY4NDgyNDd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "happy woman"
+      },
+      {
+        "id": "2",
+        "name": "Rohan K.",
+        "location": "Delhi",
+        "text": "I purchased a gift for my wife, and she was thrilled. The packaging was as beautiful as the necklace inside.",
+        "rating": 5,
+        "imageUrl": "https://images.unsplash.com/photo-1668804985095-0e6c33f99fb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzbWlsaW5nJTIwcGVyc29uJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY2ODQ4MjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "smiling man"
+      },
+      {
+        "id": "3",
+        "name": "Ananya M.",
+        "location": "Bangalore",
+        "text": "From the customer service to the product itself, my experience was seamless. The everyday diamonds are perfect for my style.",
+        "rating": 5,
+        "imageUrl": "https://images.unsplash.com/photo-1763385128836-053af3c6a91f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx3b21hbiUyMHByb2ZpbGUlMjBlbGVnYW50fGVufDB8fHx8MTc2Njg0ODI0N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "elegant woman"
+      }
+    ]
+  },
+  "journal": {
+    "enabled": true,
+    "title": "From Our Journal",
+    "categoryId": null,
+    "entries": []
+  },
+  "textHighlights": {
+    "enabled": true,
+    "items": [
+      {
+        "id": "highlight-1",
+        "title": "Free Shipping",
+        "description": "On all orders across India"
+      },
+      {
+        "id": "highlight-2",
+        "title": "15-Day Returns",
+        "description": "No questions asked"
+      },
+      {
+        "id": "highlight-3",
+        "title": "Certified Jewellery",
+        "description": "BIS Hallmark & GIA/IGI"
+      },
+      {
+        "id": "highlight-4",
+        "title": "Lifetime Warranty",
+        "description": "For your peace of mind"
+      }
+    ]
+  },
+  "splitBanner": {
+    "enabled": true,
+    "banners": [
+      {
+        "id": "banner-1",
+        "title": "For Everyday Elegance",
+        "description": "Discover pieces that shine with you, every single day.",
+        "buttonLabel": "Shop Dailywear",
+        "buttonLink": "/collections/dailywear",
+        "imageUrl": "https://images.unsplash.com/photo-1602107536707-a4a8111d3151?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxsaWZlc3R5bGUlMjBmYXNoaW9ufGVufDB8fHx8MTc2ODU0MzM2NHww&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "lifestyle fashion"
+      },
+      {
+        "id": "banner-2",
+        "title": "The Art of Gifting",
+        "description": "Find the perfect present for every occasion and everyone on your list.",
+        "buttonLabel": "Explore Gifts",
+        "buttonLink": "/gifts",
+        "imageUrl": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnaWZ0JTIwYm94fGVufDB8fHx8MTc2ODU5NDkwOHww&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "gift box"
+      }
+    ]
+  },
+  "imageGrid": {
+    "enabled": true,
+    "items": [
+      {
+        "id": "grid-1",
+        "type": "image",
+        "imageUrl": "https://images.unsplash.com/photo-1631050165155-421c47e306f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8amV3ZWxyeSUyMGRldGFpbHxlbnwwfHx8fDE3Njg1NTgyMTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "jewelry detail"
+      },
+      {
+        "id": "grid-2",
+        "type": "text",
+        "title": "Our Philosophy",
+        "content": "To create timeless pieces that are cherished for generations.",
+        "buttonLabel": "Learn More",
+        "buttonLink": "/about"
+      },
+      {
+        "id": "grid-3",
+        "type": "image",
+        "imageUrl": "https://images.unsplash.com/photo-1617059322001-a61ce9551e08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2RlbCUyMHBvcnRyYWl0fGVufDB8fHx8MTc2ODY0ODUyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "model portrait"
+      },
+      {
+        "id": "grid-4",
+        "type": "image",
+        "imageUrl": "https://images.unsplash.com/photo-1550859492-d5da9d8e45f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxhYnN0cmFjdCUyMHRleHR1cmV8ZW58MHx8fHwxNzY4NjEyOTAzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "abstract texture"
+      }
+    ]
+  },
+  "instagram": {
+    "enabled": true,
+    "handle": "@aparrajewels",
+    "postImageUrls": [
+      "https://images.unsplash.com/photo-1599351433895-0ab8c0e21544?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbnN0YWdyYW0lMjBwb3N0JTIwamV3ZWxyeXxlbnwwfHx8fDE3Njg2NTY4NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbnN0YWdyYW0lMjBwb3N0JTIwamV3ZWxyeXxlbnwwfHx8fDE3Njg2NTY4NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1619119069152-4a04595c5c4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxpbnN0YWdyYW0lMjBwb3N0JTIwamV3ZWxyeXxlbnwwfHx8fDE3Njg2NTY4NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1610216654532-6a78a6a6e7c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxpbnN0YWdyYW0lMjBwb3N0JTIwamV3ZWxyeXxlbnwwfHx8fDE3Njg2NTY4NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8aW5zdGFncmFtJTIwcG9zdCUyMGpld2Vscnl8ZW58MHx8fHwxNzY4NjU2ODUxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    ]
+  },
+  "imageSlider": {
+    "enabled": true,
+    "eyebrow": "Styled for You",
+    "title": "In the Spotlight",
+    "ctaText": "Shop the Look",
+    "ctaLink": "/shop",
+    "items": [
+      {
+        "id": "look1",
+        "imageUrl": "https://images.unsplash.com/photo-1620912189836-121658428a34?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2RlbCUyMHdlYXJpbmclMjBuZWNrbGFjZXxlbnwwfHx8fDE3Njg1NDMyNDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "model wearing necklace",
+        "link": "#"
+      },
+      {
+        "id": "look2",
+        "imageUrl": "https://images.unsplash.com/photo-1617059322001-a61ce9551e08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtb2RlbCUyMHdlYXJpbmclMjBlYXJyaW5nc3xlbnwwfHx8fDE3Njg1NDMyNDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "model wearing earrings",
+        "link": "#"
+      },
+      {
+        "id": "look3",
+        "imageUrl": "https://images.unsplash.com/photo-1611312338608-7245995a4321?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtb2RlbCUyMHdpdGglMjBqZXdlbHJ5fGVufDB8fHx8fDE3Njg1NDMyNDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "model with jewelry",
+        "link": "#"
+      },
+      {
+        "id": "look4",
+        "imageUrl": "https://images.unsplash.com/photo-1631050165155-421c47e306f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8Y2xvc2UlMjB1cCUyMGpld2Vscnl8ZW58MHx8fHwxNzY4NTQzMjQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "close up jewelry",
+        "link": "#"
+      },
+      {
+        "id": "look5",
+        "imageUrl": "https://images.unsplash.com/photo-1602107536707-a4a8111d3151?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8bGlmZXN0eWxlJTIwd2l0aCUyMGpld2Vscnl8ZW58MHx8fHwxNzY4NTQzMjQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+        "imageHint": "lifestyle with jewelry",
+        "link": "#"
+      }
+    ]
+  }
+}

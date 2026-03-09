@@ -1,0 +1,109 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Deploy to cPanel via SSH",
+      "type": "shell",
+      "command": "deploy-to-ssh.bat",
+      "windows": {
+        "command": "deploy-to-ssh.bat"
+      },
+      "linux": {
+        "command": "./deploy-to-ssh.sh"
+      },
+      "osx": {
+        "command": "./deploy-to-ssh.sh"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "focus": false,
+        "echo": true
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Build Production",
+      "type": "shell",
+      "command": "npm run build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "Install Dependencies",
+      "type": "shell",
+      "command": "npm install --production",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Restart App on Server",
+      "type": "shell",
+      "command": "ssh ${input:sshUser}@${input:sshHost} -p ${input:sshPort} 'cd ~/public_html/aparra && pm2 restart aparra'",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "View Server Logs",
+      "type": "shell",
+      "command": "ssh ${input:sshUser}@${input:sshHost} -p ${input:sshPort} 'tail -f ~/logs/node_app.log'",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Create Backup",
+      "type": "shell",
+      "command": "ssh ${input:sshUser}@${input:sshHost} -p ${input:sshPort} 'bash ~/backup-aparra.sh'",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Git Pull on Server",
+      "type": "shell",
+      "command": "ssh ${input:sshUser}@${input:sshHost} -p ${input:sshPort} 'cd ~/public_html/aparra && git pull'",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "sshUser",
+      "type": "promptString",
+      "description": "SSH Username"
+    },
+    {
+      "id": "sshHost",
+      "type": "promptString",
+      "description": "SSH Host (yourdomain.com)"
+    },
+    {
+      "id": "sshPort",
+      "type": "promptString",
+      "description": "SSH Port",
+      "default": "22"
+    }
+  ]
+}

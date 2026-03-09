@@ -1,0 +1,1035 @@
+[
+  {
+    "id": "prod-1",
+    "name": "Elegant Diamond Ring1",
+    "category_ids": [
+      "cat-rings",
+      "cat-rings-everyday"
+    ],
+    "metal_id": "metal-1",
+    "purity_id": "purity-1",
+    "tax_class_id": "tax-1772629261759",
+    "gross_weight": 5.5,
+    "net_weight": 5.2,
+    "making_charge_type": "percentage",
+    "making_charge_value": 100,
+    "auto_price_enabled": true,
+    "manual_price": null,
+    "seo_title": "Stunning 22K Gold Solitaire Ring",
+    "seo_description": "Buy the perfect 22K gold solitaire ring for your special occasion. Handcrafted to perfection. hvhgjhgjg",
+    "description": "This elegant solitaire ring is a testament to timeless beauty. Crafted from luminous 22K gold, it features a stunning, brilliant-cut diamond that captures light from every angle. The classic design and exquisite craftsmanship make it a perfect choice for engagements, anniversaries, or as a gift to cherish forever.",
+    "is_active": true,
+    "created_at": "2024-07-29T12:00:00.000Z",
+    "updated_at": "2026-03-04T13:03:59.079Z",
+    "variants": [
+      {
+        "id": "var-1-1",
+        "product_id": "prod-1",
+        "label": "Size 6",
+        "stock_quantity": 5,
+        "gross_weight": 5.5,
+        "net_weight": 5.2,
+        "price_breakup": {
+          "metal_value": 10389.6,
+          "making_charge": 1558.44,
+          "diamond_value": 25000,
+          "gst": null,
+          "total": null
+        },
+        "display_price": null,
+        "is_preorder": false,
+        "is_made_to_order": false,
+        "lead_time_days": null
+      },
+      {
+        "id": "var-1-2",
+        "product_id": "prod-1",
+        "label": "Size 7",
+        "stock_quantity": 3,
+        "gross_weight": 7,
+        "net_weight": 7.2,
+        "price_breakup": {
+          "metal_value": 14385.6,
+          "making_charge": 2157.84,
+          "diamond_value": 25000,
+          "gst": null,
+          "total": null
+        },
+        "display_price": null,
+        "is_preorder": false,
+        "is_made_to_order": false,
+        "lead_time_days": null
+      },
+      {
+        "id": "var-1-3",
+        "product_id": "prod-1",
+        "label": "Size 8",
+        "stock_quantity": 0,
+        "gross_weight": 9,
+        "net_weight": 8,
+        "price_breakup": {
+          "metal_value": 15984,
+          "making_charge": 2397.6,
+          "diamond_value": 25000,
+          "gst": null,
+          "total": null
+        },
+        "display_price": null,
+        "is_preorder": true,
+        "is_made_to_order": false,
+        "lead_time_days": 14
+      }
+    ],
+    "media": [
+      {
+        "id": "new-1772298922466",
+        "url": "/uploads/1772298919522-Gemini_Generated_Image_nwhgufnwhgufnwhg.png",
+        "hint": "Gemini_Generated_Image_nwhgufnwhgufnwhg.png",
+        "is_primary": true,
+        "sort_order": 0,
+        "media_type": "image"
+      }
+    ],
+    "certificates": [
+      {
+        "id": "cert-1-1",
+        "product_id": "prod-1",
+        "certificate_type": "Hallmark",
+        "file_url": "#",
+        "description": "BIS Hallmark Certified"
+      }
+    ],
+    "has_diamonds": true,
+    "diamond_details": [
+      {
+        "id": "client-id-0",
+        "purity": "18K",
+        "count": 1,
+        "weight": 0.25,
+        "size": 0.5,
+        "price": 25000,
+        "diamond_type": "Natural",
+        "cut": "Excellent",
+        "color": "G",
+        "clarity": "VVS1",
+        "rate_per_carat": 100000,
+        "setting_charges": 2000,
+        "certification_cost": 1500,
+        "brand_margin": 10
+      }
+    ],
+    "cross_sell_products": [
+      "prod-1722259202",
+      "prod-1722259205",
+      "prod-1722259208"
+    ],
+    "upsell_products": [
+      "prod-1722259206",
+      "prod-1722259207"
+    ],
+    "has_size_dimensions": true,
+    "height": 4,
+    "width": 1.65,
+    "length": null,
+    "has_ring_size": true,
+    "featureTabs": [
+      {
+        "tabTitle": "Outstanding Features",
+        "contentTitle": "Crafted for Brilliance",
+        "points": [
+          "Hand-selected, ethically sourced diamonds and gemstones.",
+          "Solid {purity?.label} {metal?.name} for lasting beauty.",
+          "Artisanal craftsmanship in every single detail.",
+          "Includes a certificate of authenticity."
+        ],
+        "imageUrl": "https://picsum.photos/seed/features/800/800",
+        "imageHint": "craftsmanship"
+      },
+      {
+        "tabTitle": "Supreme Quality",
+        "contentTitle": "Built to Last",
+        "points": [
+          "Backed by a lifetime warranty.",
+          "Expertly inspected for perfection.",
+          "Made with responsibly sourced materials."
+        ],
+        "imageUrl": "https://picsum.photos/seed/quality/800/800",
+        "imageHint": "jewelry tools"
+      },
+      {
+        "tabTitle": "Unique Design",
+        "contentTitle": "One of a Kind",
+        "points": [
+          "Designed in-house by our artisans.",
+          "A modern take on a timeless classic.",
+          "Customizable to your preference."
+        ],
+        "imageUrl": "https://picsum.photos/seed/design/800/800",
+        "imageHint": "jewelry design sketch"
+      }
+    ],
+    "galleryImages": [
+      {
+        "id": "gallery1",
+        "url": "https://picsum.photos/seed/gallery1/600/800",
+        "hint": "Gallery image 1"
+      },
+      {
+        "id": "gallery2",
+        "url": "https://picsum.photos/seed/gallery2/600/800",
+        "hint": "Gallery image 2"
+      },
+      {
+        "id": "gallery3",
+        "url": "https://picsum.photos/seed/gallery3/600/800",
+        "hint": "Gallery image 3"
+      }
+    ],
+    "showGalleryGrid": false
+  },
+  {
+    "id": "prod-1722259201",
+    "name": "Classic Gold Hoops",
+    "category_ids": [
+      "cat-rings",
+      "cat-rings-everyday"
+    ],
+    "metal_id": "metal-1",
+    "purity_id": "purity-3",
+    "tax_class_id": "tax-1",
+    "gross_weight": 4,
+    "net_weight": 4,
+    "making_charge_type": "fixed",
+    "making_charge_value": 4500,
+    "auto_price_enabled": true,
+    "manual_price": null,
+    "seo_title": "18K Classic Gold Hoop Earrings",
+    "seo_description": "Timeless and elegant 18K gold hoop earrings, a staple for any jewelry collection.",
+    "description": "A must-have in every collection, these Classic Gold Hoops are crafted from 18K gold, offering a perfect blend of simplicity and elegance. Lightweight and comfortable for all-day wear.",
+    "is_active": true,
+    "created_at": "2024-07-29T13:00:01.000Z",
+    "updated_at": "2024-07-29T13:00:01.000Z",
+    "variants": [
+      {
+        "id": "var-prod-1722259201-1",
+        "product_id": "prod-1722259201",
+        "label": "Medium",
+        "stock_quantity": 15,
+        "is_preorder": false,
+        "is_made_to_order": false,
+        "lead_time_days": null
+      }
+    ],
+    "media": [
+      {
+        "id": "media-prod-1722259201-1",
+        "product_id": "prod-1722259201",
+        "url": "https://picsum.photos/seed/goldhoops/600/600",
+        "hint": "gold hoop earrings",
+        "sort_order": 0,
+        "is_primary": true,
+        "media_type": "image"
+      }
+    ],
+    "certificates": [],
+    "has_diamonds": false,
+    "diamond_details": [],
+    "cross_sell_products": [
+      "prod-1"
+    ],
+    "upsell_products": [
+      "prod-1722259207"
+    ],
+    "featureTabs": [
+      {
+        "tabTitle": "Outstanding Features",
+        "contentTitle": "Crafted for Brilliance",
+        "points": [
+          "Hand-selected, ethically sourced diamonds and gemstones.",
+          "Solid {purity?.label} {metal?.name} for lasting beauty.",
+          "Artisanal craftsmanship in every single detail.",
+          "Includes a certificate of authenticity."
+        ],
+        "imageUrl": "https://picsum.photos/seed/features/800/800",
+        "imageHint": "craftsmanship"
+      },
+      {
+        "tabTitle": "Supreme Quality",
+        "contentTitle": "Built to Last",
+        "points": [
+          "Backed by a lifetime warranty.",
+          "Expertly inspected for perfection.",
+          "Made with responsibly sourced materials."
+        ],
+        "imageUrl": "https://picsum.photos/seed/quality/800/800",
+        "imageHint": "jewelry tools"
+      },
+      {
+        "tabTitle": "Unique Design",
+        "contentTitle": "One of a Kind",
+        "points": [
+          "Designed in-house by our artisans.",
+          "A modern take on a timeless classic.",
+          "Customizable to your preference."
+        ],
+        "imageUrl": "https://picsum.photos/seed/design/800/800",
+        "imageHint": "jewelry design sketch"
+      }
+    ]
+  },
+  {
+    "id": "prod-1722259202",
+    "name": "Delicate Chain Pendant",
+    "category_ids": [
+      "cat-rings",
+      "cat-rings-everyday"
+    ],
+    "metal_id": "metal-4",
+    "purity_id": "purity-6",
+    "tax_class_id": "tax-1",
+    "gross_weight": 3.5,
+    "net_weight": 3.5,
+    "making_charge_type": "percentage",
+    "making_charge_value": 18,
+    "auto_price_enabled": true,
+    "manual_price": null,
+    "seo_title": "18K Rose Gold Delicate Pendant Necklace",
+    "seo_description": "A subtle yet charming rose gold pendant, perfect for layering or wearing alone.",
+    "description": "Add a touch of warmth with this delicate chain pendant in 18K rose gold. Its minimalist design makes it an ideal piece for everyday elegance and a thoughtful gift for any occasion.",
+    "is_active": true,
+    "created_at": "2024-07-29T13:00:02.000Z",
+    "updated_at": "2024-07-29T13:00:02.000Z",
+    "variants": [
+      {
+        "id": "var-prod-1722259202-1",
+        "product_id": "prod-1722259202",
+        "label": "18-inch",
+        "stock_quantity": 20,
+        "is_preorder": false,
+        "is_made_to_order": false,
+        "lead_time_days": null
+      }
+    ],
+    "media": [
+      {
+        "id": "media-prod-1722259202-1",
+        "product_id": "prod-1722259202",
+        "url": "https://picsum.photos/seed/rosependant/600/600",
+        "hint": "rose gold pendant",
+        "sort_order": 0,
+        "is_primary": true,
+        "media_type": "image"
+      }
+    ],
+    "certificates": [],
+    "has_diamonds": false,
+    "diamond_details": [],
+    "cross_sell_products": [
+      "prod-1722259209",
+      "prod-1722259201"
+    ],
+    "upsell_products": [
+      "prod-1"
+    ],
+    "featureTabs": [
+      {
+        "tabTitle": "Outstanding Features",
+        "contentTitle": "Crafted for Brilliance",
+        "points": [
+          "Hand-selected, ethically sourced diamonds and gemstones.",
+          "Solid {purity?.label} {metal?.name} for lasting beauty.",
+          "Artisanal craftsmanship in every single detail.",
+          "Includes a certificate of authenticity."
+        ],
+        "imageUrl": "https://picsum.photos/seed/features/800/800",
+        "imageHint": "craftsmanship"
+      },
+      {
+        "tabTitle": "Supreme Quality",
+        "contentTitle": "Built to Last",
+        "points": [
+          "Backed by a lifetime warranty.",
+          "Expertly inspected for perfection.",
+          "Made with responsibly sourced materials."
+        ],
+        "imageUrl": "https://picsum.photos/seed/quality/800/800",
+        "imageHint": "jewelry tools"
+      },
+      {
+        "tabTitle": "Unique Design",
+        "contentTitle": "One of a Kind",
+        "points": [
+          "Designed in-house by our artisans.",
+          "A modern take on a timeless classic.",
+          "Customizable to your preference."
+        ],
+        "imageUrl": "https://picsum.photos/seed/design/800/800",
+        "imageHint": "jewelry design sketch"
+      }
+    ]
+  },
+  {
+    "id": "prod-1722259203",
+    "name": "Men's Signature Band",
+    "category_ids": [
+      "cat-rings",
+      "cat-rings-everyday"
+    ],
+    "metal_id": "metal-3",
+    "purity_id": "purity-5",
+    "tax_class_id": "tax-1",
+    "gross_weight": 8,
+    "net_weight": 8,
+    "making_charge_type": "fixed",
+    "making_charge_value": 8000,
+    "auto_price_enabled": true,
+    "manual_price": null,
+    "seo_title": "Modern 950 Platinum Men's Band",
+    "seo_description": "A sophisticated and durable platinum band for the modern man.",
+    "description": "Sleek, modern, and built to last. This Signature Band is crafted from 950 platinum, featuring a brushed finish for a contemporary look. A symbol of strength and style.",
+    "is_active": true,
+    "created_at": "2024-07-29T13:00:03.000Z",
+    "updated_at": "2024-07-29T13:00:03.000Z",
+    "variants": [
+      {
+        "id": "var-prod-1722259203-1",
+        "product_id": "prod-1722259203",
+        "label": "Size 10",
+        "stock_quantity": 8,
+        "is_preorder": false,
+        "is_made_to_order": false,
+        "lead_time_days": null
+      }
+    ],
+    "media": [
+      {
+        "id": "media-prod-1722259203-1",
+        "product_id": "prod-1722259203",
+        "url": "https://picsum.photos/seed/mensband/600/600",
+        "hint": "mens platinum band",
+        "sort_order": 0,
+        "is_primary": true,
+        "media_type": "image"
+      }
+    ],
+    "certificates": [],
+    "has_diamonds": false,
+    "diamond_details": [],
+    "cross_sell_products": [
+      "prod-1",
+      "prod-1722259210"
+    ],
+    "upsell_products": [],
+    "featureTabs": [
+      {
+        "tabTitle": "Outstanding Features",
+        "contentTitle": "Crafted for Brilliance",
+        "points": [
+          "Hand-selected, ethically sourced diamonds and gemstones.",
+          "Solid {purity?.label} {metal?.name} for lasting beauty.",
+          "Artisanal craftsmanship in every single detail.",
+          "Includes a certificate of authenticity."
+        ],
+        "imageUrl": "https://picsum.photos/seed/features/800/800",
+        "imageHint": "craftsmanship"
+      },
+      {
+        "tabTitle": "Supreme Quality",
+        "contentTitle": "Built to Last",
+        "points": [
+          "Backed by a lifetime warranty.",
+          "Expertly inspected for perfection.",
+          "Made with responsibly sourced materials."
+        ],
+        "imageUrl": "https://picsum.photos/seed/quality/800/800",
+        "imageHint": "jewelry tools"
+      },
+      {
+        "tabTitle": "Unique Design",
+        "contentTitle": "One of a Kind",
+        "points": [
+          "Designed in-house by our artisans.",
+          "A modern take on a timeless classic.",
+          "Customizable to your preference."
+        ],
+        "imageUrl": "https://picsum.photos/seed/design/800/800",
+        "imageHint": "jewelry design sketch"
+      }
+    ]
+  },
+  {
+    "id": "prod-1722259204",
+    "name": "Classic Tennis Bracelet",
+    "category_ids": [
+      "cat-rings",
+      "cat-rings-everyday"
+    ],
+    "metal_id": "metal-2",
+    "purity_id": "purity-4",
+    "tax_class_id": "tax-1",
+    "gross_weight": 15,
+    "net_weight": 14,
+    "making_charge_type": "fixed",
+    "making_charge_value": 10000,
+    "auto_price_enabled": false,
+    "manual_price": 95000,
+    "seo_title": "Sterling Silver Diamond Tennis Bracelet",
+    "seo_description": "An iconic tennis bracelet featuring a continuous line of brilliant-cut diamonds set in sterling silver.",
+    "description": "The epitome of elegance, the Classic Tennis Bracelet is a must-have for any fine jewelry enthusiast. This stunning piece features a seamless row of sparkling diamonds, meticulously set in gleaming sterling silver. Its timeless design ensures it will never go out of style.",
+    "is_active": true,
+    "created_at": "2024-07-29T13:00:04.000Z",
+    "updated_at": "2024-07-29T13:00:04.000Z",
+    "variants": [
+      {
+        "id": "var-prod-1722259204-1",
+        "product_id": "prod-1722259204",
+        "label": "7-inch",
+        "stock_quantity": 4,
+        "is_preorder": false,
+        "is_made_to_order": false,
+        "lead_time_days": null
+      }
+    ],
+    "media": [
+      {
+        "id": "media-prod-1722259204-1",
+        "product_id": "prod-1722259204",
+        "url": "https://picsum.photos/seed/tennisbracelet/600/600",
+        "hint": "diamond tennis bracelet",
+        "sort_order": 0,
+        "is_primary": true,
+        "media_type": "image"
+      }
+    ],
+    "certificates": [],
+    "has_diamonds": true,
+    "diamond_details": [
+      {
+        "purity": null,
+        "count": 50,
+        "weight": 2.5,
+        "size": null,
+        "price": 80000,
+        "diamond_type": "Lab-grown",
+        "cut": "Very Good",
+        "color": "H",
+        "clarity": "SI1",
+        "rate_per_carat": null,
+        "setting_charges": null,
+        "certification_cost": null,
+        "brand_margin": null
+      }
+    ],
+    "cross_sell_products": [
+      "prod-1722259207",
+      "prod-1722259209"
+    ],
+    "upsell_products": [
+      "prod-1722259206"
+    ],
+    "featureTabs": [
+      {
+        "tabTitle": "Outstanding Features",
+        "contentTitle": "Crafted for Brilliance",
+        "points": [
+          "Hand-selected, ethically sourced diamonds and gemstones.",
+          "Solid {purity?.label} {metal?.name} for lasting beauty.",
+          "Artisanal craftsmanship in every single detail.",
+          "Includes a certificate of authenticity."
+        ],
+        "imageUrl": "https://picsum.photos/seed/features/800/800",
+        "imageHint": "craftsmanship"
+      },
+      {
+        "tabTitle": "Supreme Quality",
+        "contentTitle": "Built to Last",
+        "points": [
+          "Backed by a lifetime warranty.",
+          "Expertly inspected for perfection.",
+          "Made with responsibly sourced materials."
+        ],
+        "imageUrl": "https://picsum.photos/seed/quality/800/800",
+        "imageHint": "jewelry tools"
+      },
+      {
+        "tabTitle": "Unique Design",
+        "contentTitle": "One of a Kind",
+        "points": [
+          "Designed in-house by our artisans.",
+          "A modern take on a timeless classic.",
+          "Customizable to your preference."
+        ],
+        "imageUrl": "https://picsum.photos/seed/design/800/800",
+        "imageHint": "jewelry design sketch"
+      }
+    ]
+  },
+  {
+    "id": "prod-1722259205",
+    "name": "Modern Mangalsutra Bracelet",
+    "category_ids": [
+      "cat-rings",
+      "cat-rings-everyday"
+    ],
+    "metal_id": "metal-1",
+    "purity_id": "purity-2",
+    "tax_class_id": "tax-1",
+    "gross_weight": 6,
+    "net_weight": 5.8,
+    "making_charge_type": "percentage",
+    "making_charge_value": 22,
+    "auto_price_enabled": true,
+    "manual_price": null,
+    "seo_title": "22K Gold Modern Mangalsutra Bracelet",
+    "seo_description": "A contemporary take on the traditional mangalsutra, designed as a chic bracelet.",
+    "description": "Redefining tradition for the modern woman. This 22K gold mangalsutra bracelet combines the sacred black beads with a stylish, contemporary design, allowing you to carry a symbol of your bond with grace and style.",
+    "is_active": true,
+    "created_at": "2024-07-29T13:00:05.000Z",
+    "updated_at": "2024-07-29T13:00:05.000Z",
+    "variants": [
+      {
+        "id": "var-prod-1722259205-1",
+        "product_id": "prod-1722259205",
+        "label": "Adjustable",
+        "stock_quantity": 10,
+        "is_preorder": false,
+        "is_made_to_order": false,
+        "lead_time_days": null
+      }
+    ],
+    "media": [
+      {
+        "id": "media-prod-1722259205-1",
+        "product_id": "prod-1722259205",
+        "url": "https://picsum.photos/seed/mangalsutrabracelet/600/600",
+        "hint": "mangalsutra bracelet",
+        "sort_order": 0,
+        "is_primary": true,
+        "media_type": "image"
+      }
+    ],
+    "certificates": [],
+    "has_diamonds": false,
+    "diamond_details": [],
+    "cross_sell_products": [
+      "prod-1"
+    ],
+    "upsell_products": [],
+    "featureTabs": [
+      {
+        "tabTitle": "Outstanding Features",
+        "contentTitle": "Crafted for Brilliance",
+        "points": [
+          "Hand-selected, ethically sourced diamonds and gemstones.",
+          "Solid {purity?.label} {metal?.name} for lasting beauty.",
+          "Artisanal craftsmanship in every single detail.",
+          "Includes a certificate of authenticity."
+        ],
+        "imageUrl": "https://picsum.photos/seed/features/800/800",
+        "imageHint": "craftsmanship"
+      },
+      {
+        "tabTitle": "Supreme Quality",
+        "contentTitle": "Built to Last",
+        "points": [
+          "Backed by a lifetime warranty.",
+          "Expertly inspected for perfection.",
+          "Made with responsibly sourced materials."
+        ],
+        "imageUrl": "https://picsum.photos/seed/quality/800/800",
+        "imageHint": "jewelry tools"
+      },
+      {
+        "tabTitle": "Unique Design",
+        "contentTitle": "One of a Kind",
+        "points": [
+          "Designed in-house by our artisans.",
+          "A modern take on a timeless classic.",
+          "Customizable to your preference."
+        ],
+        "imageUrl": "https://picsum.photos/seed/design/800/800",
+        "imageHint": "jewelry design sketch"
+      }
+    ]
+  },
+  {
+    "id": "prod-1722259206",
+    "name": "Sapphire Cocktail Ring",
+    "category_ids": [
+      "cat-rings",
+      "cat-rings-everyday"
+    ],
+    "metal_id": "metal-3",
+    "purity_id": "purity-5",
+    "tax_class_id": "tax-1",
+    "gross_weight": 7.2,
+    "net_weight": 6.8,
+    "making_charge_type": "fixed",
+    "making_charge_value": 15000,
+    "auto_price_enabled": false,
+    "manual_price": 120000,
+    "seo_title": "Large Blue Sapphire Platinum Cocktail Ring",
+    "seo_description": "Make a statement with this breathtaking blue sapphire cocktail ring set in 950 platinum.",
+    "description": "Command attention with this magnificent cocktail ring. It showcases a large, deep blue sapphire, surrounded by a halo of smaller diamonds, all set in lustrous 950 platinum. This is a true showstopper piece, perfect for galas and special events.",
+    "is_active": true,
+    "created_at": "2024-07-29T13:00:06.000Z",
+    "updated_at": "2024-07-29T13:00:06.000Z",
+    "variants": [
+      {
+        "id": "var-prod-1722259206-1",
+        "product_id": "prod-1722259206",
+        "label": "Size 7",
+        "stock_quantity": 2,
+        "is_preorder": false,
+        "is_made_to_order": false,
+        "lead_time_days": null
+      }
+    ],
+    "media": [
+      {
+        "id": "media-prod-1722259206-1",
+        "product_id": "prod-1722259206",
+        "url": "https://picsum.photos/seed/sapphirering/600/600",
+        "hint": "sapphire cocktail ring",
+        "sort_order": 0,
+        "is_primary": true,
+        "media_type": "image"
+      }
+    ],
+    "certificates": [],
+    "has_diamonds": true,
+    "diamond_details": [
+      {
+        "purity": null,
+        "count": 20,
+        "weight": 0.5,
+        "size": null,
+        "price": 40000,
+        "diamond_type": "Natural",
+        "cut": "Good",
+        "color": "H",
+        "clarity": "SI1",
+        "rate_per_carat": null,
+        "setting_charges": null,
+        "certification_cost": null,
+        "brand_margin": null
+      }
+    ],
+    "cross_sell_products": [
+      "prod-1"
+    ],
+    "upsell_products": [],
+    "featureTabs": [
+      {
+        "tabTitle": "Outstanding Features",
+        "contentTitle": "Crafted for Brilliance",
+        "points": [
+          "Hand-selected, ethically sourced diamonds and gemstones.",
+          "Solid {purity?.label} {metal?.name} for lasting beauty.",
+          "Artisanal craftsmanship in every single detail.",
+          "Includes a certificate of authenticity."
+        ],
+        "imageUrl": "https://picsum.photos/seed/features/800/800",
+        "imageHint": "craftsmanship"
+      },
+      {
+        "tabTitle": "Supreme Quality",
+        "contentTitle": "Built to Last",
+        "points": [
+          "Backed by a lifetime warranty.",
+          "Expertly inspected for perfection.",
+          "Made with responsibly sourced materials."
+        ],
+        "imageUrl": "https://picsum.photos/seed/quality/800/800",
+        "imageHint": "jewelry tools"
+      },
+      {
+        "tabTitle": "Unique Design",
+        "contentTitle": "One of a Kind",
+        "points": [
+          "Designed in-house by our artisans.",
+          "A modern take on a timeless classic.",
+          "Customizable to your preference."
+        ],
+        "imageUrl": "https://picsum.photos/seed/design/800/800",
+        "imageHint": "jewelry design sketch"
+      }
+    ]
+  },
+  {
+    "id": "prod-1722259207",
+    "name": "Diamond Stud Earrings",
+    "category_ids": [
+      "cat-rings",
+      "cat-rings-everyday"
+    ],
+    "metal_id": "metal-1",
+    "purity_id": "purity-7",
+    "tax_class_id": "tax-1",
+    "gross_weight": 2.1,
+    "net_weight": 2,
+    "making_charge_type": "percentage",
+    "making_charge_value": 25,
+    "auto_price_enabled": true,
+    "manual_price": null,
+    "seo_title": "14K Gold Brilliant Diamond Studs",
+    "seo_description": "Essential and brilliant diamond stud earrings in 14K gold, perfect for everyday luxury.",
+    "description": "The quintessential accessory. Our diamond stud earrings feature brilliant-cut diamonds, set in classic 14K gold four-prong settings. They are the perfect first pair of diamonds or a timeless addition to any jewelry wardrobe.",
+    "is_active": true,
+    "created_at": "2024-07-29T13:00:07.000Z",
+    "updated_at": "2024-07-29T13:00:07.000Z",
+    "variants": [
+      {
+        "id": "var-prod-1722259207-1",
+        "product_id": "prod-1722259207",
+        "label": "0.5 ctw",
+        "stock_quantity": 12,
+        "is_preorder": false,
+        "is_made_to_order": false,
+        "lead_time_days": null
+      }
+    ],
+    "media": [
+      {
+        "id": "media-prod-1722259207-1",
+        "product_id": "prod-1722259207",
+        "url": "https://picsum.photos/seed/diamondstuds/600/600",
+        "hint": "diamond studs",
+        "sort_order": 0,
+        "is_primary": true,
+        "media_type": "image"
+      }
+    ],
+    "certificates": [],
+    "has_diamonds": true,
+    "diamond_details": [
+      {
+        "purity": "14K",
+        "count": 2,
+        "weight": 0.5,
+        "size": null,
+        "price": 35000,
+        "diamond_type": "Natural",
+        "cut": "Excellent",
+        "color": "I",
+        "clarity": "SI2",
+        "rate_per_carat": null,
+        "setting_charges": null,
+        "certification_cost": null,
+        "brand_margin": null
+      }
+    ],
+    "cross_sell_products": [
+      "prod-1722259204"
+    ],
+    "upsell_products": [],
+    "featureTabs": [
+      {
+        "tabTitle": "Outstanding Features",
+        "contentTitle": "Crafted for Brilliance",
+        "points": [
+          "Hand-selected, ethically sourced diamonds and gemstones.",
+          "Solid {purity?.label} {metal?.name} for lasting beauty.",
+          "Artisanal craftsmanship in every single detail.",
+          "Includes a certificate of authenticity."
+        ],
+        "imageUrl": "https://picsum.photos/seed/features/800/800",
+        "imageHint": "craftsmanship"
+      },
+      {
+        "tabTitle": "Supreme Quality",
+        "contentTitle": "Built to Last",
+        "points": [
+          "Backed by a lifetime warranty.",
+          "Expertly inspected for perfection.",
+          "Made with responsibly sourced materials."
+        ],
+        "imageUrl": "https://picsum.photos/seed/quality/800/800",
+        "imageHint": "jewelry tools"
+      },
+      {
+        "tabTitle": "Unique Design",
+        "contentTitle": "One of a Kind",
+        "points": [
+          "Designed in-house by our artisans.",
+          "A modern take on a timeless classic.",
+          "Customizable to your preference."
+        ],
+        "imageUrl": "https://picsum.photos/seed/design/800/800",
+        "imageHint": "jewelry design sketch"
+      }
+    ]
+  },
+  {
+    "id": "prod-1722259208",
+    "name": "Adjustable Gold Bracelet",
+    "category_ids": [
+      "cat-rings",
+      "cat-rings-everyday"
+    ],
+    "metal_id": "metal-1",
+    "purity_id": "purity-2",
+    "tax_class_id": "tax-1",
+    "gross_weight": 9,
+    "net_weight": 9,
+    "making_charge_type": "fixed",
+    "making_charge_value": 7000,
+    "auto_price_enabled": true,
+    "manual_price": null,
+    "seo_title": "Adjustable 22K Gold Chain Bracelet",
+    "seo_description": "A versatile and stylish adjustable gold bracelet, perfect for any wrist size.",
+    "description": "Function meets fashion in this adjustable gold bracelet. Crafted in 22K gold, it features a unique sliding clasp that allows for a perfect fit on any wrist. The simple yet elegant design makes it ideal for daily wear.",
+    "is_active": true,
+    "created_at": "2024-07-29T13:00:08.000Z",
+    "updated_at": "2024-07-29T13:00:08.000Z",
+    "variants": [
+      {
+        "id": "var-prod-1722259208-1",
+        "product_id": "prod-1722259208",
+        "label": "One Size",
+        "stock_quantity": 7,
+        "is_preorder": false,
+        "is_made_to_order": false,
+        "lead_time_days": null
+      }
+    ],
+    "media": [
+      {
+        "id": "media-prod-1722259208-1",
+        "product_id": "prod-1722259208",
+        "url": "https://picsum.photos/seed/adjbracelet/600/600",
+        "hint": "adjustable bracelet",
+        "sort_order": 0,
+        "is_primary": true,
+        "media_type": "image"
+      }
+    ],
+    "certificates": [],
+    "has_diamonds": false,
+    "diamond_details": [],
+    "cross_sell_products": [],
+    "upsell_products": [],
+    "featureTabs": [
+      {
+        "tabTitle": "Outstanding Features",
+        "contentTitle": "Crafted for Brilliance",
+        "points": [
+          "Hand-selected, ethically sourced diamonds and gemstones.",
+          "Solid {purity?.label} {metal?.name} for lasting beauty.",
+          "Artisanal craftsmanship in every single detail.",
+          "Includes a certificate of authenticity."
+        ],
+        "imageUrl": "https://picsum.photos/seed/features/800/800",
+        "imageHint": "craftsmanship"
+      },
+      {
+        "tabTitle": "Supreme Quality",
+        "contentTitle": "Built to Last",
+        "points": [
+          "Backed by a lifetime warranty.",
+          "Expertly inspected for perfection.",
+          "Made with responsibly sourced materials."
+        ],
+        "imageUrl": "https://picsum.photos/seed/quality/800/800",
+        "imageHint": "jewelry tools"
+      },
+      {
+        "tabTitle": "Unique Design",
+        "contentTitle": "One of a Kind",
+        "points": [
+          "Designed in-house by our artisans.",
+          "A modern take on a timeless classic.",
+          "Customizable to your preference."
+        ],
+        "imageUrl": "https://picsum.photos/seed/design/800/800",
+        "imageHint": "jewelry design sketch"
+      }
+    ]
+  },
+  {
+    "id": "prod-1722259210",
+    "name": "Classic Couple Bands",
+    "category_ids": [
+      "cat-rings",
+      "cat-rings-everyday"
+    ],
+    "metal_id": "metal-1",
+    "purity_id": "purity-3",
+    "tax_class_id": "tax-1",
+    "gross_weight": 12,
+    "net_weight": 12,
+    "making_charge_type": "fixed",
+    "making_charge_value": 12000,
+    "auto_price_enabled": true,
+    "manual_price": null,
+    "seo_title": "Matching 18K Gold Couple Wedding Bands",
+    "seo_description": "A beautiful set of matching wedding bands in 18K gold to symbolize your union.",
+    "description": "Symbolize your unity with this elegant set of classic couple bands. Crafted from polished 18K gold, these rings feature a comfortable fit and a timeless design that you will both love for a lifetime. A perfect testament to a shared journey.",
+    "is_active": true,
+    "created_at": "2024-07-29T13:00:10.000Z",
+    "updated_at": "2024-07-29T13:00:10.000Z",
+    "variants": [
+      {
+        "id": "var-prod-1722259210-1",
+        "product_id": "prod-1722259210",
+        "label": "Size 6 & 10",
+        "stock_quantity": 5,
+        "is_preorder": false,
+        "is_made_to_order": false,
+        "lead_time_days": null
+      }
+    ],
+    "media": [
+      {
+        "id": "media-prod-1722259210-1",
+        "product_id": "prod-1722259210",
+        "url": "https://picsum.photos/seed/couplebands/600/600",
+        "hint": "matching wedding bands",
+        "sort_order": 0,
+        "is_primary": true,
+        "media_type": "image"
+      }
+    ],
+    "certificates": [],
+    "has_diamonds": false,
+    "diamond_details": [],
+    "cross_sell_products": [],
+    "upsell_products": [],
+    "featureTabs": [
+      {
+        "tabTitle": "Outstanding Features",
+        "contentTitle": "Crafted for Brilliance",
+        "points": [
+          "Hand-selected, ethically sourced diamonds and gemstones.",
+          "Solid {purity?.label} {metal?.name} for lasting beauty.",
+          "Artisanal craftsmanship in every single detail.",
+          "Includes a certificate of authenticity."
+        ],
+        "imageUrl": "https://picsum.photos/seed/features/800/800",
+        "imageHint": "craftsmanship"
+      },
+      {
+        "tabTitle": "Supreme Quality",
+        "contentTitle": "Built to Last",
+        "points": [
+          "Backed by a lifetime warranty.",
+          "Expertly inspected for perfection.",
+          "Made with responsibly sourced materials."
+        ],
+        "imageUrl": "https://picsum.photos/seed/quality/800/800",
+        "imageHint": "jewelry tools"
+      },
+      {
+        "tabTitle": "Unique Design",
+        "contentTitle": "One of a Kind",
+        "points": [
+          "Designed in-house by our artisans.",
+          "A modern take on a timeless classic.",
+          "Customizable to your preference."
+        ],
+        "imageUrl": "https://picsum.photos/seed/design/800/800",
+        "imageHint": "jewelry design sketch"
+      }
+    ]
+  }
+]

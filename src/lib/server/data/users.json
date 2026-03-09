@@ -1,0 +1,54 @@
+[
+  {
+    "id": "admin",
+    "name": "Admin User",
+    "email": "admin@aparra.com",
+    "password": "password",
+    "role": "admin",
+    "created_at": "2024-01-01T10:00:00.000Z",
+    "email_verified": true,
+    "status": "active",
+    "addresses": [
+      {
+        "name": "sacasc",
+        "address": "vsvsdv",
+        "city": "safasf",
+        "state": "afasfas",
+        "zip": "scsavsd",
+        "country": "India",
+        "id": "addr-1772564111812"
+      }
+    ]
+  },
+  {
+    "id": "customer-1",
+    "name": "Priya Sharma",
+    "phone_number": "919876543210",
+    "role": "customer",
+    "created_at": "2024-07-01T10:00:00.000Z",
+    "phone_number_verified": true,
+    "addresses": [
+      {
+        "id": "addr-1",
+        "name": "Priya Sharma",
+        "address": "123, Marine Drive",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "zip": "400001",
+        "country": "India"
+      },
+      {
+        "id": "addr-2",
+        "name": "Work Office",
+        "address": "456, BKC",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "zip": "400051",
+        "country": "India"
+      }
+    ],
+    "default_address_id": "addr-1",
+    "status": "banned",
+    "email_verified": true
+  }
+]

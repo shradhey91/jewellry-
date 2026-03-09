@@ -1,0 +1,39 @@
+# App Hosting configuration for the Aparra Next.js project.
+# This file is used by Firebase App Hosting to deploy the application.
+
+# Specifies the version of the App Hosting YAML schema.
+version: 1
+
+# Defines the build process for the application.
+build:
+  # The command to install dependencies.
+  install: npm install
+  # The command to build the application for production.
+  run: npm run build
+
+# Defines how the application should be served.
+run:
+  # The command to start the application server.
+  start: npm start
+  # The Node.js version to use for the runtime environment.
+  # This should match the version used in local development.
+  node_version: 18
+
+# Defines environment variables available to the application.
+# These can be used for configuration that differs between environments
+# (e.g., API keys, database connection strings).
+#
+# Example:
+#
+# env:
+#   - variable: MYSQL_URI
+#     value: "mysql://user:password@host:port/database"
+#
+# For security, it is highly recommended to use secrets for sensitive
+# information like database credentials.
+#
+# Example with secrets:
+#
+# env:
+#   - variable: MYSQL_URI
+#     secret: MYSQL_CONNECTION_STRING

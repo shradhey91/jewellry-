@@ -1,0 +1,36 @@
+/*
+================================================================================
+||                                                                            ||
+||   STRICT NOTICE: THEME COLORS ARE LOCKED                                   ||
+||                                                                            ||
+||   The color variables in this file define the master color palette for     ||
+||   the entire storefront. They have been finalized and should not be        ||
+||   modified without explicit confirmation from the project owner.           ||
+||                                                                            ||
+||   Any changes here will have a global impact on the website's appearance.  ||
+||   Proceed with extreme caution.                                            ||
+||                                                                            ||
+================================================================================
+*/
+:root {
+  --background: 40 33% 94%; /* Light Beige */
+  --foreground: 35 33% 20%; /* Deep Brown */
+  --card: 0 0% 100%;
+  --card-foreground: 35 33% 20%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 35 33% 20%;
+  --primary: 45 35% 55%; /* Gold/Ochre */
+  --primary-foreground: 40 33% 98%;
+  --secondary: 40 25% 88%; /* Lighter Beige */
+  --secondary-foreground: 35 33% 20%;
+  --muted: 40 25% 90%;
+  --muted-foreground: 35 25% 45%;
+  --accent: 40 30% 85%;
+  --accent-foreground: 35 33% 15%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 40 20% 80%;
+  --input: 40 20% 88%;
+  --ring: 45 35% 55%;
+  --radius: 0.5rem;
+}

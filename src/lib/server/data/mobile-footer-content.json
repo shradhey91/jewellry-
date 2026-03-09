@@ -1,0 +1,41 @@
+
+[
+  {
+    "columns": [
+      {
+        "id": "col1",
+        "title": "Useful Links",
+        "links": [
+          { "id": "link1-1", "label": "Track your Order", "url": "#" },
+          { "id": "link1-2", "label": "Returns", "url": "#" },
+          { "id": "link1-3", "label": "Find a Store", "url": "#" }
+        ]
+      },
+      {
+        "id": "col2",
+        "title": "Information",
+        "links": [
+          { "id": "link2-3", "label": "Diamond Guide", "url": "/guides/diamond-guide" },
+          { "id": "link2-4", "label": "About Aparra", "url": "/about" }
+        ]
+      }
+    ],
+    "contact": {
+      "email": "support@aparra.com"
+    },
+    "locations": [],
+    "socials": {
+      "facebook": "#",
+      "instagram": "#",
+      "twitter": "#",
+      "youtube": ""
+    },
+    "bottom": {
+      "copyright": "© 2024 Aparra. All rights reserved.",
+      "links": [
+        { "id": "bottom-1", "label": "Terms & Conditions", "url": "#" },
+        { "id": "bottom-2", "label": "Privacy Notice", "url": "#" }
+      ]
+    }
+  }
+]

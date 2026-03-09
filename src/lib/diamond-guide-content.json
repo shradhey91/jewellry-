@@ -1,0 +1,102 @@
+
+{
+  "hero": {
+    "eyebrow": "Aparra Education",
+    "title": "The Diamond Guide",
+    "subtitle": "An elegant introduction to the qualities that make each diamond unique.",
+    "imageUrl": "https://images.unsplash.com/photo-1610216654532-6a78a6a6e7c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzcGFya2xpbmclMjBkaWFtb25kfGVufDB8fHx8MTc2Nzk3OTI3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "imageHint": "sparkling diamond"
+  },
+  "fourCs": {
+    "title": "The 4Cs of Diamond Quality",
+    "subtitle": "Understanding these four characteristics will help you choose the perfect diamond.",
+    "items": [
+      {
+        "icon": "Scissors",
+        "title": "Cut",
+        "description": "The quality of a diamond's cut determines its brilliance and sparkle. A well-cut diamond reflects light beautifully.",
+        "imageUrl": "https://picsum.photos/seed/diamond-cut/600/400",
+        "imageHint": "diamond cut diagram"
+      },
+      {
+        "icon": "Droplets",
+        "title": "Color",
+        "description": "Diamond color is graded from D (colorless) to Z (light yellow). The less color, the rarer and more valuable the diamond.",
+        "imageUrl": "https://picsum.photos/seed/diamond-color/600/400",
+        "imageHint": "diamond color scale"
+      },
+      {
+        "icon": "Search",
+        "title": "Clarity",
+        "description": "Clarity measures the absence of inclusions and blemishes. Flawless diamonds are exceptionally rare and highly prized.",
+        "imageUrl": "https://picsum.photos/seed/diamond-clarity/600/400",
+        "imageHint": "diamond clarity chart"
+      },
+      {
+        "icon": "Scaling",
+        "title": "Carat",
+        "description": "Carat refers to the diamond's weight, not its size. Larger carats are rarer, making weight a major factor in a diamond's value.",
+        "imageUrl": "https://picsum.photos/seed/diamond-carat/600/400",
+        "imageHint": "diamond carat size"
+      }
+    ]
+  },
+  "shapes": {
+    "title": "Explore Diamond Shapes",
+    "subtitle": "Each shape offers a distinct style and personality. Discover the one that speaks to you.",
+    "items": [
+      {
+        "name": "Round",
+        "imageUrl": "https://picsum.photos/seed/shape-round/96/96",
+        "imageHint": "round diamond"
+      },
+      {
+        "name": "Princess",
+        "imageUrl": "https://picsum.photos/seed/shape-princess/96/96",
+        "imageHint": "princess cut diamond"
+      },
+      {
+        "name": "Cushion",
+        "imageUrl": "https://picsum.photos/seed/shape-cushion/96/96",
+        "imageHint": "cushion cut diamond"
+      },
+      {
+        "name": "Oval",
+        "imageUrl": "https://picsum.photos/seed/shape-oval/96/96",
+        "imageHint": "oval cut diamond"
+      },
+      {
+        "name": "Emerald",
+        "imageUrl": "https://picsum.photos/seed/shape-emerald/96/96",
+        "imageHint": "emerald cut diamond"
+      },
+      {
+        "name": "Pear",
+        "imageUrl": "https://picsum.photos/seed/shape-pear/96/96",
+        "imageHint": "pear shaped diamond"
+      },
+      {
+        "name": "Marquise",
+        "imageUrl": "https://picsum.photos/seed/shape-marquise/96/96",
+        "imageHint": "marquise cut diamond"
+      },
+      {
+        "name": "Asscher",
+        "imageUrl": "https://picsum.photos/seed/shape-asscher/96/96",
+        "imageHint": "asscher cut diamond"
+      }
+    ]
+  },
+  "anatomy": {
+    "title": "Anatomy of a Diamond",
+    "subtitle": "Learn the key parts of a diamond that contribute to its overall beauty and structure.",
+    "imageUrl": "https://picsum.photos/seed/diamond-anatomy/800/600",
+    "imageHint": "diamond anatomy diagram"
+  },
+  "cta": {
+    "title": "Ready to Find Your Perfect Diamond?",
+    "subtitle": "Explore our curated collection of diamond engagement rings and fine jewelry.",
+    "ctaText": "Shop Diamond Rings",
+    "ctaLink": "/category/cat-rings-diamond"
+  }
+}

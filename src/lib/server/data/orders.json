@@ -1,0 +1,146 @@
+[
+  {
+    "id": "order-1722163200",
+    "user_id": "customer-1",
+    "items": [
+      {
+        "product_id": "prod-1",
+        "variant_id": "var-1-1",
+        "quantity": 1,
+        "price_snapshot": {
+          "metal_value": 34300,
+          "making_charge": 5150,
+          "diamond_value": 25000,
+          "gst": 1935,
+          "total": 66385
+        },
+        "product_name": "Elegant Diamond Ring",
+        "product_image": "https://uncommongoods.in/media/images/1.jpg",
+        "variant_label": "Size 6",
+        "created_at": "2024-07-28T10:00:00.000Z"
+      }
+    ],
+    "shippingAddress": {
+      "name": "Priya Sharma",
+      "address": "123, Marine Drive",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zip": "400001",
+      "country": "India"
+    },
+    "status": "processing",
+    "created_at": "2024-07-28T10:00:00.000Z"
+  },
+  {
+    "id": "order-1722249600",
+    "user_id": "customer-1",
+    "items": [
+      {
+        "product_id": "prod-1722259201",
+        "variant_id": "var-prod-1722259201-1",
+        "quantity": 2,
+        "price_snapshot": {
+          "metal_value": 21600,
+          "making_charge": 4500,
+          "diamond_value": 0,
+          "gst": 783,
+          "total": 26883
+        },
+        "product_name": "Classic Gold Hoops",
+        "product_image": "https://picsum.photos/seed/goldhoops/600/600",
+        "variant_label": "Medium",
+        "created_at": "2024-07-29T10:00:00.000Z"
+      }
+    ],
+    "shippingAddress": {
+      "name": "Priya Sharma",
+      "address": "456, BKC",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zip": "400051",
+      "country": "India"
+    },
+    "status": "delivered",
+    "created_at": "2024-07-29T10:00:00.000Z"
+  },
+  {
+    "id": "order-1722336000",
+    "user_id": "customer-1",
+    "items": [
+      {
+        "product_id": "prod-1722259202",
+        "variant_id": "var-prod-1722259202-1",
+        "quantity": 1,
+        "price_snapshot": {
+          "metal_value": 18375,
+          "making_charge": 3307,
+          "diamond_value": 0,
+          "gst": 650,
+          "total": 22332
+        },
+        "product_name": "Delicate Chain Pendant",
+        "product_image": "https://picsum.photos/seed/rosependant/600/600",
+        "variant_label": "18-inch",
+        "created_at": "2024-07-30T10:00:00.000Z"
+      }
+    ],
+    "shippingAddress": {
+      "name": "Priya Sharma",
+      "address": "123, Marine Drive",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zip": "400001",
+      "country": "India"
+    },
+    "status": "shipped",
+    "created_at": "2024-07-30T10:00:00.000Z"
+  },
+  {
+    "id": "order-1722422400",
+    "user_id": "customer-1",
+    "items": [
+      {
+        "product_id": "prod-1722259203",
+        "variant_id": "var-prod-1722259203-1",
+        "quantity": 1,
+        "price_snapshot": {
+          "metal_value": 19760,
+          "making_charge": 8000,
+          "diamond_value": 0,
+          "gst": 832,
+          "total": 28592
+        },
+        "product_name": "Men's Signature Band",
+        "product_image": "https://picsum.photos/seed/mensband/600/600",
+        "variant_label": "Size 10",
+        "created_at": "2024-07-31T10:00:00.000Z"
+      },
+      {
+        "product_id": "prod-1722259204",
+        "variant_id": "var-prod-1722259204-1",
+        "quantity": 1,
+        "price_snapshot": {
+          "metal_value": 1387,
+          "making_charge": 10000,
+          "diamond_value": 80000,
+          "gst": 2741,
+          "total": 94128
+        },
+        "product_name": "Classic Tennis Bracelet",
+        "product_image": "https://picsum.photos/seed/tennisbracelet/600/600",
+        "variant_label": "7-inch",
+        "created_at": "2024-07-31T10:00:00.000Z"
+      }
+    ],
+    "shippingAddress": {
+      "name": "Priya Sharma",
+      "address": "123, Marine Drive",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "zip": "400001",
+      "country": "India"
+    },
+    "status": "processing",
+    "created_at": "2024-07-31T10:00:00.000Z"
+  }
+]

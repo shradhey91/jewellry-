@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Elegant Diamond Ring",
+    "description": "This elegant solitaire ring is a testament to timeless beauty. Crafted from luminous 22K gold, it features a stunning, brilliant-cut diamond that captures light from every angle. The classic design and exquisite craftsmanship make it a perfect choice for engagements, anniversaries, or as a gift to cherish forever.",
+    "seo_title": "Stunning 22K Gold Solitaire Ring",
+    "seo_description": "Buy the perfect 22K gold solitaire ring for your special occasion. Handcrafted to perfection.",
+    "gross_weight": 5.5,
+    "net_weight": 5.2,
+    "metal_id": "metal-1",
+    "purity_id": "purity-2",
+    "tax_class_id": "tax-1",
+    "category_ids": ["cat-rings", "cat-rings-everyday"],
+    "making_charge_type": "percentage",
+    "making_charge_value": 15,
+    "is_active": true,
+    "media_filenames": ["elegant-diamond-ring-1.jpg", "elegant-diamond-ring-2.mp4"]
+  },
+  {
+    "name": "Classic Gold Hoops",
+    "description": "A must-have in every collection, these Classic Gold Hoops are crafted from 18K gold, offering a perfect blend of simplicity and elegance. Lightweight and comfortable for all-day wear.",
+    "seo_title": "18K Classic Gold Hoop Earrings",
+    "seo_description": "Timeless and elegant 18K gold hoop earrings, a staple for any jewelry collection.",
+    "gross_weight": 4.0,
+    "net_weight": 4.0,
+    "metal_id": "metal-1",
+    "purity_id": "purity-3",
+    "tax_class_id": "tax-1",
+    "category_ids": ["cat-earrings", "cat-earrings-hoops"],
+    "making_charge_type": "fixed",
+    "making_charge_value": 4500,
+    "is_active": false,
+    "media_filenames": ["classic-gold-hoops.jpg"]
+  }
+]

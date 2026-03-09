@@ -1,0 +1,335 @@
+[
+  {
+    "id": "hist-1772688701294",
+    "entity_type": "Pricing",
+    "entity_id": "metal-4",
+    "entity_name": "Rose Gold Price",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-05T05:31:41.294Z"
+  },
+  {
+    "id": "hist-1772688701293",
+    "entity_type": "Pricing",
+    "entity_id": "metal-1",
+    "entity_name": "Gold Price",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-05T05:31:41.293Z"
+  },
+  {
+    "id": "hist-1772688686745",
+    "entity_type": "Pricing",
+    "entity_id": "metal-4",
+    "entity_name": "Rose Gold Price",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-05T05:31:26.745Z"
+  },
+  {
+    "id": "hist-1772688686745",
+    "entity_type": "Pricing",
+    "entity_id": "metal-3",
+    "entity_name": "Platinum Price",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-05T05:31:26.745Z"
+  },
+  {
+    "id": "hist-1772688686745",
+    "entity_type": "Pricing",
+    "entity_id": "metal-2",
+    "entity_name": "Silver Price",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-05T05:31:26.745Z"
+  },
+  {
+    "id": "hist-1772629439084",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-04T13:03:59.084Z"
+  },
+  {
+    "id": "hist-1772629429771",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-04T13:03:49.771Z"
+  },
+  {
+    "id": "hist-1772629315055",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-04T13:01:55.055Z"
+  },
+  {
+    "id": "hist-1772629261761",
+    "entity_type": "Tax",
+    "entity_id": "tax-1772629261759",
+    "entity_name": "Fixed",
+    "action": "Created",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-04T13:01:01.761Z"
+  },
+  {
+    "id": "hist-1772628212942",
+    "entity_type": "Tax",
+    "entity_id": "tax-1772628212940",
+    "entity_name": "GST",
+    "action": "Created",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-04T12:43:32.942Z"
+  },
+  {
+    "id": "hist-1772627701788",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-04T12:35:01.788Z"
+  },
+  {
+    "id": "hist-1772627629025",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-04T12:33:49.025Z"
+  },
+  {
+    "id": "hist-1772563585028",
+    "entity_type": "Order",
+    "entity_id": "order-1722163200",
+    "entity_name": "Order #1722163200",
+    "action": "Status changed to processing",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-03T18:46:25.028Z"
+  },
+  {
+    "id": "hist-1772562416643",
+    "entity_type": "Category",
+    "entity_id": "cat-1772562397836",
+    "entity_name": "hi",
+    "action": "Deleted",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-03T18:26:56.643Z"
+  },
+  {
+    "id": "hist-1772562397838",
+    "entity_type": "Category",
+    "entity_id": "cat-1772562397836",
+    "entity_name": "hi",
+    "action": "Created",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-03T18:26:37.838Z"
+  },
+  {
+    "id": "hist-1772562381288",
+    "entity_type": "Category",
+    "entity_id": "cat-1772562362571",
+    "entity_name": "hi",
+    "action": "Deleted",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-03T18:26:21.288Z"
+  },
+  {
+    "id": "hist-1772562362573",
+    "entity_type": "Category",
+    "entity_id": "cat-1772562362571",
+    "entity_name": "hi",
+    "action": "Created",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-03T18:26:02.573Z"
+  },
+  {
+    "id": "hist-1772468623620",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-02T16:23:43.620Z"
+  },
+  {
+    "id": "hist-1772468567356",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-02T16:22:47.356Z"
+  },
+  {
+    "id": "hist-1772467222321",
+    "entity_type": "Pricing",
+    "entity_id": "metal-4",
+    "entity_name": "Rose Gold Price",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-02T16:00:22.321Z"
+  },
+  {
+    "id": "hist-1772467222319",
+    "entity_type": "Pricing",
+    "entity_id": "metal-3",
+    "entity_name": "Platinum Price",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-02T16:00:22.319Z"
+  },
+  {
+    "id": "hist-1772467222312",
+    "entity_type": "Pricing",
+    "entity_id": "metal-2",
+    "entity_name": "Silver Price",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-02T16:00:22.312Z"
+  },
+  {
+    "id": "hist-1772467222310",
+    "entity_type": "Pricing",
+    "entity_id": "metal-1",
+    "entity_name": "Gold Price",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-03-02T16:00:22.310Z"
+  },
+  {
+    "id": "hist-1772299307680",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-28T17:21:47.680Z"
+  },
+  {
+    "id": "hist-1772299014392",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-28T17:16:54.392Z"
+  },
+  {
+    "id": "hist-1772298925429",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-28T17:15:25.429Z"
+  },
+  {
+    "id": "hist-1772217746802",
+    "entity_type": "Menu",
+    "entity_id": "header-menu",
+    "entity_name": "Header Menu",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-27T18:42:26.802Z"
+  },
+  {
+    "id": "hist-1772217712094",
+    "entity_type": "Menu",
+    "entity_id": "header-menu",
+    "entity_name": "Header Menu",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-27T18:41:52.094Z"
+  },
+  {
+    "id": "hist-1772217528329",
+    "entity_type": "Menu",
+    "entity_id": "header-menu",
+    "entity_name": "Header Menu",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-27T18:38:48.330Z"
+  },
+  {
+    "id": "hist-1772216931441",
+    "entity_type": "Category",
+    "entity_id": "cat-1772216721787",
+    "entity_name": "hello",
+    "action": "Deleted",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-27T18:28:51.441Z"
+  },
+  {
+    "id": "hist-1772216721902",
+    "entity_type": "Category",
+    "entity_id": "cat-1772216721787",
+    "entity_name": "hello",
+    "action": "Created",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-27T18:25:21.902Z"
+  },
+  {
+    "id": "hist-1772184541756",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-27T09:29:01.756Z"
+  },
+  {
+    "id": "hist-1772177033346",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-27T07:23:53.346Z"
+  },
+  {
+    "id": "hist-1772176883079",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-27T07:21:23.079Z"
+  },
+  {
+    "id": "hist-1772176730515",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-27T07:18:50.515Z"
+  },
+  {
+    "id": "hist-1772176681381",
+    "entity_type": "Product",
+    "entity_id": "prod-1",
+    "entity_name": "Elegant Diamond Ring1",
+    "action": "Updated",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-27T07:18:01.381Z"
+  },
+  {
+    "id": "hist-1772170313190",
+    "entity_type": "Product",
+    "entity_id": "prod-1722259209",
+    "entity_name": "Pearl Drop Danglers",
+    "action": "Deleted",
+    "user": "admin@aparra.com",
+    "timestamp": "2026-02-27T05:31:53.190Z"
+  }
+]

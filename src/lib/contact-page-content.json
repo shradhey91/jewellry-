@@ -1,0 +1,10 @@
+{
+  "title": "Contact Us",
+  "subtitle": "Get in touch with our team",
+  "email": "supportme@aparra.com",
+  "phone": "+91 9876543210",
+  "address": "123, Marine Drive, Mumbai, Maharashtra 400001",
+  "workingHours": "Mon - Sat: 10:00 AM - 8:00 PM",
+  "contactFormEnabled": true,
+  "showMap": true
+}

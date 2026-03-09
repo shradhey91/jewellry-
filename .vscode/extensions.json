@@ -1,0 +1,46 @@
+{
+  "name": "Aparra E-Commerce",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/aparra.git"
+  },
+  "dependencies": [
+    {
+      "name": "Remote - SSH",
+      "publisher": "ms-vscode-remote",
+      "version": "latest"
+    },
+    {
+      "name": "SFTP",
+      "publisher": "Natizianskunk",
+      "version": "latest"
+    },
+    {
+      "name": "ESLint",
+      "publisher": "dbaeumer",
+      "version": "latest"
+    },
+    {
+      "name": "Prettier - Code formatter",
+      "publisher": "esbenp",
+      "version": "latest"
+    }
+  ],
+  "settings": {
+    "remote.SSH.showLoginTerminal": true,
+    "remote.SSH.remotePlatform": "linux",
+    "files.exclude": {
+      "**/.git": false,
+      "**/node_modules": false
+    },
+    "explorer.excludeGitIgnore": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "extensions": [
+    "ms-vscode-remote.remote-ssh",
+    "natizianskunk.sftp",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ]
+}

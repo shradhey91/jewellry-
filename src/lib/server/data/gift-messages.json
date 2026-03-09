@@ -1,0 +1,56 @@
+[
+  {
+    "category": "Birthday",
+    "messages": [
+      "Happy Birthday! Wishing you a day as special as you are.",
+      "Cheers to another year of you! Hope it's the best one yet.",
+      "May your birthday be filled with love, laughter, and everything you wished for.",
+      "Wishing you all the happiness your heart can hold. Happy Birthday!",
+      "A little sparkle for your special day. Happy Birthday!"
+    ]
+  },
+  {
+    "category": "Anniversary",
+    "messages": [
+      "Happy Anniversary! Here's to another chapter of our beautiful story.",
+      "To many more years of love and laughter. Happy Anniversary!",
+      "Thank you for being my rock. I love you more every day. Happy Anniversary.",
+      "Celebrating us today and always. Happy Anniversary, my love.",
+      "A symbol of our timeless love. Happy Anniversary."
+    ]
+  },
+  {
+    "category": "Valentine's Day",
+    "messages": [
+      "Happy Valentine's Day, my love. You are my everything.",
+      "You have my whole heart, today and always. Happy Valentine's Day.",
+      "To my one and only, thank you for being you. Happy Valentine's Day!",
+      "Every day with you is like Valentine's Day. I love you.",
+      "A little something to show you how much you mean to me. Happy Valentine's!"
+    ]
+  },
+  {
+    "category": "Wedding",
+    "messages": [
+      "Wishing you a lifetime of love and happiness. Congratulations!",
+      "Congratulations on your wedding day! May your love story be beautiful and timeless.",
+      "So happy to celebrate this special day with you both. Congratulations!",
+      "May your life together be filled with unforgettable moments and endless tenderness.",
+      "Best wishes on this wonderful journey, as you build your new lives together."
+    ]
+  },
+  {
+    "category": "General",
+    "messages": [
+      "Just because. Thinking of you!",
+      "A little something to brighten your day.",
+      "Congratulations on your achievement! You deserve it.",
+      "Thank you for everything you do.",
+      "Wear this and remember you are loved."
+    ]
+  },
+  {
+    "category": "New Category",
+    "messages": []
+  }
+]

@@ -1,0 +1,59 @@
+
+[
+  {
+    "id": "purity-1",
+    "metal_id": "metal-1",
+    "label": "24K",
+    "fineness": 0.999,
+    "is_active": true,
+    "updated_at": "2024-07-29T12:00:00.000Z"
+  },
+  {
+    "id": "purity-2",
+    "metal_id": "metal-1",
+    "label": "22K",
+    "fineness": 0.916,
+    "is_active": true,
+    "updated_at": "2024-07-29T12:00:00.000Z"
+  },
+  {
+    "id": "purity-3",
+    "metal_id": "metal-1",
+    "label": "18K",
+    "fineness": 0.75,
+    "is_active": true,
+    "updated_at": "2024-07-29T12:00:00.000Z"
+  },
+  {
+    "id": "purity-7",
+    "metal_id": "metal-1",
+    "label": "14K",
+    "fineness": 0.583,
+    "is_active": true,
+    "updated_at": "2024-07-29T12:00:00.000Z"
+  },
+  {
+    "id": "purity-4",
+    "metal_id": "metal-2",
+    "label": "925 Sterling",
+    "fineness": 0.925,
+    "is_active": true,
+    "updated_at": "2024-07-29T12:00:00.000Z"
+  },
+  {
+    "id": "purity-5",
+    "metal_id": "metal-3",
+    "label": "950",
+    "fineness": 0.95,
+    "is_active": true,
+    "updated_at": "2024-07-29T12:00:00.000Z"
+  },
+  {
+    "id": "purity-6",
+    "metal_id": "metal-4",
+    "label": "18K",
+    "fineness": 0.75,
+    "is_active": true,
+    "updated_at": "2024-07-29T12:00:00.000Z"
+  }
+]
