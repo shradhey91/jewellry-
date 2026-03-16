@@ -1,4 +1,3 @@
-
 'use server';
 
 import { z } from 'zod';
@@ -9,6 +8,8 @@ import { getUploadedMedia } from '@/lib/server/actions/media';
 
 const toBoolean = z.string().optional().transform(val => val?.toLowerCase() === 'true').default(false);
 const semicolonStringToArray = z.string().optional().transform(val => val ? val.split(';').map(s => s.trim()).filter(Boolean) : []);
+const emptyStringToNull = z.string().optional().transform(val => (val === '' || val === undefined) ? null : val);
+const emptyNumberToNull = z.string().optional().transform(val => (val === '' || val === undefined) ? null : Number(val)).pipe(z.number().nullable().optional());
 
 const BulkProductSchema = z.object({
   id: z.string().optional().nullable(),
@@ -28,7 +29,7 @@ const BulkProductSchema = z.object({
   making_charge_type: z.enum(['fixed', 'percentage']),
   making_charge_value: z.coerce.number(),
   auto_price_enabled: toBoolean,
-  manual_price: z.coerce.number().nullable().optional(),
+  manual_price: emptyNumberToNull,
   
   seo_title: z.string().optional(),
   seo_description: z.string().optional(),
@@ -41,27 +42,27 @@ const BulkProductSchema = z.object({
   media_5: z.string().optional().nullable(),
 
   // Variants (up to 3 for simplicity)
-  variant_1_label: z.string().optional().nullable(),
-  variant_1_stock: z.coerce.number().optional().nullable(),
-  variant_2_label: z.string().optional().nullable(),
-  variant_2_stock: z.coerce.number().optional().nullable(),
-  variant_3_label: z.string().optional().nullable(),
-  variant_3_stock: z.coerce.number().optional().nullable(),
+  variant_1_label: emptyStringToNull,
+  variant_1_stock: emptyNumberToNull,
+  variant_2_label: emptyStringToNull,
+  variant_2_stock: emptyNumberToNull,
+  variant_3_label: emptyStringToNull,
+  variant_3_stock: emptyNumberToNull,
 
   has_diamonds: toBoolean,
   // Single diamond component for simplicity
-  diamond_count: z.coerce.number().optional().nullable(),
-  diamond_weight: z.coerce.number().optional().nullable(),
-  diamond_price: z.coerce.number().optional().nullable(),
-  diamond_type: z.enum(['Natural', 'Lab-grown']).optional().nullable(),
-  diamond_cut: z.string().optional().nullable(),
-  diamond_color: z.string().optional().nullable(),
-  diamond_clarity: z.string().optional().nullable(),
+  diamond_count: emptyNumberToNull,
+  diamond_weight: emptyNumberToNull,
+  diamond_price: emptyNumberToNull,
+  diamond_type: emptyStringToNull.pipe(z.enum(['Natural', 'Lab-grown']).nullable().optional()),
+  diamond_cut: emptyStringToNull,
+  diamond_color: emptyStringToNull,
+  diamond_clarity: emptyStringToNull,
 
   has_size_dimensions: toBoolean,
-  height: z.coerce.number().nullable().optional(),
-  width: z.coerce.number().nullable().optional(),
-  length: z.coerce.number().nullable().optional(),
+  height: emptyNumberToNull,
+  width: emptyNumberToNull,
+  length: emptyNumberToNull,
   has_ring_size: toBoolean,
 });
 
