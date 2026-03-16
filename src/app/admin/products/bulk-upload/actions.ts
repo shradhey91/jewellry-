@@ -78,25 +78,44 @@ export interface BulkUploadState {
 }
 
 function parseCsv(csv: string): Record<string, string>[] {
-  const lines = csv.trim().split('\n');
+  // Normalize Windows/Mac line endings
+  const lines = csv.trim().replace(/\r\n/g, '\n').replace(/\r/g, '\n').split('\n');
   if (lines.length < 2) return [];
 
-  const headers = lines[0].split(',').map(h => h.trim());
+  const parseRow = (line: string): string[] => {
+    const result: string[] = [];
+    let current = '';
+    let insideQuotes = false;
+    for (let i = 0; i < line.length; i++) {
+      const char = line[i];
+      if (char === '"') {
+        if (insideQuotes && line[i + 1] === '"') {
+          current += '"';
+          i++; // skip escaped quote
+        } else {
+          insideQuotes = !insideQuotes;
+        }
+      } else if (char === ',' && !insideQuotes) {
+        result.push(current.trim());
+        current = '';
+      } else {
+        current += char;
+      }
+    }
+    result.push(current.trim());
+    return result;
+  };
+
+  const headers = parseRow(lines[0]);
   const rows = [];
 
   for (let i = 1; i < lines.length; i++) {
-    // Regex to split by comma but ignore commas inside quotes
-    const values = lines[i].split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-    
+    if (!lines[i].trim()) continue; // skip blank lines
+    const values = parseRow(lines[i]);
     const rowObject: Record<string, string> = {};
     for (let j = 0; j < headers.length; j++) {
-      const rawValue = values[j]?.trim() ?? '';
-      // Remove quotes if present and un-escape double quotes
-      if (rawValue.startsWith('"') && rawValue.endsWith('"')) {
-        rowObject[headers[j]] = rawValue.substring(1, rawValue.length - 1).replace(/""/g, '"');
-      } else {
-        rowObject[headers[j]] = rawValue;
-      }
+      // Always default to '' so emptyStringToNull/emptyNumberToNull work correctly
+      rowObject[headers[j]] = values[j] ?? '';
     }
     rows.push(rowObject);
   }
