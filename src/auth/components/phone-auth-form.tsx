@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -133,8 +132,8 @@ export function PhoneAuthForm() {
                <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <Label htmlFor="password">Password</Label>
-                    <Link href="/auth/forgot-password" passHref>
-                        <Button variant="link" size="sm" className="h-auto p-0 text-xs">Forgot password?</Button>
+                    <Link href="/auth/forgot-password" className="text-xs text-muted-foreground hover:text-primary underline-offset-4 hover:underline">
+                        Forgot password?
                     </Link>
                   </div>
                   <Input id="password" name="password" type="password" placeholder="" />
