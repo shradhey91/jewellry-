@@ -36,15 +36,15 @@ export function VideoHighlights({ eyebrow, title, description, items }: VideoHig
   return (
     <section className="bg-background">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-            <div className="p-8 flex flex-col justify-center text-left h-full bg-stone-100 rounded-lg lg:col-span-2 aspect-[4/5]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="grid grid-cols-2 gap-6">
+            <div className="p-8 flex flex-col justify-center text-left h-full bg-stone-100 rounded-lg col-span-1 aspect-[4/5]">
                 <p className="text-sm uppercase tracking-wider text-muted-foreground">{eyebrow}</p>
                 <h3 className="font-headline text-3xl mt-2">{title}</h3>
                 <p className="mt-4 text-muted-foreground">{description}</p>
             </div>
              {items.slice(0, 1).map(item => (
-                 <div key={item.id} className="lg:col-span-2">
+                 <div key={item.id} className="col-span-1">
                     <VideoCard item={item} />
                  </div>
              ))}

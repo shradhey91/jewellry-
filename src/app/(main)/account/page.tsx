@@ -94,10 +94,10 @@ export default function AccountPage() {
             <p className="text-muted-foreground">Welcome back, {user.name}!</p>
         </div>
         <Tabs defaultValue="orders" className="w-full">
-            <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="orders"><ShoppingBag className="mr-2 h-4 w-4"/>Your Orders</TabsTrigger>
-                <TabsTrigger value="security"><User className="mr-2 h-4 w-4"/>Login & Security</TabsTrigger>
-                <TabsTrigger value="addresses"><BookUser className="mr-2 h-4 w-4"/>Your Addresses</TabsTrigger>
+            <TabsList className="w-full flex overflow-x-auto">
+                <TabsTrigger value="orders" className="flex-1 min-w-max"><ShoppingBag className="mr-2 h-4 w-4"/>Your Orders</TabsTrigger>
+                <TabsTrigger value="security" className="flex-1 min-w-max"><User className="mr-2 h-4 w-4"/>Login & Security</TabsTrigger>
+                <TabsTrigger value="addresses" className="flex-1 min-w-max"><BookUser className="mr-2 h-4 w-4"/>Your Addresses</TabsTrigger>
             </TabsList>
             <TabsContent value="orders" className="mt-6">
                 <OrderHistory orders={orders} />

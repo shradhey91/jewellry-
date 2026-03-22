@@ -26,13 +26,13 @@ export function ImageBanner({
   const contentOrder = textPosition === "left" ? "md:flex-row" : "md:flex-row-reverse";
 
   return (
-    <section className="bg-background">
-      <div className="container mx-auto px-0 md:px-8">
-        <div className={cn("flex flex-col md:items-center", contentOrder)}>
+    <section className="bg-background overflow-hidden">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className={cn("flex flex-col md:flex-row md:items-center w-full", contentOrder)}>
           <div className="w-full md:w-1/2">
             <div className={cn("flex flex-col justify-center h-full p-8 md:p-16", textAlignment)}>
               <p className="text-lg tracking-wider uppercase text-muted-foreground">{subtitle}</p>
-              <h2 className="mt-2 text-4xl md:text-5xl font-headline">{title}</h2>
+              <h2 className="mt-2 text-3xl md:text-5xl font-headline">{title}</h2>
               <Button asChild className="mt-6 w-fit" variant="outline" size="lg">
                 <Link href={ctaLink}>{ctaText}</Link>
               </Button>

@@ -73,7 +73,7 @@ export function MinimalistHero({ data }: { data: { enabled: boolean; slides: Min
                 <div className="relative h-[80vh] md:h-[75vh] rounded-3xl overflow-hidden flex items-center">
                   {slide.type === 'video' && slide.videoUrl ? (
                     youtubeEmbedUrl ? (
-                      <div className="absolute top-1/2 left-1/2 w-[177.78vh] min-w-full min-h-full h-[100vh] -translate-x-1/2 -translate-y-1/2 scale-[1.35]">
+                      <div className="absolute top-1/2 left-1/2 w-[max(100%,177.78vh)] h-full -translate-x-1/2 -translate-y-1/2">
                          <iframe
                             key={slide.id}
                             src={youtubeEmbedUrl}

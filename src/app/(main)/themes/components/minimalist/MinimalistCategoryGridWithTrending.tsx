@@ -14,7 +14,7 @@ export function MinimalistCategoryGridWithTrending({ data }: { data: MinimalistH
         {data.categories.title}
       </h2>
 
-      <div className="grid grid-cols-3 gap-4 md:grid-cols-6 md:gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 md:grid-cols-6 md:gap-8">
         {data.categories.items.map((item) => (
           <Link
             key={item.id}

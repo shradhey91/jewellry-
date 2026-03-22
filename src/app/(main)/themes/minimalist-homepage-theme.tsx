@@ -27,7 +27,7 @@ interface MinimalistHomepageProps {
 
 export default function MinimalistHomepageTheme({ content, newestProducts, bestSellerProducts }: MinimalistHomepageProps) {
   return (
-    <div className="bg-background">
+    <div className="bg-background overflow-x-hidden w-full">
       <MinimalistHero
         data={content.hero}
       />

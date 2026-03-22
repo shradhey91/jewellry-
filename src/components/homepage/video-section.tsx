@@ -78,7 +78,7 @@ export function VideoSection({
   } as React.CSSProperties;
   
   const videoContainerClass = "absolute inset-0 w-full h-full overflow-hidden";
-  const videoClass = "absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover -translate-x-1/2 -translate-y-1/2 pointer-events-none";
+  const videoClass = "absolute inset-0 w-full h-full object-cover pointer-events-none";
 
   return (
     <section className="relative w-full overflow-hidden bg-black" style={sectionStyle}>
@@ -113,7 +113,7 @@ export function VideoSection({
         <h2 className="font-headline uppercase text-2xl md:text-3xl lg:text-4xl">
             {title}
         </h2>
-        <h1 className="font-headline uppercase font-bold text-6xl md:text-8xl lg:text-9xl xl:text-[150px] leading-none">
+        <h1 className="font-headline uppercase font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[130px] leading-none break-words max-w-full">
           {titleHighlight}
         </h1>
         <p className="mt-4 tracking-wider text-base md:text-lg">

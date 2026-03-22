@@ -30,7 +30,7 @@ export function HeroSlider({ items, height }: HeroSliderProps) {
 
 
   return (
-    <section className="w-full">
+    <section className="w-full overflow-hidden">
       <Carousel
         plugins={[plugin.current]}
         className="w-full"
@@ -44,9 +44,9 @@ export function HeroSlider({ items, height }: HeroSliderProps) {
           {items.map((item) => (
             <CarouselItem key={item.id}>
               <div 
-                className="relative w-full"
+                className="relative w-full overflow-hidden"
                 style={{
-                  ...sliderStyle,
+                  ...(height ? { height: `min(${height}px, 90vh)` } : {}),
                   aspectRatio: imageAspectRatio
                 }}
               >

@@ -38,7 +38,7 @@ export function ProductCarousel({ products, title }: ProductCarouselProps) {
                         <Link href="/shop">View All</Link>
                     </Button>
                 </div>
-                <div className="ml-0">
+                <div className="overflow-hidden">
                     <Carousel
                         plugins={[plugin.current]}
                         onMouseEnter={plugin.current.stop}

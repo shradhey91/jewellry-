@@ -18,7 +18,7 @@ export function DefaultHomepageTheme({ content, newestProducts, bestSellerProduc
   };
 
   return (
-    <main className="flex flex-col space-y-12 md:space-y-20 md:mb-20">
+    <main className="flex flex-col space-y-12 md:space-y-20 md:mb-20 overflow-x-hidden w-full">
       {content.layout.filter(section => section.visible).map((section: HomepageSection) => (
         <SectionRenderer key={section.id} section={section} {...sectionData} />
       ))}

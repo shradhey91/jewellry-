@@ -7,7 +7,7 @@ export function MinimalistTextHighlights({ data }: { data: TextHighlightsSection
   return (
     <section className="bg-secondary py-12 md:py-16">
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {data.items.map((highlight, index) => (
             <div key={index} className="text-center">
               <h3 className="font-semibold text-lg">{highlight.title}</h3>

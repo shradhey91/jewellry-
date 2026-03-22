@@ -90,8 +90,8 @@ export function Hero({
       {videoEnabled && videoUrl && (
         <div className="absolute inset-0 overflow-hidden">
           {isYoutube ? (
-            /* YouTube background – desktop-proof */
-            <div className="absolute top-1/2 left-1/2 w-[177.78vh] h-[100vh] -translate-x-1/2 -translate-y-1/2 scale-[1.35]">
+            /* YouTube background – cover via absolute centering, clipped by parent overflow-hidden */
+            <div className="absolute top-1/2 left-1/2 w-[max(100%,177.78vh)] h-full -translate-x-1/2 -translate-y-1/2">
               <iframe
                 src={embedUrl!}
                 className="w-full h-full pointer-events-none"
@@ -124,7 +124,7 @@ export function Hero({
           {title}
         </h2>
 
-        <h1 className="font-headline uppercase font-bold text-6xl md:text-8xl lg:text-9xl xl:text-[150px] leading-none">
+        <h1 className="font-headline uppercase font-bold text-5xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-[130px] leading-none break-words max-w-full">
           {titleHighlight}
         </h1>
 
