@@ -31,7 +31,7 @@ export function ImageSlider({ eyebrow, title, ctaText, ctaLink, items }: ImageSl
 
   return (
     <section className="bg-stone-100 py-12 md:py-20 overflow-hidden">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/3 text-center md:text-left">
                 <p className="text-sm uppercase tracking-wider text-muted-foreground">{eyebrow}</p>

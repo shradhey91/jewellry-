@@ -36,7 +36,7 @@ export default async function DiamondGuidePage() {
 
       {/* 4Cs Section */}
       <section className="py-16 md:py-24">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-headline font-bold">{content.fourCs.title}</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground text-lg">
@@ -67,7 +67,7 @@ export default async function DiamondGuidePage() {
 
       {/* Diamond Shapes Section */}
       <section className="py-16 md:py-24 bg-secondary/50">
-        <div className="container mx-auto max-w-6xl text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl text-center">
             <h2 className="text-4xl font-headline font-bold">{content.shapes.title}</h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground text-lg">
                 {content.shapes.subtitle}
@@ -87,7 +87,7 @@ export default async function DiamondGuidePage() {
 
       {/* Anatomy Section */}
       <section className="py-16 md:py-24">
-        <div className="container mx-auto max-w-4xl text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
              <h2 className="text-4xl font-headline font-bold">{content.anatomy.title}</h2>
              <p className="mt-4 max-w-2xl mx-auto text-muted-foreground text-lg">
                 {content.anatomy.subtitle}
@@ -100,7 +100,7 @@ export default async function DiamondGuidePage() {
 
        {/* CTA Section */}
       <section className="bg-primary text-primary-foreground">
-        <div className="container mx-auto max-w-4xl py-16 text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl py-16 text-center">
           <h2 className="text-3xl font-bold font-headline">{content.cta.title}</h2>
           <p className="mt-4 text-lg opacity-90">
             {content.cta.subtitle}

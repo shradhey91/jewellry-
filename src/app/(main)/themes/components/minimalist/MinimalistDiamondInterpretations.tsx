@@ -21,7 +21,7 @@ export function MinimalistDiamondInterpretations({ data }: { data: MinimalistHom
   if (!data?.enabled) return null;
 
   return (
-    <section className="bg-background px-6 mt-16 md:mt-20">
+    <section className="bg-background px-4 sm:px-6 lg:px-8 mt-16 md:mt-20">
       <h2 className="mb-10 text-center font-serif text-2xl md:text-3xl">
         {data.title}
       </h2>

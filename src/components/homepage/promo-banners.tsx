@@ -16,7 +16,7 @@ export function PromoBanners({ items }: PromoBannersProps) {
   
   return (
     <section className="bg-background">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {items.map((item) => (
             <Card key={item.id} className="bg-accent text-accent-foreground p-8 flex flex-col justify-between">

@@ -22,7 +22,7 @@ export function MinimalistImageSlider({ data }: { data: ImageSliderSection }) {
 
   return (
     <section className="bg-secondary py-16 md:py-20">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/3 text-center md:text-left">
                 <p className="text-sm uppercase tracking-wider text-muted-foreground">{data.eyebrow}</p>

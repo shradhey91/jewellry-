@@ -27,7 +27,7 @@ export function ImageBanner({
 
   return (
     <section className="bg-background overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className={cn("flex flex-col md:flex-row md:items-center w-full", contentOrder)}>
           <div className="w-full md:w-1/2">
             <div className={cn("flex flex-col justify-center h-full p-8 md:p-16", textAlignment)}>

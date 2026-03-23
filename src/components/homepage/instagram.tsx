@@ -13,7 +13,7 @@ export function Instagram({ handle, postImageUrls }: InstagramProps) {
 
     return (
         <section className="bg-secondary py-12 md:py-20">
-            <div className="container mx-auto text-center">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                  <h2 className="text-3xl font-headline text-center mb-2">Join Our Instagram</h2>
                  <p className="text-muted-foreground mb-8">{handle}</p>
                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">

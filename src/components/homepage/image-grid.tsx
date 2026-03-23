@@ -28,7 +28,7 @@ export function ImageGrid({ items }: ImageGridProps) {
 
     return (
         <section className="bg-background py-12 md:py-20">
-            <div className="container mx-auto">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {items.map((item, index) => (
                         <Card key={index} className="overflow-hidden group border-none shadow-none rounded-lg bg-transparent">

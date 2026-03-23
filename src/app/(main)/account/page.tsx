@@ -61,7 +61,7 @@ export default function AccountPage() {
 
   if (isLoading) {
     return (
-        <div className="container mx-auto py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="max-w-4xl mx-auto">
                 <AccountSkeleton />
             </div>
@@ -71,7 +71,7 @@ export default function AccountPage() {
 
   if (!user) {
     return (
-        <div className="container mx-auto py-12">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="max-w-2xl mx-auto">
                 <Card>
                 <CardHeader className="text-center">
@@ -87,7 +87,7 @@ export default function AccountPage() {
   }
 
   return (
-    <div className="container mx-auto py-12">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
             <h1 className="text-3xl font-bold font-headline tracking-tight">My Account</h1>

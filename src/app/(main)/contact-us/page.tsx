@@ -16,7 +16,7 @@ export default async function ContactUsPage() {
   
   return (
     <div className="bg-background">
-      <div className="container mx-auto max-w-6xl py-16 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl py-16 md:py-24">
         <div className="text-center mb-12">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary">
             Contact

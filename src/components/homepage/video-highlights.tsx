@@ -35,7 +35,7 @@ function VideoCard({ item }: { item: VideoHighlightItem }) {
 export function VideoHighlights({ eyebrow, title, description, items }: VideoHighlightsProps) {
   return (
     <section className="bg-background">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="grid grid-cols-2 gap-6">
             <div className="p-8 flex flex-col justify-center text-left h-full bg-stone-100 rounded-lg col-span-1 aspect-[4/5]">

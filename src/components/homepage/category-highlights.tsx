@@ -16,7 +16,7 @@ export function CategoryHighlights({ items, showText = true }: CategoryHighlight
 
     return (
         <section className="bg-background">
-            <div className="container mx-auto">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-nowrap justify-around items-center gap-2 overflow-x-auto pb-4 px-4 md:overflow-visible md:pb-0 md:px-0 md:gap-4">
                     {items.map((highlight) => (
                         <Link key={highlight.id} href={highlight.link} className="flex-shrink-0">

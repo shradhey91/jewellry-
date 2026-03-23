@@ -6,7 +6,7 @@ export function MinimalistTextHighlights({ data }: { data: TextHighlightsSection
   if (!data?.enabled || !data.items) return null;
   return (
     <section className="bg-secondary py-12 md:py-16">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {data.items.map((highlight, index) => (
             <div key={index} className="text-center">

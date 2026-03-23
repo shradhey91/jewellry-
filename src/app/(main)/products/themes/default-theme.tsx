@@ -97,7 +97,7 @@ export function DefaultTheme({ product, primaryCategory, crossSellProducts, upse
   
   return (
     <div className="bg-secondary/30">
-      <div className="container mx-auto py-8 md:py-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <Breadcrumb className="mb-6">
           <BreadcrumbList>
             <BreadcrumbItem>

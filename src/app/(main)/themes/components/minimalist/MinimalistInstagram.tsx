@@ -10,7 +10,7 @@ export function MinimalistInstagram({ data }: { data: InstagramSection }) {
 
     return (
         <section className="bg-secondary py-16 md:py-20">
-            <div className="container mx-auto text-center">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                  <h2 className="text-2xl md:text-3xl font-serif text-center mb-2">Join Our Instagram</h2>
                  <p className="text-muted-foreground mb-8">{data.handle}</p>
                  <div className="grid grid-cols-2 md:grid-cols-5 gap-4">

@@ -10,7 +10,7 @@ export function MinimalistSplitBanner({ data }: { data: SplitBannerSection }) {
 
   return (
     <section className="bg-background mt-16 md:mt-20">
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {data.banners.map((banner, index) => (
             <div key={index} className="relative aspect-[4/5] group overflow-hidden rounded-3xl">

@@ -8,7 +8,7 @@ export function MinimalistGiftsAndExperiences({ data }: { data: MinimalistHomepa
   if (!data?.enabled) return null;
 
   return (
-    <section className="bg-background px-6 mt-16 md:mt-32 mb-16 md:mb-32">
+    <section className="bg-background px-4 sm:px-6 lg:px-8 mt-16 md:mt-32 mb-16 md:mb-32">
       <div className="grid gap-12 md:grid-cols-2 items-stretch">
         {/* GIFT */}
         <div className="relative h-[420px] md:h-[520px] overflow-hidden rounded-3xl">

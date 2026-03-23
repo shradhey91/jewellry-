@@ -234,7 +234,7 @@ export function Header() {
   if (!isMounted || isLoadingMenu) {
       return (
         <header className="fixed top-0 z-50 w-full h-28 bg-background">
-            <div className="container mx-auto h-full flex items-center justify-between">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-between">
                 <div className="h-10 w-32 bg-muted rounded-md animate-pulse" />
                 <div className="flex items-center gap-8">
                      <div className="h-8 w-48 bg-muted rounded-md animate-pulse" />
@@ -280,7 +280,7 @@ export function Header() {
            "w-full border-b transition-all duration-300", 
            scrolled ? "bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md" : "bg-transparent border-transparent"
         )}>
-            <div className="container mx-auto flex flex-col">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
                 <div className="flex h-20 items-center justify-between">
                     {/* Left Section */}
                     <div className="flex flex-1 items-center justify-start">

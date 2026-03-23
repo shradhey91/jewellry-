@@ -21,7 +21,7 @@ export function SplitBanner({ banners }: SplitBannerProps) {
 
     return (
         <section className="bg-background py-12 md:py-20">
-            <div className="container mx-auto">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {banners.map((banner, index) => (
                          <div key={index} className="relative aspect-[4/5] group overflow-hidden rounded-lg">

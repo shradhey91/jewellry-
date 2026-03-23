@@ -12,7 +12,7 @@ const highlights = [
 export function IconHighlights() {
     return (
         <section className="bg-background py-12">
-            <div className="container mx-auto">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-around items-center">
                     {highlights.map((highlight, index) => (
                         <div key={index} className="flex flex-col items-center gap-2 text-center text-muted-foreground hover:text-primary transition-colors">

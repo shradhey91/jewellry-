@@ -57,7 +57,7 @@ export function MinimalistHero({ data }: { data: { enabled: boolean; slides: Min
   if (!data?.enabled || !data.slides || data.slides.length === 0) return null;
 
   return (
-    <section className="bg-background px-6 pt-6">
+    <section className="bg-background px-4 sm:px-6 lg:px-8 pt-6">
       <Carousel
         plugins={[plugin.current]}
         className="w-full"

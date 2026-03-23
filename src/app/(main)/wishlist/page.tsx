@@ -54,7 +54,7 @@ export default function WishlistPage() {
 
     if (isLoading || isUserLoading) {
         return (
-             <div className="container mx-auto py-12">
+             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <Skeleton className="h-8 w-48 mb-12" />
                 <WishlistGridSkeleton />
             </div>
@@ -64,7 +64,7 @@ export default function WishlistPage() {
     if (!user) {
         return (
             <div className="bg-secondary/30 min-h-[70vh] flex items-center">
-                <div className="container mx-auto py-12 md:py-20 flex flex-col items-center justify-center text-center">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 flex flex-col items-center justify-center text-center">
                     <div className="relative inline-block mb-6">
                         <Heart className="h-20 w-20 text-primary/30" />
                         <Heart className="h-8 w-8 text-primary absolute top-1/2 left-1/2 -translate-x-1/3 -translate-y-1/2 animate-ping" />
@@ -83,7 +83,7 @@ export default function WishlistPage() {
 
     return (
         <div className="bg-secondary/30 min-h-[70vh]">
-            <div className="container mx-auto py-12 md:py-20">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
                 <Breadcrumb className="mb-4">
                     <BreadcrumbList>
                     <BreadcrumbItem>

@@ -189,7 +189,7 @@ export function ShopPageClient({ content, categories, allCategories, products, m
     );
     
     return (
-        <div className="container mx-auto py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
             {/* Category selection */}
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
                 <h2 className="text-3xl font-headline font-bold">{content.main.title}</h2>

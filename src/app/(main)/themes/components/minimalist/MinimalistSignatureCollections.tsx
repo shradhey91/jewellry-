@@ -10,7 +10,7 @@ export function MinimalistSignatureCollections({ data }: { data: MinimalistHomep
   const { primary, secondary } = data.collections;
 
   return (
-    <section className="bg-background px-6 mt-16 md:mt-28">
+    <section className="bg-background px-4 sm:px-6 lg:px-8 mt-16 md:mt-28">
       <h2 className="mb-12 text-center font-serif text-2xl md:text-3xl">
         {data.title}
       </h2>
