@@ -1,4 +1,4 @@
-
+// src/app/layout.tsx
 "use client";
 
 import { useFavicon, FaviconProvider } from "@/hooks/use-favicon.tsx";
@@ -23,10 +23,8 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 });
 
-
 function FaviconUpdater() {
   const { currentFaviconUrl } = useFavicon();
-
   useEffect(() => {
     let link: HTMLLinkElement | null = document.querySelector("link[rel~='icon']");
     if (!link) {
@@ -34,9 +32,8 @@ function FaviconUpdater() {
       link.rel = 'icon';
       document.getElementsByTagName('head')[0].appendChild(link);
     }
-    link.href = currentFaviconUrl || '/favicon.ico'; // Fallback to a default
+    link.href = currentFaviconUrl || '/favicon.ico';
   }, [currentFaviconUrl]);
-
   return null;
 }
 
@@ -44,38 +41,25 @@ function SiteLayout({ children }: { children: React.ReactNode }) {
     const pathname = usePathname();
     const isAdminPage = pathname.startsWith('/admin');
     const isAuthPage = pathname.startsWith('/auth/login') || pathname.startsWith('/auth/signup');
-    
     const [isMounted, setIsMounted] = useState(false);
     useEffect(() => setIsMounted(true), []);
-    
-    // Safely use the hook on the client side
     const isMobile = useIsMobile();
     
-    useEffect(() => {
-        document.title = "Aparra";
-    }, []);
-
     const showHeader = !isAdminPage && !isAuthPage;
 
-    // Render skeleton or null during SSR and initial client render
     const HeaderComponent = () => {
-        if (!isMounted) {
-            return <div className="h-28" />; // Placeholder to prevent layout shift
-        }
+        if (!isMounted) return <div className="h-28" />;
         return isMobile ? <MobileHeader /> : <Header />;
     };
 
     return (
         <html lang="en" suppressHydrationWarning>
-          <head>
-              <FaviconUpdater />
-          </head>
-          <body 
-            className={cn(
-              "font-body antialiased",
-              montserrat.variable
-            )}
-          >
+          <head><FaviconUpdater /></head>
+          <body className={cn("font-body antialiased", montserrat.variable)}>
+            {/* Added Skip to Content Link */}
+            <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-white focus:p-4 focus:text-black">
+              Skip to content
+            </a>
             <Providers>
                 <div className="flex min-h-screen flex-col">
                   {showHeader && (
@@ -83,7 +67,10 @@ function SiteLayout({ children }: { children: React.ReactNode }) {
                         <HeaderComponent />
                     </Suspense>
                   )}
-                  <main className={cn("flex-1", showHeader && (isMobile ? "pt-16" : "pt-28"))}>{children}</main>
+                  {/* Added main-content ID */}
+                  <main id="main-content" className={cn("flex-1", showHeader && (isMobile ? "pt-16" : "pt-28"))}>
+                    {children}
+                  </main>
                 </div>
               <Toaster />
             </Providers>
@@ -92,11 +79,7 @@ function SiteLayout({ children }: { children: React.ReactNode }) {
     );
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
       <SiteLogoProvider>
         <FaviconProvider>
@@ -109,5 +92,3 @@ export default function RootLayout({
       </SiteLogoProvider>
   );
 }
-
-    

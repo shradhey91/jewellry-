@@ -1,17 +1,27 @@
-'use client';
+// src/app/(main)/themes/components/minimalist/MinimalistTextHighlights.tsx
+"use client";
 
 import type { TextHighlightsSection } from "@/lib/types";
 
-export function MinimalistTextHighlights({ data }: { data: TextHighlightsSection }) {
+export function MinimalistTextHighlights({
+  data,
+}: {
+  data: TextHighlightsSection;
+}) {
   if (!data?.enabled || !data.items) return null;
   return (
-    <section className="bg-secondary py-12 md:py-16">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    // Replaced bg-secondary with border-y treatment
+    <section className="bg-background border-y border-gray-100 py-10 my-8">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {data.items.map((highlight, index) => (
-            <div key={index} className="text-center">
-              <h3 className="font-semibold text-lg">{highlight.title}</h3>
-              <p className="text-muted-foreground mt-1 text-sm">{highlight.description}</p>
+            <div key={index} className="text-center px-4">
+              <h3 className="font-serif text-base md:text-lg">
+                {highlight.title}
+              </h3>
+              <p className="text-muted-foreground mt-1 text-xs md:text-sm">
+                {highlight.description}
+              </p>
             </div>
           ))}
         </div>
