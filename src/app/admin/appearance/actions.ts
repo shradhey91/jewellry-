@@ -344,7 +344,7 @@ function updateIconHighlights(
     showText: getFormBoolean(
       formData,
       "iconHighlights-showText",
-      original.iconHighlights.showText ?? false,
+      original.iconHighlights.showText ?? true,
     ),
   };
 }
