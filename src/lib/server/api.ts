@@ -229,9 +229,21 @@ export async function getCategories(): Promise<Category[]> {
     return JSON.parse(JSON.stringify(db.categories));
 };
 
+const resolveCategoryId = (id: string): string => {
+    // If it already matches a real ID, return as-is
+    if (db.categories.some(c => c.id === id)) return id;
+    // Try matching by slug derived from name e.g. "earrings" -> "cat-earrings"
+    const bySlug = db.categories.find(c =>
+        c.id === `cat-${id}` ||
+        c.name.toLowerCase().replace(/[^a-z0-9]+/g, '-') === id.toLowerCase()
+    );
+    return bySlug ? bySlug.id : id;
+};
+
 export async function getCategoryById(id: string): Promise<Category | undefined> {
     await db.initialize();
-    const category = db.categories.find(c => c.id === id);
+    const resolvedId = resolveCategoryId(id);
+    const category = db.categories.find(c => c.id === resolvedId);
     return category ? JSON.parse(JSON.stringify(category)) : undefined;
 };
 
@@ -243,8 +255,10 @@ const getSubCategoryIds = (parentId: string, allCategories: Category[]): string[
 export async function getProductsForCategory(categoryId: string): Promise<Product[]> {
     const allCategories = await getCategories();
     const allProducts = await getProducts();
-    
-    const categoryIdsToFilter = [categoryId, ...getSubCategoryIds(categoryId, allCategories)];
+
+    // Resolve slug to real ID if needed
+    const resolvedId = resolveCategoryId(categoryId);
+    const categoryIdsToFilter = [resolvedId, ...getSubCategoryIds(resolvedId, allCategories)];
     
     const filteredProducts = allProducts.filter(product => 
         product.category_ids.some(id => categoryIdsToFilter.includes(id))
