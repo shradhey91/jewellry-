@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useRef } from 'react';
@@ -59,14 +58,14 @@ export function HeroSlider({ items, height }: HeroSliderProps) {
                   priority
                 />
                 <div className="absolute inset-0 bg-black/40" />
-                <div className="relative z-10 flex h-full flex-col items-start justify-center p-8 text-left md:p-16 lg:p-24">
-                  <h2 className="max-w-2xl text-3xl font-bold font-headline md:text-5xl lg:text-6xl text-white">
+                <div className="relative z-10 flex h-full flex-col items-start justify-end pb-12 px-5 text-left sm:justify-center sm:pb-0 sm:px-10 md:px-16 lg:px-24">
+                  <h2 className="max-w-2xl text-xl font-bold font-headline sm:text-3xl md:text-5xl lg:text-6xl text-white leading-tight">
                     {item.title}
                   </h2>
-                  <p className="mt-4 max-w-lg text-sm md:text-lg text-white/90">
+                  <p className="mt-2 max-w-lg text-xs sm:text-sm md:text-lg text-white/90 line-clamp-3 sm:line-clamp-none">
                     {item.subtitle}
                   </p>
-                  <Button asChild size="lg" className="mt-8 bg-white text-black hover:bg-white/90">
+                  <Button asChild size="sm" className="mt-4 sm:mt-8 sm:size-lg bg-white text-black hover:bg-white/90 text-xs sm:text-sm">
                     <Link href={item.ctaLink}>{item.ctaText}</Link>
                   </Button>
                 </div>
@@ -74,8 +73,8 @@ export function HeroSlider({ items, height }: HeroSliderProps) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
-        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
+        <CarouselPrevious className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-10 sm:w-10" />
+        <CarouselNext className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-10 sm:w-10" />
       </Carousel>
     </section>
   );

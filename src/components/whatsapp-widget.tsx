@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -30,7 +29,7 @@ export function WhatsAppWidget({ phoneNumber, defaultMessage }: WhatsAppWidgetPr
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        'fixed bottom-8 right-8 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-transform duration-300 hover:scale-110 animate-elegant-jump'
+        'fixed bottom-20 right-4 sm:bottom-8 sm:right-8 z-50 flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full bg-green-500 text-white shadow-lg transition-transform duration-300 hover:scale-110 animate-elegant-jump'
       )}
       aria-label="Chat on WhatsApp"
     >

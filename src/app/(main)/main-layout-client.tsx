@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Footer } from "@/components/layout/footer";
@@ -21,8 +20,7 @@ export function MainLayoutClient({ footerContent, mobileFooterContent }: MainLay
   }, []);
 
   if (!isMounted) {
-    // Render a placeholder on the server and during initial client render
-    return <div className="h-96 bg-secondary" />;
+    return <div className="h-48 bg-secondary/50" />;
   }
 
   return (

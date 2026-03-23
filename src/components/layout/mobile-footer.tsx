@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -54,7 +53,7 @@ export function MobileFooter({ content }: MobileFooterProps) {
             </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t flex flex-col items-center">
+        <div className="mt-8 pt-8 border-t flex flex-col items-center pb-6">
           <div className="flex items-center space-x-4 text-muted-foreground text-xs">
             {content.bottom?.links.map((link, index) => (
                 <React.Fragment key={link.id}>
