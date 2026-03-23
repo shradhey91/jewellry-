@@ -328,6 +328,17 @@ export function AppearanceForm({ content: initialContent, categories }: Appearan
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-6">
                     <div className="space-y-6">
+                      <div className="flex items-center justify-between p-4 border rounded-lg">
+                        <div>
+                          <Label htmlFor="iconHighlights-showText" className="font-medium">Show Text Labels</Label>
+                          <p className="text-sm text-muted-foreground">Display the name below each icon on the homepage.</p>
+                        </div>
+                        <Switch
+                          id="iconHighlights-showText"
+                          name="iconHighlights-showText"
+                          defaultChecked={content.iconHighlights.showText !== false}
+                        />
+                      </div>
                       {content.iconHighlights.items.map((item, index) => (
                         <div key={item.id} className="p-4 border rounded-lg space-y-4">
                           <h4 className="font-semibold">Highlight {index + 1}</h4>
