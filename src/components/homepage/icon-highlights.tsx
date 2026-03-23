@@ -7,7 +7,7 @@ const highlights = [
     { name: 'Bracelets', icon: <Gem className="w-8 h-8" /> },
     { name: 'Rings', icon: <Circle className="w-8 h-8" /> },
     { name: 'Gifting', icon: <Gift className="w-8 h-8" /> },
-];
+]; 
 
 export function IconHighlights() {
     return (

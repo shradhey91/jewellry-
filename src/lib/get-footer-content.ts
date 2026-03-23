@@ -1,6 +1,3 @@
-
-import { promises as fs } from 'fs';
-import path from 'path';
 import type { FooterContent } from './types';
 import { db } from './server/db';
 

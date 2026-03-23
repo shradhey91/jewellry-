@@ -1,12 +1,9 @@
 
-
 'use server';
 
 // This file contains server-only data-fetching and mutation logic.
 // It is NOT meant to be imported into client components.
 
-import { promises as fs } from 'fs';
-import path from 'path';
 import type { Product, Metal, Purity, TaxClass, Category, ProductVariant, ProductMedia, DiamondDetail, Menu, MenuItem, ChangeHistory, Customer, User, ProductReview, Order, ShippingAddress, CartItem, SocialProofSettings, BlogPost, Address, SalesData, Role } from '@/lib/types';
 import { db } from './db';
 import { sendOrderConfirmationEmail } from '../email';
