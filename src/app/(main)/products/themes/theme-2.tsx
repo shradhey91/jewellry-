@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -117,33 +116,9 @@ export function Theme2({ product, primaryCategory, crossSellProducts, upsellProd
         
         <div className="grid md:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Left Column - Gallery */}
-            <div className="grid grid-cols-5 gap-2 md:gap-4 sticky top-28">
-                <div className="col-span-1 flex flex-col gap-2">
-                    {product.media.sort((a,b) => a.sort_order - b.sort_order).map(item => (
-                    <button
-                        key={item.id}
-                        onClick={() => setActiveMedia(item)}
-                        className={cn(
-                            "aspect-square w-full relative rounded-md overflow-hidden border-2 transition-all",
-                            item.id === activeMedia.id ? "border-primary shadow-md" : "border-transparent opacity-70 hover:opacity-100"
-                        )}
-                    >
-                        <Image
-                            src={item.media_type === 'video' ? "https://uncommongoods.in/media/images/Gemini_Generated_Image_nwhgufnwhgufnwhg.png" : item.url}
-                            alt={item.hint || 'Product thumbnail'}
-                            fill
-                            className="object-cover"
-                            sizes="10vw"
-                        />
-                        {item.media_type === 'video' && (
-                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                                <PlayCircle className="h-6 w-6 text-white" />
-                            </div>
-                        )}
-                    </button>
-                    ))}
-                </div>
-                <div className="col-span-4">
+            <div className="sticky top-28 flex flex-col gap-2 md:gap-4">
+                {/* Main image */}
+                <div className="w-full">
                     <Card className="overflow-hidden group">
                         <div className="aspect-square w-full relative">
                         {activeMedia?.media_type === 'video' ? (
@@ -169,6 +144,32 @@ export function Theme2({ product, primaryCategory, crossSellProducts, upsellProd
                         )}
                         </div>
                     </Card>
+                </div>
+                {/* Thumbnails row */}
+                <div className="grid grid-cols-5 gap-2">
+                    {product.media.sort((a,b) => a.sort_order - b.sort_order).map(item => (
+                    <button
+                        key={item.id}
+                        onClick={() => setActiveMedia(item)}
+                        className={cn(
+                            "aspect-square w-full relative rounded-md overflow-hidden border-2 transition-all",
+                            item.id === activeMedia.id ? "border-primary shadow-md" : "border-transparent opacity-70 hover:opacity-100"
+                        )}
+                    >
+                        <Image
+                            src={item.media_type === 'video' ? "https://uncommongoods.in/media/images/Gemini_Generated_Image_nwhgufnwhgufnwhg.png" : item.url}
+                            alt={item.hint || 'Product thumbnail'}
+                            fill
+                            className="object-cover"
+                            sizes="10vw"
+                        />
+                        {item.media_type === 'video' && (
+                            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                <PlayCircle className="h-6 w-6 text-white" />
+                            </div>
+                        )}
+                    </button>
+                    ))}
                 </div>
             </div>
             

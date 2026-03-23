@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useMemo, useEffect } from 'react';
@@ -225,7 +224,7 @@ export function ShopPageClient({ content, categories, allCategories, products, m
                                         Filters {activeFilterCount > 0 && `(${activeFilterCount})`}
                                     </Button>
                                 </SheetTrigger>
-                                <SheetContent side="left" className="w-[300px]">
+                                <SheetContent side="left" className="w-[85vw] sm:w-[300px]">
                                     <FilterSidebarContent />
                                 </SheetContent>
                             </Sheet>
@@ -239,7 +238,7 @@ export function ShopPageClient({ content, categories, allCategories, products, m
                                 <Button variant={columns === 4 ? 'secondary': 'ghost'} size="icon" className="h-8 w-8" onClick={() => setColumns(4)}><LayoutGrid /></Button>
                             </div>
                             <Select value={sortBy} onValueChange={setSortBy}>
-                                <SelectTrigger className="w-[180px]"><SelectValue placeholder="Sort by" /></SelectTrigger>
+                                <SelectTrigger className="w-[140px] sm:w-[180px]"><SelectValue placeholder="Sort by" /></SelectTrigger>
                                 <SelectContent>
                                     {sortOptions.map(option => (
                                     <SelectItem key={option.value} value={option.value}>{option.label}</SelectItem>

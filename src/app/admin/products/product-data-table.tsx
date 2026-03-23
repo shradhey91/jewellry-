@@ -11,7 +11,7 @@ const DataTableLoader = () => {
       <div className="flex items-center py-4">
         <Skeleton className="h-10 w-full max-w-sm" />
       </div>
-      <div className="rounded-md border">
+      <div className="rounded-md border overflow-x-auto">
         <div className="h-[500px] w-full"></div>
       </div>
     </div>

@@ -1,4 +1,3 @@
-
 "use client";
 
 import * as React from "react"
@@ -67,7 +66,7 @@ export function HistoryTable({ data }: HistoryTableProps) {
           className="max-w-sm"
         />
       </div>
-      <div className="rounded-md border">
+      <div className="rounded-md border overflow-x-auto">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (

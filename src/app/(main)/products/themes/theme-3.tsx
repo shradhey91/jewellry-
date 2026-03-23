@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -120,9 +119,9 @@ export function Theme3({ product, primaryCategory, crossSellProducts, upsellProd
                         <Image key={activeMedia?.id} src={activeMedia?.url || ''} alt={activeMedia?.hint || 'Product image'} fill className="object-cover transition-transform duration-300 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" priority />
                     )}
                 </div>
-                <div className="flex justify-center gap-3 mt-4">
+                <div className="flex justify-center gap-3 mt-4 overflow-x-auto pb-2 px-1">
                     {product.media.sort((a,b) => a.sort_order - b.sort_order).map(item => (
-                        <button key={item.id} onClick={() => setActiveMedia(item)} className={cn("h-20 w-20 relative rounded-md overflow-hidden border-2 transition-all", item.id === activeMedia.id ? "border-stone-800" : "border-transparent opacity-60 hover:opacity-100")}>
+                        <button key={item.id} onClick={() => setActiveMedia(item)} className={cn("h-20 w-20 flex-shrink-0 relative rounded-md overflow-hidden border-2 transition-all", item.id === activeMedia.id ? "border-stone-800" : "border-transparent opacity-60 hover:opacity-100")}>
                             <Image src={item.media_type === 'video' ? "https://uncommongoods.in/media/images/Gemini_Generated_Image_nwhgufnwhgufnwhg.png" : item.url} alt={item.hint || 'Product thumbnail'} fill className="object-cover" sizes="10vw" />
                              {item.media_type === 'video' && (
                                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">

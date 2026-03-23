@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -37,7 +36,7 @@ export function VideoHighlights({ eyebrow, title, description, items }: VideoHig
     <section className="bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="p-8 flex flex-col justify-center text-left h-full bg-stone-100 rounded-lg col-span-1 aspect-[4/5]">
                 <p className="text-sm uppercase tracking-wider text-muted-foreground">{eyebrow}</p>
                 <h3 className="font-headline text-3xl mt-2">{title}</h3>
