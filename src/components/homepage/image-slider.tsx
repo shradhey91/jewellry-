@@ -1,9 +1,22 @@
-
 'use client';
 
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
+
+function isVideo(url: string): boolean {
+  const clean = url.split('?')[0].toLowerCase();
+  return clean.endsWith('.mp4') || clean.endsWith('.webm') || clean.endsWith('.mov');
+}
+
+function safeUrl(url: string): string {
+  try {
+    // Already encoded or relative — just encode spaces if any remain
+    return url.replace(/ /g, '%20');
+  } catch {
+    return url;
+  }
+}
 import {
   Carousel,
   CarouselContent,
@@ -56,13 +69,24 @@ export function ImageSlider({ eyebrow, title, ctaText, ctaLink, items }: ImageSl
                             <CarouselItem key={item.id} className="basis-1/2 lg:basis-1/3">
                                 <div className="p-1">
                                     <div className="aspect-[4/5] relative rounded-lg overflow-hidden group">
-                                         <Image 
-                                            src={item.imageUrl}
-                                            alt={item.imageHint}
-                                            fill
-                                            className="object-cover transition-transform duration-300 group-hover:scale-105"
-                                            data-ai-hint={item.imageHint}
-                                        />
+                                        {isVideo(item.imageUrl) ? (
+                                            <video
+                                                src={safeUrl(item.imageUrl)}
+                                                autoPlay
+                                                muted
+                                                loop
+                                                playsInline
+                                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                            />
+                                        ) : (
+                                            <Image
+                                                src={safeUrl(item.imageUrl)}
+                                                alt={item.imageHint}
+                                                fill
+                                                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                                data-ai-hint={item.imageHint}
+                                            />
+                                        )}
                                     </div>
                                 </div>
                             </CarouselItem>
