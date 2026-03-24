@@ -24,9 +24,6 @@ export function HeroSlider({ items, height }: HeroSliderProps) {
     Autoplay({ delay: 5000, stopOnInteraction: true })
   )
 
-  const sliderStyle = height ? { height: `${height}px` } : {};
-  const imageAspectRatio = height ? undefined : "16/7";
-
   return (
     <section className="w-full overflow-hidden">
       <Carousel
@@ -41,13 +38,7 @@ export function HeroSlider({ items, height }: HeroSliderProps) {
         <CarouselContent>
           {items.map((item) => (
             <CarouselItem key={item.id}>
-              <div 
-                className="relative w-full overflow-hidden"
-                style={{
-                  ...(height ? { height: `min(${height}px, 100vh)` } : {}),
-                  aspectRatio: imageAspectRatio
-                }}
-              >
+              <div className="relative w-full h-screen max-h-[100vh] overflow-hidden">
                 <Image
                   src={item.imageUrl}
                   alt={item.imageHint}
@@ -55,25 +46,34 @@ export function HeroSlider({ items, height }: HeroSliderProps) {
                   className="object-cover"
                   data-ai-hint={item.imageHint}
                   priority
+                  sizes="100vw"
                 />
                 <div className="absolute inset-0 bg-black/40" />
-                <div className="relative z-10 flex h-full flex-col items-start justify-end pb-12 px-5 text-left sm:justify-center sm:pb-0 sm:px-10 md:px-16 lg:px-24">
-                  <h2 className="max-w-2xl text-xl font-bold font-headline sm:text-3xl md:text-5xl lg:text-6xl text-white leading-tight">
-                    {item.title}
-                  </h2>
-                  <p className="mt-2 max-w-lg text-xs sm:text-sm md:text-lg text-white/90 line-clamp-3 sm:line-clamp-none">
-                    {item.subtitle}
-                  </p>
-                  <Button asChild size="sm" className="mt-4 sm:mt-8 sm:size-lg bg-white text-black hover:bg-white/90 text-xs sm:text-sm">
-                    <Link href={item.ctaLink}>{item.ctaText}</Link>
-                  </Button>
+                
+                {/* Responsive content container */}
+                <div className="absolute inset-0 flex items-end sm:items-center justify-start">
+                  <div className="w-full px-5 pb-12 sm:pb-0 sm:px-10 md:px-16 lg:px-24 max-w-7xl mx-auto">
+                    <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold font-headline text-white leading-tight max-w-2xl">
+                      {item.title}
+                    </h2>
+                    <p className="mt-2 sm:mt-3 md:mt-4 text-sm sm:text-base md:text-lg text-white/90 max-w-lg">
+                      {item.subtitle}
+                    </p>
+                    <Button 
+                      asChild 
+                      size="default"
+                      className="mt-4 sm:mt-6 md:mt-8 bg-white text-black hover:bg-white/90 text-sm sm:text-base px-6 sm:px-8"
+                    >
+                      <Link href={item.ctaLink}>{item.ctaText}</Link>
+                    </Button>
+                  </div>
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-10 sm:w-10" />
-        <CarouselNext className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-10 sm:w-10" />
+        <CarouselPrevious className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-10 sm:w-10 bg-black/50 hover:bg-black/70 text-white border-none" />
+        <CarouselNext className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 h-8 w-8 sm:h-10 sm:w-10 bg-black/50 hover:bg-black/70 text-white border-none" />
       </Carousel>
     </section>
   );
