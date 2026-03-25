@@ -100,7 +100,31 @@ class Database {
   giftMessages: any[] = [];
   passwordResetTokens: PasswordResetToken[] = [];
 
+  // ---------------------------------------------------------------------------
+  // Initialization guard — ensures we only hit MongoDB once per server process.
+  // Previously, every api.ts function called db.initialize() which fired 23
+  // parallel MongoDB queries on EVERY request. Now it loads once and is reused.
+  // Call db.invalidate() after any write so the next read gets fresh data.
+  // ---------------------------------------------------------------------------
+  private _initialized = false;
+  private _initPromise: Promise<void> | null = null;
+
   async initialize() {
+    // Already loaded — return immediately, no DB round-trips
+    if (this._initialized) return;
+
+    // A load is already in progress (concurrent requests) — wait for it
+    if (this._initPromise) {
+      await this._initPromise;
+      return;
+    }
+
+    // First request: kick off the load and cache the promise
+    this._initPromise = this._doInitialize();
+    await this._initPromise;
+  }
+
+  private async _doInitialize() {
     [
       this.products,
       this.metals,
@@ -166,40 +190,104 @@ class Database {
     ) {
       this.developerSettings = { show_otp_in_admin: false };
     }
+
+    this._initialized = true;
+    this._initPromise = null;
+  }
+
+  /**
+   * Call this after any write operation so the next read reloads from MongoDB.
+   * This ensures admin changes are reflected without restarting the server.
+   */
+  invalidate() {
+    this._initialized = false;
+    this._initPromise = null;
   }
 
   // --- Collection save methods ---
-  saveProducts = () => replaceCollection("products", this.products);
-  saveMetals = () => replaceCollection("metals", this.metals);
-  savePurities = () => replaceCollection("purities", this.purities);
-  saveTaxClasses = () => replaceCollection("taxClasses", this.taxClasses);
-  saveCategories = () => replaceCollection("categories", this.categories);
-  saveMenus = () => replaceCollection("menus", this.menus);
-  saveHistory = () => replaceCollection("history", this.history);
-  saveUsers = () => replaceCollection("users", this.users);
-  saveRoles = () => replaceCollection("roles", this.roles);
-  saveReviews = () => replaceCollection("reviews", this.reviews);
-  saveOrders = () => replaceCollection("orders", this.orders);
-  saveDiscounts = () => replaceCollection("discounts", this.discounts);
-  savePosts = () => replaceCollection("blogPosts", this.posts);
+  saveProducts = async () => {
+    await replaceCollection("products", this.products);
+    this.invalidate();
+  };
+  saveMetals = async () => {
+    await replaceCollection("metals", this.metals);
+    this.invalidate();
+  };
+  savePurities = async () => {
+    await replaceCollection("purities", this.purities);
+    this.invalidate();
+  };
+  saveTaxClasses = async () => {
+    await replaceCollection("taxClasses", this.taxClasses);
+    this.invalidate();
+  };
+  saveCategories = async () => {
+    await replaceCollection("categories", this.categories);
+    this.invalidate();
+  };
+  saveMenus = async () => {
+    await replaceCollection("menus", this.menus);
+    this.invalidate();
+  };
+  saveHistory = () => replaceCollection("history", this.history); // history writes are frequent, don't invalidate
+  saveUsers = async () => {
+    await replaceCollection("users", this.users);
+    this.invalidate();
+  };
+  saveRoles = async () => {
+    await replaceCollection("roles", this.roles);
+    this.invalidate();
+  };
+  saveReviews = async () => {
+    await replaceCollection("reviews", this.reviews);
+    this.invalidate();
+  };
+  saveOrders = async () => {
+    await replaceCollection("orders", this.orders);
+    this.invalidate();
+  };
+  saveDiscounts = async () => {
+    await replaceCollection("discounts", this.discounts);
+    this.invalidate();
+  };
+  savePosts = async () => {
+    await replaceCollection("blogPosts", this.posts);
+    this.invalidate();
+  };
   savePasswordResetTokens = () =>
     replaceCollection("passwordResetTokens", this.passwordResetTokens);
   saveGiftMessages = () => replaceCollection("giftMessages", this.giftMessages);
   saveTempOtps = () => replaceCollection("tempOtps", this.tempOtps);
-  saveMediaLibrary = () => replaceCollection("mediaLibrary", this.mediaLibrary);
+  saveMediaLibrary = async () => {
+    await replaceCollection("mediaLibrary", this.mediaLibrary);
+    this.invalidate();
+  };
 
   // --- Singleton save methods ---
-  saveSettings = () => replaceSingleDoc("settings", this.settings);
-  saveThemeSettings = () =>
-    replaceSingleDoc("themeSettings", this.themeSettings);
-  saveSocialProofSettings = () =>
-    replaceSingleDoc("socialProof", this.socialProofSettings);
-  saveFooterContent = () =>
-    replaceSingleDoc("footerContent", this.footerContent);
-  saveMobileFooterContent = () =>
-    replaceSingleDoc("mobileFooterContent", this.mobileFooterContent);
-  saveDeveloperSettings = () =>
-    replaceSingleDoc("developerSettings", this.developerSettings);
+  saveSettings = async () => {
+    await replaceSingleDoc("settings", this.settings);
+    this.invalidate();
+  };
+  saveThemeSettings = async () => {
+    await replaceSingleDoc("themeSettings", this.themeSettings);
+    this.invalidate();
+  };
+  saveSocialProofSettings = async () => {
+    await replaceSingleDoc("socialProof", this.socialProofSettings);
+    this.invalidate();
+  };
+  saveFooterContent = async () => {
+    await replaceSingleDoc("footerContent", this.footerContent);
+    this.invalidate();
+  };
+  saveMobileFooterContent = async () => {
+    await replaceSingleDoc("mobileFooterContent", this.mobileFooterContent);
+    this.invalidate();
+  };
+  saveDeveloperSettings = async () => {
+    await replaceSingleDoc("developerSettings", this.developerSettings);
+    this.invalidate();
+  };
 
   async logChange(
     entity_type: ChangeHistory["entity_type"],

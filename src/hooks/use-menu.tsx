@@ -1,10 +1,13 @@
-
-
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, useMemo } from 'react';
+import React, { createContext, useContext, useMemo } from 'react';
 import type { Menu, Category } from '@/lib/types';
-import { getMenuById, getCategories } from "@/lib/server/api";
+
+// ---------------------------------------------------------------------------
+// MenuContext — menu data is now fetched on the SERVER (in layout.tsx) and
+// passed down as props. This eliminates the client-side fetch that was
+// causing the header to show a loading skeleton on every page navigation.
+// ---------------------------------------------------------------------------
 
 interface MenuContextType {
   menu: Menu | null;
@@ -14,35 +17,18 @@ interface MenuContextType {
 
 const MenuContext = createContext<MenuContextType | undefined>(undefined);
 
-export const MenuProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [menu, setMenu] = useState<Menu | null>(null);
-  const [categories, setCategories] = useState<Category[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+interface MenuProviderProps {
+  children: React.ReactNode;
+  menu: Menu | null;
+  categories: Category[];
+}
 
-  useEffect(() => {
-    const fetchMenuData = async () => {
-      try {
-        const [headerMenu, allCategories] = await Promise.all([
-            getMenuById("menu-1"),
-            getCategories()
-        ]);
-        setMenu(headerMenu || null);
-        setCategories(allCategories);
-      } catch (error) {
-        console.error("Failed to fetch menu data:", error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    fetchMenuData();
-  }, []);
-
+export const MenuProvider: React.FC<MenuProviderProps> = ({ children, menu, categories }) => {
   const value = useMemo(() => ({
     menu,
     categories,
-    isLoading,
-  }), [menu, categories, isLoading]);
+    isLoading: false, // Data is always ready — it came from the server
+  }), [menu, categories]);
 
   return <MenuContext.Provider value={value}>{children}</MenuContext.Provider>;
 };
@@ -54,6 +40,3 @@ export const useMenu = () => {
   }
   return context;
 };
-
-
-    
