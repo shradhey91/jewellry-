@@ -1,17 +1,6 @@
 
 'use server';
 
-/**
- * @fileOverview This file defines a Genkit flow for providing AI-powered suggestions for dynamic pricing.
- *
- * As an admin, I want to see AI-powered suggestions for manual price overrides, so I can quickly adjust prices
- * based on market trends and competitor pricing, while still adhering to the pricing formula.
- *
- * - getDynamicPricingSuggestions - A function that handles the dynamic pricing suggestion process.
- * - DynamicPricingSuggestionsInput - The input type for the getDynamicPricingSuggestions function.
- * - DynamicPricingSuggestionsOutput - The return type for the getDynamicPricingSuggestions function.
- */
-
 import {ai} from '@/ai/genkit';
 import { z } from 'zod';
 

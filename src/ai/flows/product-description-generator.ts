@@ -1,14 +1,6 @@
 
 'use server';
 
-/**
- * @fileOverview Product description generator AI agent.
- *
- * - generateProductDescription - A function that generates a product description based on product details.
- * - ProductDescriptionInput - The input type for the generateProductDescription function.
- * - ProductDescriptionOutput - The return type for the generateProductDescription function.
- */
-
 import {ai} from '@/ai/genkit';
 import { z } from 'zod';
 

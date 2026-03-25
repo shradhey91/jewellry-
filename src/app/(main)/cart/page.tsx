@@ -3,8 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { useCart } from "@/hooks/use-cart.tsx";
-import { useToast } from "@/hooks/use-toast.tsx";
+import { useCart } from "@/hooks/use-cart";
+import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -37,7 +37,6 @@ import {
   Check,
 } from "lucide-react";
 import { useUser } from "@/auth/hooks/use-user";
-import { getDiscounts } from "@/lib/server/actions/discounts";
 
 const formatCurrency = (amount: number) =>
   new Intl.NumberFormat("en-IN", {
@@ -120,43 +119,17 @@ export default function CartPage() {
   const { toast } = useToast();
   const { user, isLoading: isUserLoading } = useUser();
 
-  // Fetch active coupons on mount
+  // Fetch active coupons on mount using a secure client fetch request
   useEffect(() => {
     const fetchCoupons = async () => {
       try {
-        const allDiscounts = await getDiscounts();
-
-        const now = new Date().getTime(); // use timestamp for consistency
-
-        const activeCoupons = allDiscounts
-          .filter((d) => {
-            if (!d.is_active) return false;
-
-            if (d.start_date && new Date(d.start_date).getTime() > now)
-              return false;
-
-            if (d.end_date && new Date(d.end_date).getTime() < now)
-              return false;
-
-            if (d.usage_limit !== null && d.usage_count >= d.usage_limit)
-              return false;
-
-            return true;
-          })
-          .map((d) => ({
-            id: d.id,
-            code: d.code,
-            type: d.type,
-            value: d.value,
-            min_purchase: d.min_purchase,
-            description:
-              d.description ||
-              `${d.type === "percentage" ? d.value + "%" : "₹" + d.value} OFF${
-                d.min_purchase > 0 ? " on orders above ₹" + d.min_purchase : ""
-              }`,
-          }));
-
-        setAvailableCoupons(activeCoupons);
+        const response = await fetch("/api/discounts/active");
+        if (response.ok) {
+          const activeCoupons = await response.json();
+          setAvailableCoupons(activeCoupons);
+        } else {
+          console.error("Failed to fetch coupons from API.");
+        }
       } catch (error) {
         console.error("Failed to fetch coupons:", error);
       }

@@ -1,5 +1,3 @@
-
-
 import { getProductById, getMetals, getPurities, getTaxClasses, getProductsByIds, getCategories, getAllReviewsForProduct } from "@/lib/server/api";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/admin/page-header";

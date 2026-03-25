@@ -1,10 +1,10 @@
 "use client";
 
-import { CartProvider } from "@/hooks/use-cart.tsx";
+import { CartProvider } from "@/hooks/use-cart";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { MenuProvider } from "@/hooks/use-menu.tsx";
-import { WishlistProvider } from "@/hooks/use-wishlist.tsx";
-import { CompareProvider } from "@/hooks/use-compare.tsx";
+import { MenuProvider } from "@/hooks/use-menu";
+import { WishlistProvider } from "@/hooks/use-wishlist";
+import { CompareProvider } from "@/hooks/use-compare";
 import type { Menu, Category } from "@/lib/types";
 
 interface ProvidersProps {

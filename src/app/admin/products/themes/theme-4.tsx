@@ -8,7 +8,7 @@ import type { Product, ProductReview, Category, Metal, Purity, ProductVariant } 
 
 import { cn } from '@/lib/utils';
 
-import { PriceBreakupModal } from '../[id]/price-breakup-modal';
+import { PriceBreakupModal } from '@/app/(main)/products/[id]/price-breakup-modal';
 import { ProductCard } from '@/components/products/product-card';
 import { ProductCarousel } from '@/components/homepage/product-carousel';
 import { ProductGallery } from '@/components/products/product-gallery';

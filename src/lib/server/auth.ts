@@ -1,12 +1,31 @@
-
 'use server';
 
 import type { User } from '@/lib/types';
 import { db } from './db';
+import crypto from 'crypto';
 
-// In a real app, you would use a secure hashing algorithm like bcrypt
+// Securely verify a password against a stored hash
 export const verifyPassword = (password: string, hash: string): boolean => {
-    return password === hash;
+    // Fallback for existing plaintext passwords during the transition phase
+    if (!hash.includes(':')) {
+        return password === hash;
+    }
+    
+    try {
+        const [salt, key] = hash.split(':');
+        const hashedBuffer = crypto.scryptSync(password, salt, 64);
+        const keyBuffer = Buffer.from(key, 'hex');
+        return crypto.timingSafeEqual(hashedBuffer, keyBuffer);
+    } catch {
+        return false;
+    }
+}
+
+// Securely hash a new password with a random salt
+export const hashPassword = (password: string): string => {
+    const salt = crypto.randomBytes(16).toString('hex');
+    const hashedBuffer = crypto.scryptSync(password, salt, 64);
+    return `${salt}:${hashedBuffer.toString('hex')}`;
 }
 
 export const getUserByEmail = async (email: string): Promise<User | undefined> => {
@@ -107,6 +126,8 @@ export const createUser = async (userData: Omit<User, 'id' | 'created_at'>): Pro
     const newUser: User = {
         id: `user-${Date.now()}`,
         ...userData,
+        // Ensure the password is encrypted before saving it to the DB
+        password: userData.password ? hashPassword(userData.password) : undefined,
         created_at: new Date().toISOString(),
         email_verified: false,
         status: 'active',

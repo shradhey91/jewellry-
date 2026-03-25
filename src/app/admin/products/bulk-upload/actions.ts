@@ -6,7 +6,7 @@ import { saveProduct } from '@/lib/server/api';
 import type { Product, ProductMedia, ProductVariant, DiamondDetail } from '@/lib/types';
 import { getUploadedMedia } from '@/lib/server/actions/media';
 
-const toBoolean = z.string().optional().transform(val => val?.toLowerCase() === 'true').default(false);
+const toBoolean = z.string().optional().transform(val => val?.toLowerCase() === 'true');
 const semicolonStringToArray = z.string().optional().transform(val => val ? val.split(';').map(s => s.trim()).filter(Boolean) : []);
 const emptyStringToNull = z.string().optional().transform(val => (val === '' || val === undefined) ? null : val);
 const emptyNumberToNull = z.string().optional().transform(val => (val === '' || val === undefined) ? null : Number(val)).pipe(z.number().nullable().optional());
@@ -200,16 +200,16 @@ export async function bulkUploadProductsAction(
             }
         }
         
-        const diamond_details: DiamondDetail[] = [];
+       const diamond_details: DiamondDetail[] = [];
         if (validatedData.has_diamonds && validatedData.diamond_count) {
             diamond_details.push({
-                count: validatedData.diamond_count,
-                weight: validatedData.diamond_weight,
-                price: validatedData.diamond_price,
-                diamond_type: validatedData.diamond_type,
-                cut: validatedData.diamond_cut,
-                color: validatedData.diamond_color,
-                clarity: validatedData.diamond_clarity,
+                count: validatedData.diamond_count ?? null,
+                weight: validatedData.diamond_weight ?? null,
+                price: validatedData.diamond_price ?? null,
+                diamond_type: validatedData.diamond_type ?? null,
+                cut: validatedData.diamond_cut ?? null,
+                color: validatedData.diamond_color ?? null,
+                clarity: validatedData.diamond_clarity ?? null,
                 purity: null,
                 size: null,
                 rate_per_carat: null,
@@ -218,6 +218,7 @@ export async function bulkUploadProductsAction(
                 brand_margin: null,
             });
         }
+        
 
         const newProductData = {
             id: validatedData.id || 'new',

@@ -27,7 +27,7 @@ import {
 } from "@/components/ui/alert-dialog"
 import Link from "next/link"
 import { deleteProduct } from "@/lib/server/actions/products"
-import { useToast } from "@/hooks/use-toast.tsx"
+import { useToast } from "@/hooks/use-toast"
 import { useRouter } from "next/navigation"
 
 const formatCurrency = (amount: number) =>

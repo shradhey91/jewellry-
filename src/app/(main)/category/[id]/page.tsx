@@ -1,4 +1,3 @@
-// src/app/(main)/category/[id]/page.tsx
 import { getCategoryById, getProductsForCategory, getMetals, getPurities } from '@/lib/server/api';
 import { notFound } from 'next/navigation';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
@@ -22,7 +21,6 @@ export default async function CategoryPage({ params }: { params: { id: string } 
   }
 
   return (
-    // Reduced padding-top to prevent excessive stretching under the header
     <div className="container mx-auto px-4 py-4 md:py-8 lg:py-10">
       
       {/* Breadcrumb - Desktop only: Reduced margin */}

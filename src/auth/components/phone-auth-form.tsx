@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useFormState, useFormStatus } from 'react-dom';
 import { useRouter } from 'next/navigation';
 import { loginAction, sendVerificationOtpAction, verifyPhoneAction, LoginState, SendOtpState, VerifyPhoneState } from '@/auth/actions';
-import { useToast } from '@/hooks/use-toast.tsx';
+import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';

@@ -9,7 +9,7 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
-import { useHeaderSettings } from "@/hooks/use-header-settings.tsx";
+import { useHeaderSettings } from "@/hooks/use-header-settings";
 
 export function MobileHeaderSettingsForm() {
     const { settings, setSetting } = useHeaderSettings();

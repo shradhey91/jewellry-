@@ -1,19 +1,22 @@
-
-
-'use server';
-
 import { NextResponse, type NextRequest } from 'next/server';
+import { jwtVerify } from 'jose';
 
-// The session manager is deprecated. We now parse the cookie directly.
+// Must match the secret used in src/auth/actions.ts for signing
+const JWT_SECRET = new TextEncoder().encode(
+  process.env.JWT_SECRET || 'fallback-secret-key-change-in-production'
+);
+
 async function verifySessionCookie(session: string | undefined) {
   if (!session) {
     return null;
   }
   try {
-    const decodedClaims = JSON.parse(session);
-    return decodedClaims;
+    // Securely verify and decode the JWT
+    const { payload } = await jwtVerify(session, JWT_SECRET);
+    return payload;
   } catch (error) {
-    // This can happen if the cookie is malformed or invalid.
+    // This will catch tampered, malformed, or expired tokens
+    console.error('Session token verification failed:', error);
     return null;
   }
 }

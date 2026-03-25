@@ -1,4 +1,3 @@
-
 "use client";
 
 import { ColumnDef } from "@tanstack/react-table";
@@ -44,7 +43,6 @@ export const columns: ColumnDef<User>[] = [
     header: "Date Joined",
     cell: ({ row }) => {
         const date = new Date(row.getValue("created_at"));
-        // Use consistent date format to avoid hydration mismatch
         const formattedDate = date.toLocaleDateString('en-GB', {
           day: 'numeric',
           month: 'short',

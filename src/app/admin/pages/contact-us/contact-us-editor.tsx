@@ -23,7 +23,7 @@ export function ContactUsEditor({ initialContent }: ContactUsEditorProps) {
   const { toast } = useToast();
 
   const [state, formAction] = useFormState(
-    async (prevState: any, formData: FormData) => {
+    async (prevState: { success: boolean; message: string }, formData: FormData) => { 
       const data: ContactPageData = {
         title: formData.get('title') as string,
         subtitle: formData.get('subtitle') as string,
@@ -45,7 +45,7 @@ export function ContactUsEditor({ initialContent }: ContactUsEditorProps) {
 
       return result;
     },
-    { message: '' }
+    { success: false, message: '' }
   );
 
   const handleSubmit = (formData: FormData) => {

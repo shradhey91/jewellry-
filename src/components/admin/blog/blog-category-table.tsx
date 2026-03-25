@@ -1,4 +1,3 @@
-
 "use client";
 
 import {
@@ -26,7 +25,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MoreHorizontal, Trash2 } from "lucide-react";
 import type { BlogCategory } from "@/lib/types";
 import { deleteCategory } from "@/app/admin/blog/[slug]/actions";
-import { useToast } from "@/hooks/use-toast.tsx";
+import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 import {
   AlertDialog,

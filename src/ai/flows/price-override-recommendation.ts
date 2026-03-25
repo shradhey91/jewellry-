@@ -1,17 +1,6 @@
 
 'use server';
 
-/**
- * @fileOverview This file defines a Genkit flow for providing AI-powered recommendations for manual price overrides.
- *
- * It considers factors like competitor pricing, market trends, and inventory levels to optimize profitability.
- * The flow takes product information as input and returns a recommended price override and a rationale.
- *
- * - getPriceOverrideRecommendation - A function that handles the price override recommendation process.
- * - PriceOverrideRecommendationInput - The input type for the getPriceOverrideRecommendation function.
- * - PriceOverrideRecommendationOutput - The return type for the getPriceOverrideRecommendation function.
- */
-
 import {ai} from '@/ai/genkit';
 import { z } from 'zod';
 

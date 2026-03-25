@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState, useEffect } from 'react';
@@ -8,7 +7,7 @@ import { Search, Loader2, Copy } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { searchProductsByName } from '@/lib/server/actions/products';
 import type { Product } from '@/lib/types';
-import { useToast } from '@/hooks/use-toast.tsx';
+import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 
 const formatCurrency = (amount: number) =>

@@ -11,7 +11,6 @@ export async function GET(request: NextRequest) {
 
   try {
     const decodedClaims = JSON.parse(sessionCookie);
-    // Return only the necessary, non-sensitive user data
     const userData = {
         id: decodedClaims.id,
         email: decodedClaims.email,

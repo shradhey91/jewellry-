@@ -31,21 +31,14 @@ export function PageEditorDialog({ page, trigger }: PageEditorDialogProps) {
   const { toast } = useToast();
 
   const [state, formAction] = useFormState(
-    async (prevState: any, formData: FormData) => {
+    async (prevState: { success: boolean; message: string }, formData: FormData) => {
       const data = {
         title: formData.get('title') as string,
         content: formData.get('content') as string,
         status: formData.get('status') === 'on' ? 'Published' as const : 'Draft' as const,
       };
-      return await savePageData(page.id, data);
-    },
-    { message: '' }
-  );
-
-  // Handle form submission
-  const handleSubmit = (formData: FormData) => {
-    startTransition(async () => {
-      const result = await formAction(formData);
+      
+      const result = await savePageData(page.id, data);
       
       toast({
         title: result.success ? 'Success' : 'Error',
@@ -56,6 +49,16 @@ export function PageEditorDialog({ page, trigger }: PageEditorDialogProps) {
       if (result.success) {
         setOpen(false);
       }
+
+      return result;
+    },
+    { success: false, message: '' }
+  );
+
+  // Handle form submission
+  const handleSubmit = (formData: FormData) => {
+    startTransition(() => {
+      formAction(formData);
     });
   };
 

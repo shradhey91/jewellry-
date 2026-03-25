@@ -1,5 +1,3 @@
-
-
 import { PageHeader } from "@/components/admin/page-header";
 import { getMinimalistHomepageContent, getMobileMinimalistHomepageContent } from "@/lib/get-minimalist-homepage-content";
 import { getCategories } from "@/lib/server/api";

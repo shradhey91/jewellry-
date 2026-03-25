@@ -11,11 +11,11 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import Image from "next/image";
 import { saveSettingsAction, SettingsFormState } from "./actions";
-import { useToast } from "@/hooks/use-toast.tsx";
+import { useToast } from "@/hooks/use-toast";
 import { Upload } from "lucide-react";
-import { useFavicon } from "@/hooks/use-favicon.tsx";
+import { useFavicon } from "@/hooks/use-favicon";
 import { Separator } from "@/components/ui/separator";
-import { useSiteLogo } from "@/hooks/use-site-logo.tsx";
+import { useSiteLogo } from "@/hooks/use-site-logo";
 
 function SubmitButton() {
     const { pending } = useFormStatus();
@@ -47,10 +47,10 @@ export default function SettingsPage() {
     setState(result);
   };
   
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, setter: (url: string | null) => void, type: 'Logo' | 'Favicon') => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, setter: (url: string) => void, type: 'Logo' | 'Favicon') => {
     const file = e.target.files?.[0];
     if (file) {
-      if (file.size > 2 * 1024 * 1024) { // 2MB size limit
+      if (file.size > 2 * 1024 * 1024) {
         toast({ title: "File too large", description: `Please select an image smaller than 2MB.`, variant: "destructive" });
         return;
       }

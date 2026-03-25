@@ -1,8 +1,8 @@
 // src/app/layout.tsx
-import { FaviconProvider } from "@/hooks/use-favicon.tsx";
-import { SiteLogoProvider } from "@/hooks/use-site-logo.tsx";
-import { HeaderSettingsProvider } from "@/hooks/use-header-settings.tsx";
-import { SocialProofProvider } from "@/hooks/use-social-proof.tsx";
+import { FaviconProvider } from "@/hooks/use-favicon";
+import { SiteLogoProvider } from "@/hooks/use-site-logo";
+import { HeaderSettingsProvider } from "@/hooks/use-header-settings";
+import { SocialProofProvider } from "@/hooks/use-social-proof";
 import { Montserrat } from 'next/font/google';
 import './globals.css';
 import { Providers } from '@/app/providers';

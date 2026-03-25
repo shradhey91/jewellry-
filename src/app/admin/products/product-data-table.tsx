@@ -5,6 +5,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { columns } from "./columns";
 import { Product } from "@/lib/types";
 
+import { DataTable as OriginalDataTable } from "./data-table";
+
 const DataTableLoader = () => {
   return (
     <div className="space-y-4">
@@ -24,7 +26,7 @@ const DataTable = dynamic(
     ssr: false,
     loading: () => <DataTableLoader />,
   }
-);
+) as typeof OriginalDataTable;
 
 interface ProductDataTableProps {
   data: Product[];

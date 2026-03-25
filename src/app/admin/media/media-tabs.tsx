@@ -8,9 +8,9 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Trash2, Upload, Video } from "lucide-react";
 import type { HomepageContent, DiamondGuideContent } from "@/lib/types";
-import { useToast } from "@/hooks/use-toast.tsx";
-import { useSiteLogo } from "@/hooks/use-site-logo.tsx";
-import { useFavicon } from "@/hooks/use-favicon.tsx";
+import { useToast } from "@/hooks/use-toast";
+import { useSiteLogo } from "@/hooks/use-site-logo";
+import { useFavicon } from "@/hooks/use-favicon";
 import { Input } from "@/components/ui/input";
 
 import { getUploadedMedia, deleteFileAction, uploadFileAction } from "@/lib/server/actions/media";

@@ -17,7 +17,7 @@ import type { BlogPost, BlogTheme, BlogCategory } from '@/lib/types';
 import { getPostBySlug, savePost, getAllPosts, getAllCategories, PostFormState } from './actions';
 import { RelatedPostsManager } from '@/components/admin/blog/related-posts-manager';
 import { ProductSearch } from '@/components/admin/blog/product-search';
-import { useToast } from '@/hooks/use-toast.tsx';
+import { useToast } from '@/hooks/use-toast';
 import { useFormStatus } from 'react-dom';
 import { BlogCategoryManager } from '@/components/admin/blog/blog-category-manager';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
@@ -233,7 +233,7 @@ export default function EditBlogPostPage({ params }: { params: { slug: string } 
                     <CardFooter className="flex justify-end gap-2">
                         <SubmitButton intent="save" isPublished={post.status === 'published'} isScheduled={!!isScheduled} />
                         {post.status === 'draft' ? (
-                            <SubmitButton intent="publish" isPublished={post.status === 'published'} isScheduled={!!isScheduled} />
+                            <SubmitButton intent="publish" isPublished={false} isScheduled={!!isScheduled} />
                         ) : (
                              <SubmitButton intent="unpublish" isPublished={post.status === 'published'} isScheduled={!!isScheduled} />
                         )}

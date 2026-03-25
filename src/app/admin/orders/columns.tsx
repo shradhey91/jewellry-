@@ -1,5 +1,3 @@
-
-
 'use client';
 
 import { ColumnDef } from "@tanstack/react-table";
@@ -20,7 +18,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { format } from 'date-fns';
 import { updateOrderStatus } from "./actions";
-import { useToast } from "@/hooks/use-toast.tsx";
+import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 import { UpdateStatusDialog } from "./update-status-dialog";
 
@@ -33,12 +31,13 @@ const formatCurrency = (amount: number) =>
   }).format(amount);
 
 const StatusBadge = ({ status }: { status: Order['status'] }) => {
-    const variant: "default" | "secondary" | "destructive" | "outline" = {
+    const variantMap: Record<Order['status'], "default" | "secondary" | "destructive" | "outline"> = {
         processing: 'default',
         shipped: 'secondary',
         delivered: 'secondary',
         cancelled: 'destructive'
-    }[status] || 'outline';
+    };
+    const variant = variantMap[status] || 'outline';
 
     if(status === 'delivered') {
          return <Badge variant={variant} className="bg-green-600 text-white hover:bg-green-700">Delivered</Badge>

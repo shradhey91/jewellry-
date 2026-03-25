@@ -6,61 +6,77 @@
 
 "use client";
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Slider } from "@/components/ui/slider";
-import { useHeaderSettings } from "@/hooks/use-header-settings.tsx";
+import { useHeaderSettings } from "@/hooks/use-header-settings";
 
 export function HeaderSettingsForm() {
-    const { settings, setSetting } = useHeaderSettings();
+  const { settings, setSetting } = useHeaderSettings();
 
-    return (
-        <div className="space-y-6">
-            <Card>
-                <CardHeader>
-                    <CardTitle>Logo Settings</CardTitle>
-                    <CardDescription>Adjust the appearance of your site logo in the header.</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                    <div className="space-y-2">
-                        <Label>Logo Size</Label>
-                        <div className="flex items-center gap-4">
-                            <Slider
-                                value={[settings.logoWidth]}
-                                onValueChange={([value]) => setSetting('logoWidth', value)}
-                                min={4}
-                                max={16}
-                                step={1}
-                            />
-                            <span className="text-sm text-muted-foreground w-12 text-right">{settings.logoWidth * 4}px</span>
-                        </div>
-                         <p className="text-xs text-muted-foreground">Controls the height of the logo. Width will adjust automatically.</p>
-                    </div>
-                </CardContent>
-            </Card>
+  return (
+    <div className="space-y-6">
+      <Card>
+        <CardHeader>
+          <CardTitle>Logo Settings</CardTitle>
+          <CardDescription>
+            Adjust the appearance of your site logo in the header.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="space-y-2">
+            <Label>Logo Size</Label>
+            <div className="flex items-center gap-4">
+              <Slider
+                value={[settings.logoWidth]}
+                onValueChange={([value]) => setSetting("logoWidth", value)}
+                min={4}
+                max={16}
+                step={1}
+              />
+              <span className="text-sm text-muted-foreground w-12 text-right">
+                {settings.logoWidth * 4}px
+              </span>
+            </div>
+            <p className="text-xs text-muted-foreground">
+              Controls the height of the logo. Width will adjust automatically.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
 
-             <Card>
-                <CardHeader>
-                    <CardTitle>Scroll Behavior</CardTitle>
-                    <CardDescription>Control how the header behaves when users scroll the page.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                     <div className="flex items-center justify-between rounded-lg border p-4">
-                        <div className="space-y-0.5">
-                            <Label htmlFor="hide-on-scroll" className="text-base">Hide Header on Scroll</Label>
-                            <p className="text-sm text-muted-foreground">
-                                The header will hide on scroll down and reappear on scroll up.
-                            </p>
-                        </div>
-                        <Switch 
-                            id="hide-on-scroll" 
-                            checked={settings.hideOnScroll} 
-                            onCheckedChange={(checked) => setSetting('hideOnScroll', checked)} 
-                        />
-                    </div>
-                </CardContent>
-            </Card>
-        </div>
-    );
+      <Card>
+        <CardHeader>
+          <CardTitle>Scroll Behavior</CardTitle>
+          <CardDescription>
+            Control how the header behaves when users scroll the page.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="flex items-center justify-between rounded-lg border p-4">
+            <div className="space-y-0.5">
+              <Label htmlFor="hide-on-scroll" className="text-base">
+                Hide Header on Scroll
+              </Label>
+              <p className="text-sm text-muted-foreground">
+                The header will hide on scroll down and reappear on scroll up.
+              </p>
+            </div>
+            <Switch
+              id="hide-on-scroll"
+              checked={settings.hideOnScroll}
+              onCheckedChange={(checked) => setSetting("hideOnScroll", checked)}
+            />
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
 }

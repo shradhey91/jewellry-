@@ -1,5 +1,3 @@
-
-
 'use client';
 
 import { useFormState, useFormStatus } from 'react-dom';
@@ -8,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { useToast } from '@/hooks/use-toast.tsx';
+import { useToast } from '@/hooks/use-toast';
 import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';

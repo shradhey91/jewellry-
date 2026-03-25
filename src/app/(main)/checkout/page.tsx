@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Script from 'next/script';
-import { useCart } from '@/hooks/use-cart.tsx';
+import { useCart } from '@/hooks/use-cart';
 import { Button } from '@/components/ui/button';
 import { useForm, FormProvider } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -14,7 +14,7 @@ import { ShippingForm } from '@/components/checkout/shipping-form';
 import { OrderSummary } from '@/components/checkout/order-summary';
 import { placeOrderAction, PlaceOrderFormState } from './actions';
 import { createCashfreeOrder, verifyCashfreePayment } from './razorpay-actions';
-import { useToast } from '@/hooks/use-toast.tsx';
+import { useToast } from '@/hooks/use-toast';
 import { getAccountDetails } from '@/app/(main)/account/actions';
 import type { User } from '@/lib/types';
 
@@ -296,7 +296,7 @@ export default function CheckoutPage() {
                             >
                                 {isSubmitting ? (
                                     <span className="flex items-center gap-2">
-                                        <Sparkles className="w-4 h-4 md:w-5 h-5 animate-spin" />
+                                        <Sparkles className="w-4 h-4 md:w-5 animate-spin" />
                                         <span className="hidden xs:inline">Processing Your Magic...</span>
                                         <span className="xs:hidden">Processing...</span>
                                     </span>

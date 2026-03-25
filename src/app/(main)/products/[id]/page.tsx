@@ -1,5 +1,3 @@
-
-
 import { getProductById, getProductsByIds, getProductReviews, getMetalById, getPurityById, getCategoryById, getThemeSettings } from '@/lib/server/api';
 import { notFound } from 'next/navigation';
 import { DefaultTheme } from '../themes/default-theme';
@@ -45,7 +43,7 @@ export default async function ProductPageController({ params }: { params: { id: 
   // 2. Prepare props for the theme component
   const themeProps = {
     product,
-    primaryCategory,
+    primaryCategory: primaryCategory ?? null,
     crossSellProducts,
     upsellProducts,
     reviews,

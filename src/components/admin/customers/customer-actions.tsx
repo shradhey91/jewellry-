@@ -14,7 +14,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuSeparator,
 } from '@/components/ui/dropdown-menu';
-import { useToast } from '@/hooks/use-toast.tsx';
+import { useToast } from '@/hooks/use-toast';
 import { banUserAction, unbanUserAction } from '@/app/admin/customers/actions';
 import type { User } from '@/lib/types';
 import { CustomerDialog } from './customer-dialog';

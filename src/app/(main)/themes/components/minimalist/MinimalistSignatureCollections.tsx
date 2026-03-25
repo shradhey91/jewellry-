@@ -1,4 +1,3 @@
-// src/app/(main)/themes/components/minimalist/MinimalistSignatureCollections.tsx
 "use client";
 
 import Image from "next/image";

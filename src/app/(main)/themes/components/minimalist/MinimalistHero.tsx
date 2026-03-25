@@ -31,7 +31,7 @@ export function MinimalistHero({ data }: { data: { enabled: boolean; slides: Min
               {/* Mobile height 55vh, desktop 75vh */}
               <div className="relative h-[55vh] md:h-[75vh] rounded-3xl overflow-hidden flex items-center">
                 {slide.type === 'video' ? (
-                  <video src={slide.videoUrl} className="absolute inset-0 w-full h-full object-cover" autoPlay loop muted playsInline />
+                  <video src={slide.videoUrl || ""} className="absolute inset-0 w-full h-full object-cover" autoPlay loop muted playsInline />
                 ) : (
                   <Image src={slide.imageUrl} alt={slide.title} fill className="object-cover" priority />
                 )}

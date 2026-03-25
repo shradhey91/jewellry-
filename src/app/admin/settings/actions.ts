@@ -9,3 +9,5 @@ export async function saveSettingsAction(
 ): Promise<SettingsFormState> {
   return saveSettingsActionApi(prevState, formData);
 }
+
+export { SettingsFormState };

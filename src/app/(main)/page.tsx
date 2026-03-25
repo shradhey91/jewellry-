@@ -1,5 +1,3 @@
-
-
 import { getProducts, getProductsForCategory, getThemeSettings } from "@/lib/server/api";
 import { getHomepageContent } from "@/lib/get-homepage-content";
 import { getMinimalistHomepageData } from "@/lib/get-minimalist-homepage-content";

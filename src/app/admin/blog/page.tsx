@@ -42,7 +42,7 @@ import { Badge } from "@/components/ui/badge";
 import type { BlogPost } from "@/lib/types";
 import { getAllPosts, deletePostAction } from "@/app/admin/blog/[slug]/actions";
 import Image from "next/image";
-import { useToast } from "@/hooks/use-toast.tsx";
+import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 
 function BlogPosts() {

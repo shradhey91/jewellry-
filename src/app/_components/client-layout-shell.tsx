@@ -1,15 +1,8 @@
 "use client";
 
-// ClientLayoutShell handles everything that needs client-side APIs:
-// - Reading the pathname to show/hide the header
-// - Detecting mobile vs desktop for the right header component
-// - Updating the favicon
-// This is a separate component because the root layout.tsx is now an async
-// Server Component (needed to fetch menu data server-side).
-
 import { useEffect, useState, Suspense } from "react";
 import { usePathname } from "next/navigation";
-import { useFavicon } from "@/hooks/use-favicon.tsx";
+import { useFavicon } from "@/hooks/use-favicon";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Header } from "@/components/layout/header";
 import { MobileHeader } from "@/components/layout/mobile-header";
@@ -18,7 +11,8 @@ import { cn } from "@/lib/utils";
 function FaviconUpdater() {
   const { currentFaviconUrl } = useFavicon();
   useEffect(() => {
-    let link: HTMLLinkElement | null = document.querySelector("link[rel~='icon']");
+    let link: HTMLLinkElement | null =
+      document.querySelector("link[rel~='icon']");
     if (!link) {
       link = document.createElement("link");
       link.rel = "icon";
@@ -29,7 +23,11 @@ function FaviconUpdater() {
   return null;
 }
 
-export default function ClientLayoutShell({ children }: { children: React.ReactNode }) {
+export default function ClientLayoutShell({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const pathname = usePathname();
   const isAdminPage = pathname.startsWith("/admin");
   const isAuthPage =

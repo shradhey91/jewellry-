@@ -1,5 +1,3 @@
-
-
 import { getProducts, getAllOrders, getDeveloperSettings, getTempOtps, getUsers } from "@/lib/server/api";
 import { getAllPosts } from "@/app/admin/blog/[slug]/actions";
 import { DashboardClient } from "./dashboard-client";

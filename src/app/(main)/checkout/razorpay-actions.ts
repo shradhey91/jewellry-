@@ -1,9 +1,9 @@
-
 'use server';
 
 import { z } from 'zod';
 import { getSettings } from '@/lib/server/api';
 import { randomUUID } from 'crypto';
+import { headers } from 'next/headers';
 
 const CASHFREE_API_URL = 'https://sandbox.cashfree.com/pg'; 
 
@@ -29,6 +29,10 @@ export async function createCashfreeOrder(amount: number, customerDetails: { id:
         return null;
     }
 
+    // Dynamically get the current origin to ensure it works in production
+    const headersList = headers();
+    const origin = headersList.get('origin') || process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+
     const orderId = `order_${randomUUID()}`;
 
     try {
@@ -51,8 +55,8 @@ export async function createCashfreeOrder(amount: number, customerDetails: { id:
                     customer_name: customerDetails.name,
                 },
                 order_meta: {
-                    // return_url is not used by this SDK flow but required by API in some cases.
-                    return_url: `http://localhost:3000/checkout/order-confirmation/{order_id}`, 
+                    // Replaced hardcoded localhost with dynamic origin
+                    return_url: `${origin}/checkout/order-confirmation/{order_id}`, 
                 }
             })
         });

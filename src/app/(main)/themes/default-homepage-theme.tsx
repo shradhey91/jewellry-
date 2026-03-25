@@ -1,4 +1,3 @@
-
 'use client';
 
 import type { HomepageSection, Product, HomepageContent } from '@/lib/types';

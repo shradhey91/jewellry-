@@ -7,7 +7,7 @@ import { saveCategory, CategoryFormState } from "@/app/admin/blog/[slug]/actions
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast.tsx";
+import { useToast } from "@/hooks/use-toast";
 import { PlusCircle } from "lucide-react";
 import type { BlogCategory } from "@/lib/types";
 
