@@ -100,9 +100,9 @@ export default function EditBlogPostPage({ params }: { params: { slug: string } 
   useEffect(() => {
     if (state.message) {
         toast({
-            title: state.errors ? "Error" : "Success",
+            title: state.errors && Object.keys(state.errors).length > 0 ? "Error" : "Success",
             description: state.message,
-            variant: state.errors ? "destructive" : "default",
+            variant: state.errors && Object.keys(state.errors).length > 0 ? "destructive" : "default",
         });
         if (state.post_slug && state.post_slug !== params.slug) {
             router.push(`/admin/blog/${state.post_slug}`);

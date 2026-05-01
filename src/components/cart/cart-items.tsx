@@ -1,5 +1,7 @@
 "use client";
 
+import { formatCurrency } from '@/lib/utils';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -12,20 +14,12 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { getGiftMessages } from '@/lib/server/api';
+import { getGiftMessagesAction } from '@/lib/actions/client-data';
 
 interface GiftMessageCategory {
   category: string;
   messages: string[];
 }
-
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
 
 export function CartItems() {
   const { cartItems, removeFromCart, updateQuantity, updateGiftMessage } = useCart();
@@ -35,7 +29,7 @@ export function CartItems() {
   const [selectedGiftCategories, setSelectedGiftCategories] = useState<{[key: string]: string}>({});
 
   useEffect(() => {
-    getGiftMessages().then(setGiftMessageSuggestions);
+    getGiftMessagesAction().then(setGiftMessageSuggestions);
   }, []);
 
   const handleQuantityChange = (itemId: string, newQuantity: number) => {

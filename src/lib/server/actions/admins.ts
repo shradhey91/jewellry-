@@ -2,24 +2,14 @@
 
 'use server';
 
+import { verifyAdmin } from '@/lib/server/auth-admin';
+
 import { z } from "zod";
 import { revalidatePath } from "next/cache";
 import type { User } from '@/lib/types';
 import { db } from '../db';
 import { cookies } from 'next/headers';
 
-async function verifyAdmin() {
-  const sessionCookie = cookies().get('session')?.value;
-  if (!sessionCookie) throw new Error("Authentication required.");
-  try {
-    const claims = JSON.parse(sessionCookie);
-    if (claims.role !== 'admin') {
-      throw new Error("Authorization failed.");
-    }
-  } catch {
-    throw new Error('Invalid session.');
-  }
-}
 
 async function saveUser(userData: Omit<User, 'id' | 'created_at'> & { id?: string }) {
   await db.initialize();

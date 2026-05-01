@@ -4,7 +4,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useWishlist } from '@/hooks/use-wishlist';
-import { getProductsByIds } from '@/lib/server/api';
+import { getProductsByIdsAction } from '@/lib/actions/client-data';
 import { Product } from '@/lib/types';
 import { ProductCard } from '@/components/products/product-card';
 import { Button } from '@/components/ui/button';
@@ -41,7 +41,7 @@ export default function WishlistPage() {
         };
 
         if (wishlist.length > 0) {
-            getProductsByIds(wishlist).then(fetchedProducts => {
+            getProductsByIdsAction(wishlist).then(fetchedProducts => {
                 const productMap = new Map(fetchedProducts.map(p => [p.id, p]));
                 const sortedProducts = wishlist.map(id => productMap.get(id)).filter((p): p is Product => !!p);
                 setProducts(sortedProducts);

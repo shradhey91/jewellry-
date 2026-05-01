@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import { cn, formatCurrency } from '@/lib/utils';
 import type { Product, ProductReview, Category, Metal, Purity } from '@/lib/types';
 import {
   Breadcrumb,
@@ -197,12 +197,7 @@ export function Theme2({ product, primaryCategory, crossSellProducts, upsellProd
                 <div>
                   <div className="flex items-baseline gap-4">
                       <p className="text-3xl font-bold text-foreground">
-                          {new Intl.NumberFormat('en-IN', {
-                          style: 'currency',
-                          currency: 'INR',
-                          minimumFractionDigits: 0,
-                          maximumFractionDigits: 0,
-                          }).format(displayPrice)}
+                          {formatCurrency(displayPrice)}
                       </p>
                        <span className="text-xs text-muted-foreground"> (Incl. of all taxes)</span>
                   </div>

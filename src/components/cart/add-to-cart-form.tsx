@@ -18,7 +18,7 @@ import { useToast } from '@/hooks/use-toast.tsx';
 import { Label } from '../ui/label';
 import { Checkbox } from '../ui/checkbox';
 import { Textarea } from '../ui/textarea';
-import { getGiftMessages } from '@/lib/server/api';
+import { getGiftMessagesAction } from '@/lib/actions/client-data';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { useRouter } from 'next/navigation';
 
@@ -47,7 +47,7 @@ export function AddToCartForm({ product, selectedVariantId: propSelectedVariantI
   const router = useRouter();
 
   useEffect(() => {
-    getGiftMessages().then(setGiftMessageSuggestions);
+    getGiftMessagesAction().then(setGiftMessageSuggestions);
   }, []);
 
   const selectedMessages = giftMessageSuggestions.find(

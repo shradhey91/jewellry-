@@ -42,3 +42,18 @@ export async function verifyAdmin() {
         throw new Error("Unauthorized: Invalid or expired session.");
     }
 }
+
+/**
+ * Decodes the current user's JWT session without requiring admin role.
+ * Returns null if no valid session exists.
+ */
+export async function getSessionPayload() {
+    const sessionCookie = cookies().get('session')?.value;
+    if (!sessionCookie) return null;
+    try {
+        const { payload } = await jwtVerify(sessionCookie, JWT_SECRET);
+        return payload;
+    } catch {
+        return null;
+    }
+}

@@ -41,23 +41,15 @@ export const CompareProvider: React.FC<{ children: React.ReactNode }> = ({ child
   }, [compareItems, isMounted]);
 
   const addToCompare = useCallback((productId: string): { success: boolean; message: string } => {
-    let success = false;
-    let message = "";
-    setCompareItems(prev => {
-      if (prev.includes(productId)) {
-        message = "This item is already in your compare list.";
-        return prev;
-      }
-      if (prev.length >= MAX_COMPARE_ITEMS) {
-        message = `You can only compare up to ${MAX_COMPARE_ITEMS} items.`;
-        return prev;
-      }
-      success = true;
-      message = "Product added to comparison.";
-      return [...prev, productId];
-    });
-    return { success, message };
-  }, []);
+    if (compareItems.includes(productId)) {
+      return { success: false, message: "This item is already in your compare list." };
+    }
+    if (compareItems.length >= MAX_COMPARE_ITEMS) {
+      return { success: false, message: `You can only compare up to ${MAX_COMPARE_ITEMS} items.` };
+    }
+    setCompareItems(prev => [...prev, productId]);
+    return { success: true, message: "Product added to comparison." };
+  }, [compareItems]);
 
   const removeFromCompare = useCallback((productId: string) => {
     setCompareItems(prev => prev.filter(id => id !== productId));

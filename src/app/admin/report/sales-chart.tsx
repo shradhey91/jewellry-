@@ -1,5 +1,7 @@
 'use client';
 
+import { formatCurrency } from '@/lib/utils';
+
 import { Bar, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import type { SalesData } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -7,15 +9,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 interface SalesChartProps {
   data: SalesData[];
 }
-
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-    notation: 'compact'
-  }).format(amount);
 
 export function SalesChart({ data }: SalesChartProps) {
   return (

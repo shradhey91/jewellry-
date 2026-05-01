@@ -55,7 +55,7 @@ export function UserMenu() {
                     </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
-                {user.role === 'admin' && (
+                {user.role !== 'customer' && (
                     <DropdownMenuItem asChild>
                         <Link href="/admin">
                             <LayoutDashboard className="mr-2 h-4 w-4" />

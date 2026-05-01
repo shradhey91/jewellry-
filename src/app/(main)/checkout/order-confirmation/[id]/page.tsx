@@ -1,10 +1,12 @@
 "use client";
 
+import { formatCurrency } from '@/lib/utils';
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound, useParams } from "next/navigation";
-import { getOrderById } from "@/lib/server/api";
+import { getOrderAction } from "./actions";
 import type { Order } from "@/lib/types";
 import { Button } from "@/components/ui/button";
 import {
@@ -17,14 +19,6 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { CheckCircle2, Truck } from "lucide-react";
 
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-
 export default function OrderConfirmationPage() {
   const params = useParams();
   const id = params.id as string;
@@ -33,7 +27,7 @@ export default function OrderConfirmationPage() {
 
   useEffect(() => {
     if (id) {
-      getOrderById(id).then((fetchedOrder) => {
+      getOrderAction(id).then((fetchedOrder) => {
         if (fetchedOrder) {
           setOrder(fetchedOrder);
         }

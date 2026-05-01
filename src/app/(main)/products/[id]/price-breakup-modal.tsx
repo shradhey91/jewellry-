@@ -1,5 +1,7 @@
 "use client";
 
+import { formatCurrency } from '@/lib/utils';
+
 import {
   Dialog,
   DialogContent,
@@ -17,14 +19,6 @@ interface PriceBreakupModalProps {
   finalPrice: number;
   children: ReactNode;
 }
-
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
 
 export function PriceBreakupModal({ priceBreakup, finalPrice, children }: PriceBreakupModalProps) {
   const isDiscounted = Math.round(priceBreakup.total) !== Math.round(finalPrice);

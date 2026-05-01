@@ -4,8 +4,8 @@ import { z } from 'zod';
 import { redirect } from 'next/navigation';
 import { createOrder } from '@/lib/server/api';
 import type { CartItem } from '@/lib/types';
-import { cookies } from 'next/headers';
 import { findOrCreateGuestUser } from '@/lib/server/auth';
+import { getSessionPayload } from '@/lib/server/auth-admin';
 
 const placeOrderSchema = z.object({
   cartItems: z.string(),
@@ -73,11 +73,10 @@ export async function placeOrderAction(
   }
 
   let userId: string;
-  const sessionCookie = cookies().get('session')?.value;
-  const session = sessionCookie ? JSON.parse(sessionCookie) : null;
+  const session = await getSessionPayload();
   
   if (session?.id) {
-    userId = session.id;
+    userId = session.id as string;
   } else {
     // Guest checkout: find or create a user profile
     const guestUser = await findOrCreateGuestUser(validatedFields.data.email, validatedFields.data.shippingAddress.name, validatedFields.data.phone_number);

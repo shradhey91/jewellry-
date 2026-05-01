@@ -220,9 +220,9 @@ export function MinimalistAppearanceForm({
   useEffect(() => {
     if (state.message) {
       toast({
-        title: state.errors ? "Error" : "Success",
+        title: state.errors && Object.keys(state.errors).length > 0 ? "Error" : "Success",
         description: state.message,
-        variant: state.errors ? "destructive" : "default",
+        variant: state.errors && Object.keys(state.errors).length > 0 ? "destructive" : "default",
       });
     }
   }, [state, toast]);

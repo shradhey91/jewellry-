@@ -2,6 +2,8 @@
 
 'use server';
 
+import { verifyAdmin, getSessionPayload } from '@/lib/server/auth-admin';
+
 import { z } from 'zod';
 import { revalidatePath } from 'next/cache';
 import { saveProduct, updateProductMedia, searchProductsByName as searchProductsApi, saveProductReview, updateProductReview, deleteProductReview, getProductById } from '@/lib/server/api';
@@ -10,23 +12,11 @@ import { redirect } from 'next/navigation';
 import { cookies } from 'next/headers';
 import { db } from '../db';
 
-async function verifyAdmin() {
-  const sessionCookie = cookies().get('session')?.value;
-  if (!sessionCookie) throw new Error("Authentication required.");
-  try {
-    const claims = JSON.parse(sessionCookie);
-    if (claims.role !== 'admin') {
-      throw new Error("Authorization failed.");
-    }
-  } catch {
-    throw new Error('Invalid session.');
-  }
-}
 
 async function verifyCustomer() {
-  const sessionCookie = cookies().get('session')?.value;
-  if (!sessionCookie) throw new Error("You must be logged in to leave a review.");
-  return JSON.parse(sessionCookie);
+  const payload = await getSessionPayload();
+  if (!payload) throw new Error("You must be logged in to leave a review.");
+  return payload;
 }
 
 const diamondDetailSchema = z.object({

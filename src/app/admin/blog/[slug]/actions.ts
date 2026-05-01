@@ -1,5 +1,7 @@
 "use server";
 
+import { verifyAdmin } from '@/lib/server/auth-admin';
+
 import type { BlogPost, BlogCategory } from "@/lib/types";
 import { revalidatePath } from "next/cache";
 import { z } from "zod";
@@ -7,16 +9,6 @@ import { db } from "@/lib/server/db";
 import { cookies } from "next/headers";
 import { getMongoDB } from "@/lib/server/mongodb";
 
-async function verifyAdmin() {
-  const sessionCookie = cookies().get("session")?.value;
-  if (!sessionCookie) throw new Error("Authentication required.");
-  try {
-    const claims = JSON.parse(sessionCookie);
-    if (claims.role !== "admin") throw new Error("Authorization failed.");
-  } catch {
-    throw new Error("Invalid session.");
-  }
-}
 
 // --- Blog Categories via MongoDB ---
 async function getCategoriesFromDB(): Promise<BlogCategory[]> {

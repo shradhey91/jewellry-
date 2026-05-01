@@ -4,7 +4,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Product } from '@/lib/types';
-import { cn } from '@/lib/utils';
+import { cn, formatCurrency } from '@/lib/utils';
 import { Card, CardContent } from '@/components/ui/card';
 import { useRef } from 'react';
 import { WishlistButton } from './wishlist-button';
@@ -75,14 +75,11 @@ export function ProductCard({ product, className }: ProductCardProps) {
           </div>
           <div className="p-4 border-t">
             <h3 className="font-semibold text-lg leading-tight truncate">{product.name}</h3>
-            <p className="text-sm text-muted-foreground mt-1">{product.seo_title}</p>
+            {product.seo_title && (
+              <p className="text-sm text-muted-foreground mt-1 truncate">{product.seo_title}</p>
+            )}
             <p className="font-bold text-xl mt-2 text-primary">
-              {new Intl.NumberFormat('en-IN', {
-                style: 'currency',
-                currency: 'INR',
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0,
-              }).format(product.display_price)}
+              {formatCurrency(product.display_price)}
             </p>
           </div>
         </CardContent>

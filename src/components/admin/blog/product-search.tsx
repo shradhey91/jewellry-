@@ -1,5 +1,7 @@
 "use client";
 
+import { formatCurrency } from '@/lib/utils';
+
 import React, { useState, useEffect } from 'react';
 import { useDebounce } from '@/hooks/use-debounce';
 import Image from 'next/image';
@@ -9,15 +11,6 @@ import { searchProductsByName } from '@/lib/server/actions/products';
 import type { Product } from '@/lib/types';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
-
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-
 
 export function ProductSearch() {
   const [query, setQuery] = useState('');

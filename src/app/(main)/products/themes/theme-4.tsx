@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { format } from 'date-fns';
 import type { Product, ProductReview, Category, Metal, Purity } from '@/lib/types';
-import { cn } from '@/lib/utils';
+import { cn, formatCurrency } from '@/lib/utils';
 import { PriceBreakupModal } from '../[id]/price-breakup-modal';
 import { ProductCarousel } from '@/components/homepage/product-carousel';
 import { ProductGallery } from '@/components/products/product-gallery';
@@ -136,12 +136,12 @@ export function Theme4({ product, primaryCategory, crossSellProducts, upsellProd
 
                 <div className="flex items-baseline gap-3">
                     <p className="text-3xl font-bold text-foreground">
-                        {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(displayPrice)}
+                        {formatCurrency(displayPrice)}
                     </p>
                     {discountPercentage > 0 && (
                         <>
                             <p className="text-xl text-muted-foreground line-through">
-                                {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(priceBreakup.total)}
+                                {formatCurrency(priceBreakup.total)}
                             </p>
                             <Badge variant="destructive">SAVE {discountPercentage}%</Badge>
                         </>

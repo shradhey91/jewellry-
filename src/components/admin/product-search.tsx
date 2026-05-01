@@ -10,21 +10,12 @@ import { Input } from '@/components/ui/input';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { searchProductsByName } from '@/lib/server/actions/products';
 import type { Product } from '@/lib/types';
-import { cn } from '@/lib/utils';
+import { cn, formatCurrency } from '@/lib/utils';
 
 interface ProductSearchProps {
   onProductSelect: (product: Product) => void;
   filterActive?: boolean;
 }
-
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-
 
 export function ProductSearch({ onProductSelect, filterActive = false }: ProductSearchProps) {
   const [query, setQuery] = useState('');

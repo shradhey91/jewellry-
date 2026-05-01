@@ -1,6 +1,11 @@
 
 import { type NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
+import { jwtVerify } from 'jose';
+
+const JWT_SECRET = new TextEncoder().encode(
+  process.env.JWT_SECRET || 'fallback-secret-key-change-in-production'
+);
 
 export async function GET(request: NextRequest) {
   const sessionCookie = cookies().get('session')?.value;
@@ -10,13 +15,13 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    const decodedClaims = JSON.parse(sessionCookie);
+    const { payload } = await jwtVerify(sessionCookie, JWT_SECRET);
     const userData = {
-        id: decodedClaims.id,
-        email: decodedClaims.email,
-        name: decodedClaims.name,
-        role: decodedClaims.role,
-        phone_number: decodedClaims.phone_number
+        id: payload.id,
+        email: payload.email,
+        name: payload.name,
+        role: payload.role,
+        phone_number: payload.phone_number
     };
     return NextResponse.json({ user: userData });
   } catch (error) {

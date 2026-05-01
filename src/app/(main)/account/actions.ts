@@ -5,6 +5,7 @@ import { z } from 'zod';
 import { revalidatePath } from 'next/cache';
 import {
     updateUserName,
+    updateUserProfile,
     getUserById,
     getOrdersByUserId,
     saveUserAddress,
@@ -14,19 +15,14 @@ import {
     getUserByEmail,
     createUser,
 } from '@/lib/server/api';
+import { verifyPassword, hashPassword } from '@/lib/server/auth';
 import type { Order, User, Address } from '@/lib/types';
-import { cookies } from 'next/headers';
 import { randomBytes } from 'crypto';
 import { db } from '@/lib/server/db';
+import { getSessionPayload } from '@/lib/server/auth-admin';
 
 async function getSessionUser() {
-  const sessionCookie = cookies().get('session')?.value;
-  if (!sessionCookie) return null;
-  try {
-    return JSON.parse(sessionCookie);
-  } catch {
-    return null;
-  }
+  return getSessionPayload();
 }
 
 // --- DATA FETCHING ACTIONS ---
@@ -69,10 +65,11 @@ export async function updateAccountDetails(prevState: any, formData: FormData): 
     }
 
     try {
-        // Update name
-        await updateUserName(session.id, validatedFields.data.name);
-        // Note: Phone and email updates would require additional API functions
-        // For now, they're stored in the form but need backend implementation
+        await updateUserProfile(session.id as string, {
+            name: validatedFields.data.name,
+            phone_number: validatedFields.data.phone || undefined,
+            email: validatedFields.data.email || undefined,
+        });
         revalidatePath('/account');
         return { message: "Profile updated successfully." };
     } catch (error) {
@@ -169,17 +166,18 @@ export async function sendOtpForChanges(): Promise<{ success: boolean; message: 
         // Generate 6-digit OTP
         const otp = Math.floor(100000 + Math.random() * 900000).toString();
         const expiresAt = Date.now() + (10 * 60 * 1000); // 10 minutes
+        const otpKey = session.email as string;
 
-        // Store OTP in database
+        // Store OTP in database keyed by email
         await db.initialize();
         db.tempOtps = [
-            { phone: session.email, otp, expires: expiresAt },
-            ...db.tempOtps.slice(0, 4) // Keep last 5 OTPs
+            { phone: otpKey, otp, expires: expiresAt },
+            ...db.tempOtps.filter(o => o.phone !== otpKey),
         ];
         await db.saveTempOtps();
 
         // In production, send email here
-        console.log(`OTP for ${session.email}: ${otp}`);
+        console.log(`OTP for ${otpKey}: ${otp}`);
 
         return { success: true, message: "OTP sent successfully to your email." };
     } catch (error) {
@@ -213,28 +211,32 @@ export async function verifyOtpAndChangePassword(prevState: any, formData: FormD
         await db.initialize();
         
         // Verify OTP
+        const otpKey = session.email as string;
         const otpEntry = db.tempOtps.find(
-            o => o.phone === session.email && o.otp === validatedFields.data.otp && o.expires > Date.now()
+            o => o.phone === otpKey && o.otp === validatedFields.data.otp && o.expires > Date.now()
         );
 
         if (!otpEntry) {
             return { message: "Invalid or expired OTP." };
         }
 
-        // Verify current password (for admin users with password)
-        if (session.password) {
-            const user = await getUserById(session.id);
-            if (!user || user.password !== validatedFields.data.currentPassword) {
-                return { message: "Current password is incorrect." };
-            }
+        // Verify current password using the secure verifyPassword function
+        const user = await getUserById(session.id as string);
+        if (user?.password && !verifyPassword(validatedFields.data.currentPassword, user.password)) {
+            return { message: "Current password is incorrect." };
         }
 
-        // Note: In a real app, you would hash the password and update it
-        // For now, we'll just log success
-        console.log(`Password changed for user ${session.id}`);
+        // Hash and save the new password
+        const userIndex = db.users.findIndex(u => u.id === session.id);
+        if (userIndex !== -1) {
+            db.users[userIndex].password = hashPassword(validatedFields.data.newPassword);
+            await db.saveUsers();
+        }
 
-        // Remove used OTP
-        db.tempOtps = db.tempOtps.filter(o => o.otp !== validatedFields.data.otp);
+        console.log(`Password changed successfully for user ${session.id}`);
+
+        // Remove used OTP by key, not just OTP value (avoids accidental collision)
+        db.tempOtps = db.tempOtps.filter(o => o.phone !== otpKey);
         await db.saveTempOtps();
 
         revalidatePath('/account');

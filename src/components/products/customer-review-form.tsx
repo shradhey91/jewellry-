@@ -57,9 +57,9 @@ export function CustomerReviewForm({ productId }: { productId: string }) {
     useEffect(() => {
         if (state.message) {
             toast({
-                title: state.errors ? "Error" : "Thank you!",
+                title: state.errors && Object.keys(state.errors).length > 0 ? "Error" : "Thank you!",
                 description: state.message,
-                variant: state.errors ? "destructive" : "default",
+                variant: state.errors && Object.keys(state.errors).length > 0 ? "destructive" : "default",
             });
         }
     }, [state, toast]);

@@ -865,6 +865,26 @@ export async function getUserById(id: string): Promise<User | undefined> {
     return db.users.find(u => u.id === id);
 }
 
+export async function updateUserProfile(
+    userId: string,
+    updates: { name: string; phone_number?: string; email?: string }
+): Promise<User | undefined> {
+    await db.initialize();
+    const userIndex = db.users.findIndex(u => u.id === userId);
+    if (userIndex !== -1) {
+        db.users[userIndex].name = updates.name;
+        if (updates.phone_number) {
+            db.users[userIndex].phone_number = updates.phone_number;
+        }
+        if (updates.email) {
+            db.users[userIndex].email = updates.email;
+        }
+        await db.saveUsers();
+        return db.users[userIndex];
+    }
+    return undefined;
+}
+
 export async function updateUserName(userId: string, name: string): Promise<User | undefined> {
     await db.initialize();
     const userIndex = db.users.findIndex(u => u.id === userId);

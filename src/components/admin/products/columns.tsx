@@ -31,14 +31,6 @@ import { deleteProduct } from "@/lib/server/actions/products"
 import { useToast } from "@/hooks/use-toast.tsx"
 import { useRouter } from "next/navigation"
 
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-
 // Client component to handle stateful actions like deletion
 function ProductActions({ product }: { product: Product }) {
   const { toast } = useToast();

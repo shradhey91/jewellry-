@@ -17,6 +17,7 @@ interface CartContextType {
   addToCart: (item: Omit<CartItem, 'created_at'>) => void;
   removeFromCart: (productId: string, variantId: string) => void;
   updateQuantity: (productId: string, variantId: string, quantity: number) => void;
+  updateGiftMessage: (productId: string, variantId: string, giftMessage: string) => void;
   clearCart: () => void;
   cartCount: number;
   cartSubtotal: number;

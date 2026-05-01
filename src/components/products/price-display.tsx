@@ -8,14 +8,6 @@ interface PriceDisplayProps {
   finalPrice: number;
 }
 
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-
 export function PriceDisplay({ priceBreakup, finalPrice }: PriceDisplayProps) {
   return (
     <div className="space-y-2 text-sm">

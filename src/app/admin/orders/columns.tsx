@@ -1,5 +1,7 @@
 'use client';
 
+import { formatCurrency } from '@/lib/utils';
+
 import { ColumnDef } from "@tanstack/react-table";
 import type { Order } from "@/lib/types";
 import { Button } from "@/components/ui/button";
@@ -21,14 +23,6 @@ import { updateOrderStatus } from "./actions";
 import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/navigation";
 import { UpdateStatusDialog } from "./update-status-dialog";
-
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
 
 const StatusBadge = ({ status }: { status: Order['status'] }) => {
     const variantMap: Record<Order['status'], "default" | "secondary" | "destructive" | "outline"> = {

@@ -47,12 +47,6 @@ export function ProfileForm({ user }: { user: User }) {
     message: "",
   });
   const { toast } = useToast();
-  const [paymentMethods, setPaymentMethods] = useState([
-    { id: "1", type: "Card", last4: "4242", expiry: "12/25", isDefault: true },
-    { id: "2", type: "UPI", upiId: "user@oksbi", isDefault: false },
-  ]);
-
-  // OTP and Password Change State
   const [showOtpInput, setShowOtpInput] = useState(false);
   const [otp, setOtp] = useState("");
   const [otpSent, setOtpSent] = useState(false);
@@ -61,61 +55,16 @@ export function ProfileForm({ user }: { user: User }) {
     newPassword: "",
     confirmPassword: "",
   });
-  const [passwordState, setPasswordState] = useFormState(
-    verifyOtpAndChangePassword,
-    { message: "" },
-  );
 
   useEffect(() => {
     if (state.message) {
       toast({
-        title: state.errors ? "Error" : "Success",
+        title: state.errors && Object.keys(state.errors).length > 0 ? "Error" : "Success",
         description: state.message,
-        variant: state.errors ? "destructive" : "default",
+        variant: state.errors && Object.keys(state.errors).length > 0 ? "destructive" : "default",
       });
-      // Don't call onProfileUpdate to avoid tab change - just show success toast
     }
   }, [state, toast]);
-
-  useEffect(() => {
-    if (passwordState.message) {
-      toast({
-        title: passwordState.errors ? "Error" : "Success",
-        description: passwordState.message,
-        variant: passwordState.errors ? "destructive" : "default",
-      });
-      if (!passwordState.errors) {
-        setShowOtpInput(false);
-        setOtp("");
-        setPasswordData({
-          currentPassword: "",
-          newPassword: "",
-          confirmPassword: "",
-        });
-      }
-    }
-  }, [passwordState, toast]);
-
-  const handleRemovePayment = (paymentId: string) => {
-    setPaymentMethods((prev) => prev.filter((m) => m.id !== paymentId));
-    toast({
-      title: "Payment Method Removed",
-      description: "Your payment method has been removed.",
-    });
-  };
-
-  const handleSetDefaultPayment = (paymentId: string) => {
-    setPaymentMethods((prev) =>
-      prev.map((m) => ({
-        ...m,
-        isDefault: m.id === paymentId,
-      })),
-    );
-    toast({
-      title: "Default Payment Method Updated",
-      description: "This payment method has been set as your default.",
-    });
-  };
 
   const handleSendOtp = async () => {
     // Validate passwords first
@@ -158,7 +107,17 @@ export function ProfileForm({ user }: { user: User }) {
     formData.append("otp", otp);
     formData.append("currentPassword", passwordData.currentPassword);
     formData.append("newPassword", passwordData.newPassword);
-    await verifyOtpAndChangePassword({}, formData);
+    const result = await verifyOtpAndChangePassword({ message: "" }, formData);
+    if (!result.errors || Object.keys(result.errors).length === 0) {
+      // Success — reset the password form UI
+      setShowOtpInput(false);
+      setOtpSent(false);
+      setOtp("");
+      setPasswordData({ currentPassword: "", newPassword: "", confirmPassword: "" });
+      toast({ title: "Success", description: result.message || "Password changed successfully." });
+    } else {
+      toast({ title: "Error", description: result.message, variant: "destructive" });
+    }
   };
 
   return (
@@ -340,69 +299,8 @@ export function ProfileForm({ user }: { user: User }) {
             <div>
               <h3 className="text-lg font-semibold">Payment Methods</h3>
               <p className="text-sm text-muted-foreground">
-                Manage your saved payment methods
+                Manage your saved payment methods in the Payment tab.
               </p>
-            </div>
-
-            <div className="space-y-3">
-              {paymentMethods.map((method) => (
-                <div
-                  key={method.id}
-                  className="flex items-center justify-between p-4 border rounded-lg"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="h-10 w-10 rounded bg-secondary flex items-center justify-center">
-                      {method.type === "Card" ? (
-                        <span className="text-lg">💳</span>
-                      ) : (
-                        <span className="text-lg">📱</span>
-                      )}
-                    </div>
-                    <div>
-                      <p className="font-medium">
-                        {method.type === "Card"
-                          ? `•••• ${method.last4}`
-                          : method.upiId}
-                      </p>
-                      <p className="text-sm text-muted-foreground">
-                        {method.type === "Card"
-                          ? `Expires ${method.expiry}`
-                          : "UPI"}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    {method.isDefault ? (
-                      <span className="text-xs bg-primary text-primary-foreground px-2 py-1 rounded">
-                        Default
-                      </span>
-                    ) : (
-                      <Button
-                        type="button"
-                        variant="outline"
-                        size="sm"
-                        onClick={() => handleSetDefaultPayment(method.id)}
-                      >
-                        Set as Default
-                      </Button>
-                    )}
-                    <Button
-                      type="button"
-                      variant="ghost"
-                      size="sm"
-                      className="text-destructive hover:text-destructive"
-                      onClick={() => handleRemovePayment(method.id)}
-                    >
-                      Remove
-                    </Button>
-                  </div>
-                </div>
-              ))}
-              {paymentMethods.length === 0 && (
-                <p className="text-sm text-muted-foreground text-center py-4">
-                  No payment methods saved yet.
-                </p>
-              )}
             </div>
           </div>
         </CardContent>

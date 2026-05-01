@@ -1,5 +1,7 @@
 "use client";
 
+import { formatCurrency } from '@/lib/utils';
+
 import type { Order } from "@/lib/types";
 import {
   Card,
@@ -19,14 +21,6 @@ import {
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
 
 export function OrderHistory({ orders }: { orders: Order[] }) {
   return (

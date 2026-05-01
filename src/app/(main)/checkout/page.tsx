@@ -1,5 +1,7 @@
 'use client';
 
+import { formatCurrency } from '@/lib/utils';
+
 import { useState, useEffect } from 'react';
 import Script from 'next/script';
 import { useCart } from '@/hooks/use-cart';
@@ -164,15 +166,7 @@ export default function CheckoutPage() {
     return <div className="container py-24 text-center">Loading checkout...</div>;
   }
 
-  const formatCurrency = (amount: number) =>
-    new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(amount);
-
-  return (
+    return (
     <>
         <Script
             id="cashfree-checkout-js"

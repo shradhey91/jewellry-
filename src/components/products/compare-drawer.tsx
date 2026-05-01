@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCompare } from '@/hooks/use-compare';
-import { getProductsByIds, getMetals, getPurities } from '@/lib/server/api';
+import { getProductsByIdsAction, getMetalsAction, getPuritiesAction } from '@/lib/actions/client-data';
 import type { Product, Metal, Purity } from '@/lib/types';
 import { formatCurrency } from '@/lib/utils';
 import {
@@ -50,9 +50,9 @@ export function CompareDrawer({ open, onOpenChange }: { open: boolean; onOpenCha
         setIsLoading(true);
         try {
             const [fetchedProducts, allMetals, allPurities] = await Promise.all([
-                getProductsByIds(compareItems),
-                getMetals(),
-                getPurities(),
+                getProductsByIdsAction(compareItems),
+                getMetalsAction(),
+                getPuritiesAction(),
             ]);
 
             const productMap = new Map(fetchedProducts.map(p => [p.id, p]));

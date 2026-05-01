@@ -1,5 +1,7 @@
 'use client';
 
+import { formatCurrency } from '@/lib/utils';
+
 import { useState, useMemo } from 'react';
 import { useFormStatus } from 'react-dom';
 import { useRouter } from 'next/navigation';
@@ -63,15 +65,7 @@ export function UpdateStatusDialog({ order, children }: UpdateStatusDialogProps)
     }
   };
 
-  const formatCurrency = (amount: number) =>
-    new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR',
-      minimumFractionDigits: 0,
-      maximumFractionDigits: 0,
-    }).format(amount);
-
-  return (
+    return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>{children}</DialogTrigger>
       <DialogContent>

@@ -1,22 +1,12 @@
 
 'use server';
 
+import { verifyAdmin } from '@/lib/server/auth-admin';
+
 import { revalidatePath } from 'next/cache';
 import { db } from '@/lib/server/db';
 import { cookies } from 'next/headers';
 
-async function verifyAdmin() {
-  const sessionCookie = cookies().get('session')?.value;
-  if (!sessionCookie) throw new Error("Authentication required.");
-  try {
-    const claims = JSON.parse(sessionCookie);
-    if (claims.role !== 'admin') {
-      throw new Error("Authorization failed.");
-    }
-  } catch {
-    throw new Error('Invalid session.');
-  }
-}
 
 export async function approveUser(userId: string): Promise<{ success: boolean; message: string }> {
   try {

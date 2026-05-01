@@ -17,7 +17,7 @@ export function ShippingForm({ user }: ShippingFormProps) {
 
   const handleAddressChange = (addressId: string) => {
     if (addressId === 'new-address') {
-      reset({ name: '', address: '', city: '', state: '', zip: '', country: 'IN', email: user?.email || '', phone_number: user?.phone_number || '' });
+      reset({ name: '', address: '', city: '', state: '', zip: '', country: 'India', email: user?.email || '', phone_number: user?.phone_number || '' });
     } else {
       const selectedAddress = user?.addresses?.find(a => a.id === addressId);
       if (selectedAddress) {
@@ -29,7 +29,7 @@ export function ShippingForm({ user }: ShippingFormProps) {
           city: selectedAddress.city,
           state: selectedAddress.state,
           zip: selectedAddress.zip,
-          country: selectedAddress.country || 'IN',
+          country: selectedAddress.country || 'India',
         });
       }
     }

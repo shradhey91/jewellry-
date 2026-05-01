@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { format } from 'date-fns';
 import type { Product, ProductReview, Category, Metal, Purity, ProductVariant } from '@/lib/types';
 
-import { cn } from '@/lib/utils';
+import { cn, formatCurrency } from '@/lib/utils';
 
 import { PriceBreakupModal } from '@/app/(main)/products/[id]/price-breakup-modal';
 import { ProductCard } from '@/components/products/product-card';
@@ -129,12 +129,12 @@ export function Theme4({ product, primaryCategory, crossSellProducts, upsellProd
 
                 <div className="flex items-baseline gap-3">
                     <p className="text-3xl font-bold text-foreground">
-                        {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(product.display_price)}
+                        {formatCurrency(product.display_price)}
                     </p>
                     {discountPercentage > 0 && (
                         <>
                             <p className="text-xl text-muted-foreground line-through">
-                                {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(product.price_breakup.total)}
+                                {formatCurrency(product.price_breakup.total)}
                             </p>
                             <Badge variant="destructive">SAVE {discountPercentage}%</Badge>
                         </>

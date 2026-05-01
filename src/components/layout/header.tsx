@@ -205,31 +205,30 @@ export function Header() {
   const { menu, categories, isLoading: isLoadingMenu } = useMenu();
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollYRef = React.useRef(0);
 
-  const handleScroll = () => {
-    const isScrolled = window.scrollY > 20;
-    setScrolled(isScrolled);
+  const handleScroll = React.useCallback(() => {
+    const currentScrollY = window.scrollY;
+    setScrolled(currentScrollY > 20);
 
     if (settings.hideOnScroll) {
-        const currentScrollY = window.scrollY;
-        if (currentScrollY > lastScrollY && currentScrollY > 150) {
+        if (currentScrollY > lastScrollYRef.current && currentScrollY > 150) {
             setVisible(false);
         } else {
             setVisible(true);
         }
-        setLastScrollY(currentScrollY);
     } else {
         setVisible(true);
     }
-  };
+    lastScrollYRef.current = currentScrollY;
+  }, [settings.hideOnScroll]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY, settings.hideOnScroll]);
+  }, [handleScroll]);
 
   if (!isMounted || isLoadingMenu) {
       return (

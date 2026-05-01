@@ -1,5 +1,7 @@
 "use client";
 
+import { formatCurrency } from '@/lib/utils';
+
 import { useState } from "react";
 import { Wand2, Loader2, Info } from "lucide-react";
 import { getDynamicPricingSuggestions } from "@/ai/flows/dynamic-pricing-suggestions";
@@ -15,15 +17,6 @@ import { Separator } from "../ui/separator";
 interface DynamicPricingCardProps {
   product: Product;
 }
-
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
-
 
 export function DynamicPricingCard({ product }: DynamicPricingCardProps) {
   const isNew = product.id === 'new';

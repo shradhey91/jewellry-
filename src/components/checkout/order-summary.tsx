@@ -1,17 +1,11 @@
 'use client';
 
+import { formatCurrency } from '@/lib/utils';
+
 import { useCart } from '@/hooks/use-cart.tsx';
 import { Card, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Check, Truck, Sparkles } from 'lucide-react';
-
-const formatCurrency = (amount: number) =>
-  new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(amount);
 
 export function OrderSummary() {
   const { cartItems, cartSubtotal, cartTotal, discount, discountAmount } = useCart();

@@ -6,7 +6,7 @@ import { ProductGallery } from '@/components/products/product-gallery';
 import { AddToCartForm } from '@/components/cart/add-to-cart-form';
 import { Separator } from '@/components/ui/separator';
 import { ProductCarousel } from '@/components/homepage/product-carousel';
-import { cn } from '@/lib/utils';
+import { cn, formatCurrency } from '@/lib/utils';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -148,12 +148,7 @@ export function DefaultTheme({ product, primaryCategory, crossSellProducts, upse
                 <div>
                   <div className="flex items-baseline gap-4">
                       <p className="text-3xl font-bold text-foreground">
-                          {new Intl.NumberFormat('en-IN', {
-                          style: 'currency',
-                          currency: 'INR',
-                          minimumFractionDigits: 0,
-                          maximumFractionDigits: 0,
-                          }).format(displayPrice)}
+                          {formatCurrency(displayPrice)}
                       </p>
                        <span className="text-xs text-muted-foreground"> (Incl. of all taxes)</span>
                   </div>
@@ -271,7 +266,7 @@ export function DefaultTheme({ product, primaryCategory, crossSellProducts, upse
                                                 </div>
                                                  <div>
                                                     <p className="font-bold text-lg">
-                                                        {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 }).format(diamond.price || 0)}
+                                                        {formatCurrency(diamond.price || 0)}
                                                     </p>
                                                     <p className="text-sm text-muted-foreground">Approx. Value</p>
                                                 </div>

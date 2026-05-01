@@ -5,7 +5,11 @@ import { getSettings } from '@/lib/server/api';
 import { randomUUID } from 'crypto';
 import { headers } from 'next/headers';
 
-const CASHFREE_API_URL = 'https://sandbox.cashfree.com/pg'; 
+// Switch between sandbox and production based on NODE_ENV or explicit env var
+const CASHFREE_API_URL = process.env.CASHFREE_API_URL || 
+  (process.env.NODE_ENV === 'production' 
+    ? 'https://api.cashfree.com/pg' 
+    : 'https://sandbox.cashfree.com/pg');
 
 async function getCashfreeInstance() {
     const settings = await getSettings();

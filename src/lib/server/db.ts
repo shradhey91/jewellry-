@@ -229,7 +229,9 @@ class Database {
     await replaceCollection("menus", this.menus);
     this.invalidate();
   };
-  saveHistory = () => replaceCollection("history", this.history); // history writes are frequent, don't invalidate
+  saveHistory = async () => {
+    await replaceCollection("history", this.history); // history writes are frequent, intentionally skip invalidate
+  };
   saveUsers = async () => {
     await replaceCollection("users", this.users);
     this.invalidate();
@@ -254,10 +256,15 @@ class Database {
     await replaceCollection("blogPosts", this.posts);
     this.invalidate();
   };
-  savePasswordResetTokens = () =>
-    replaceCollection("passwordResetTokens", this.passwordResetTokens);
-  saveGiftMessages = () => replaceCollection("giftMessages", this.giftMessages);
-  saveTempOtps = () => replaceCollection("tempOtps", this.tempOtps);
+  savePasswordResetTokens = async () => {
+    await replaceCollection("passwordResetTokens", this.passwordResetTokens);
+  };
+  saveGiftMessages = async () => {
+    await replaceCollection("giftMessages", this.giftMessages);
+  };
+  saveTempOtps = async () => {
+    await replaceCollection("tempOtps", this.tempOtps);
+  };
   saveMediaLibrary = async () => {
     await replaceCollection("mediaLibrary", this.mediaLibrary);
     this.invalidate();

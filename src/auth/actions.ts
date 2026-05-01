@@ -9,6 +9,7 @@ import {
   getUserByEmail,
   verifyPassword,
   createUser,
+  hashPassword,
 } from "@/lib/server/auth";
 import type { User } from "@/lib/types";
 import { getDeveloperSettings } from "@/lib/server/api";
@@ -323,7 +324,7 @@ export async function resetPasswordAction(
     return { success: false, message: "User not found." };
   }
 
-  db.users[userIndex].password = password;
+  db.users[userIndex].password = hashPassword(password);
   db.passwordResetTokens = db.passwordResetTokens.filter(
     (t) => t.token !== token,
   );

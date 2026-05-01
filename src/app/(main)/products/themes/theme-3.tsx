@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import { cn, formatCurrency } from '@/lib/utils';
 import type { Product, ProductReview, Category, Metal, Purity } from '@/lib/types';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 import { Star, Gift, Truck, Share2, MessageCircle, PlayCircle, GitCompareArrows, CheckCircle2 } from 'lucide-react';
@@ -153,7 +153,7 @@ export function Theme3({ product, primaryCategory, crossSellProducts, upsellProd
                 
                 <div>
                   <p className="text-4xl font-light text-amber-900/90">
-                      {new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(displayPrice)}
+                      {formatCurrency(displayPrice)}
                   </p>
                    <span className="text-xs text-stone-500 mt-1 block"> (Inclusive of all taxes)</span>
                    <PriceBreakupModal priceBreakup={priceBreakup} finalPrice={displayPrice}>
