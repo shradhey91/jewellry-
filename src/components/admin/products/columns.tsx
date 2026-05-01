@@ -1,6 +1,8 @@
 
 "use client"
 
+import { formatCurrency } from '@/lib/utils';
+
 import { ColumnDef } from "@tanstack/react-table"
 import { Product } from "@/lib/types"
 import { Checkbox } from "@/components/ui/checkbox"
