@@ -15,13 +15,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast.tsx";
+import { useToast } from "@/hooks/use-toast";
 import { Separator } from "../ui/separator";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
 import { Trash2, PlusCircle, Wand2, Loader2, X, Info } from "lucide-react";
 import { RelatedProductsManager } from "./related-products-manager";
 import { ProductImageManager } from "./product-image-manager";
-import { generateProductDescription } from "@/ai/flows/product-description-generator";
 import { DynamicPricingCard } from "./dynamic-pricing-card";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "@/components/ui/command";
@@ -232,6 +231,8 @@ export function ProductEditForm({
               seoDescription: formData.get('seo_description') as string,
           };
           
+          // Dynamically import to prevent module-level crash when GOOGLE_GENAI_API_KEY is missing
+          const { generateProductDescription } = await import("@/ai/flows/product-description-generator");
           const result = await generateProductDescription(input);
           setDescription(result.description);
           toast({ title: "Description Generated", description: "AI has generated a new description for your product." });
