@@ -120,7 +120,7 @@ export default function BulkUploadPage() {
                     <div>
                         <h4 className="font-semibold text-foreground">2. Prepare CSV</h4>
                         <p>Use the sample file as a template. In the `media_1`, `media_2`, etc., columns, list the exact filenames for each product as they appear in the Media Library.</p>
-                         <Link href="/sample-products.csv" download className="text-primary underline text-xs font-semibold">Download Sample CSV</Link>
+                         <a href="/sample-products.csv" download="sample-products.csv" className="text-primary underline text-xs font-semibold">Download Sample CSV</a>
                     </div>
                 </div>
                  <div className="flex items-start gap-4">
